@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <nav>
+        <button class="menu-toggle">☰</button>
+        <ul class="nav-links">
+            <li><a href="/dashboard">Inicio</a></li>
+            <li><a href="#" id="showMessage">Ejemplo JS</a></li>
+            <li><a href="#" id="showConstructionServicios">Servicios</a></li>
+            <li><a href="#" id="showConstructionContacto">Contacto</a></li>
+            <li><a href="#" id="showError">Mostrar Error</a></li>
+            <li><a href="#" id="logout">Cerrar Sesión</a></li>
+        </ul>
+    </nav>
+
+    <div class="breadcrumb" id="breadcrumb"></div>
+
+    <div class="dashboard-container">
+        <h1>Bienvenido al Dashboard</h1>
+        <p>Selecciona una opción en el menú.</p>
+        <p id="message"></p>
+    </div>
+
+    <script src="/js/dashboard.js"></script>
+</body>
+</html>
