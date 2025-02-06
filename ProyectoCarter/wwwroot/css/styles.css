@@ -3,203 +3,105 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background: linear-gradient(135deg, #6a11cb, #2575fc); /* Fondo con gradiente */
     color: #333;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
+    height: 100vh; /* Ocupa toda la altura de la pantalla */
 }
 
-/* Estilos del login */
+/* Contenedor del login */
 .login-container {
-    margin-top: 50px;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
+    padding: 40px;
+    border-radius: 15px; /* Bordes más redondeados */
     text-align: center;
-    background-color: white;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    width: 300px;
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo semi-transparente */
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+    width: 350px; /* Ancho fijo */
+    animation: fadeIn 1s ease-in-out; /* Animación de entrada */
 }
 
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Contenedor de los inputs */
+.input-container {
+    position: relative;
+    margin: 20px 0;
+}
+
+    /* Íconos dentro de los inputs */
+    .input-container i {
+        position: absolute;
+        left: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #777; /* Color gris para los íconos */
+    }
+
+/* Estilos de los inputs */
 input {
     display: block;
-    width: 90%;
-    margin: 10px auto;
-    padding: 10px;
+    width: calc(100% - 50px); /* Ajuste del ancho para que no sobresalga */
+    padding: 10px 10px 10px 40px;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 25px; /* Bordes redondeados */
+    font-size: 16px;
+    transition: border-color 0.3s ease; /* Transición suave */
 }
 
+    input:focus {
+        border-color: #007BFF; /* Cambia el color del borde */
+        outline: none; /* Quita el outline por defecto */
+    }
+
+/* Estilos del botón */
 button {
     padding: 10px;
     width: 100%;
     background-color: #007BFF;
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 25px; /* Bordes redondeados */
     cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease; /* Transición suave */
 }
 
     button:hover {
-        background-color: #0056b3;
+        background-color: #0056b3; /* Color más oscuro al pasar el mouse */
     }
 
-/* Dashboard con menú arriba */
-.dashboard-container {
-    margin-top: 20px;
-    text-align: center;
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    width: 80%;
+/* Contenedor de enlaces */
+.links {
+    margin-top: 15px;
 }
 
-/* Estilos de navegación */
-nav {
-    width: 100%;
-    background-color: #007BFF;
-    padding: 10px;
-    display: flex;
-    justify-content: center; 
-    align-items: center;
-}
-
-/* Menú hamburguesa */
-.menu-toggle {
-    display: none;
-    font-size: 24px;
-    background: none;
-    border: none;
-    color: white;
-    cursor: pointer;
-}
-
-.nav-links {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    gap: 20px;
-    justify-content: center; /* Centrado horizontalmente */
-    margin: 0 auto; /* Para asegurarse de que esté centrado */
-}
-
-    .nav-links a {
-        text-decoration: none;
-        color: white;
-        font-weight: bold;
-        cursor: pointer;
-    }
-
-/* Mensaje inicial del dashboard */
-#welcome-message {
-    font-size: 18px;
-    font-weight: bold;
-    margin-top: 20px;
-}
-
-/* Sección oculta del ejemplo de JS */
-#js-example {
-    display: none;
-    margin-top: 20px;
-    text-align: center;
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    width: 80%;
-}
-
-
-/* Breadcrumbs */
-.breadcrumb {
-    margin-top: 10px;
-    font-size: 14px;
-    color: #555;
-}
-
-    .breadcrumb a {
+    .links a {
         text-decoration: none;
         color: #007BFF;
+        font-size: 14px;
+        margin: 0 10px;
+        transition: color 0.3s ease; /* Transición suave */
     }
 
-/* Página de error */
-.error-container {
-    text-align: center;
-    margin-top: 50px;
-}
+        .links a:hover {
+            color: #0056b3; /* Color más oscuro al pasar el mouse */
+        }
 
-    .error-container h1 {
-        font-size: 50px;
-        color: red;
-    }
-
-    .error-container p {
-        font-size: 20px;
-    }
-
-.back-button {
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #007BFF;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-    .back-button:hover {
-        background-color: #0056b3;
-    }
-
-/* Página de construccion */
-.construccion-container {
-    text-align: center;
-    margin-top: 50px;
-}
-
-    .construccion-container h1 {
-        font-size: 50px;
-        color: darkorange;
-    }
-
-    .construccion-container p {
-        font-size: 20px;
-    }
-
-.back-button {
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #007BFF;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-    .back-button:hover {
-        background-color: #0056b3;
-    }
-
- /* Responsive */
-@media (max-width: 600px) {
-    .menu-toggle
-
-{
-    display: block;
-}
-
-.nav-links {
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    background-color: #007BFF;
+/* Mensaje de error */
+.error {
+    color: red;
+    font-size: 14px;
     margin-top: 10px;
-}
-
-    .nav-links.active {
-        display: flex;
-    }
 }
