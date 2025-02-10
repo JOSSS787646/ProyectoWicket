@@ -361,4 +361,4 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
-/ProyectoCarter/ProyectoCarter.csproj
+#/ProyectoCarter/ProyectoCarter.csproj
