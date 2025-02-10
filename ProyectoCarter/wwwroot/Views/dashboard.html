@@ -5,26 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="stylesheet" href="/css/dashboard.css"> <!-- Archivo CSS separado -->
+    <link rel="stylesheet" href="/css/dashboard.css">
 </head>
 <body>
+
+    <!-- Menú de navegación -->
     <nav>
-        <button class="menu-toggle">☰</button>
+        <button class="menu-toggle"><i class="fas fa-bars"></i></button>
         <ul class="nav-links">
-            <li><a href="/dashboard">Inicio</a></li>
-            <li><a href="#" id="showMessage">Ejemplo JS</a></li>
-            <li><a href="#" id="showConstructionServicios">Servicios</a></li>
-            <li><a href="#" id="showConstructionContacto">Contacto</a></li>
-            <li><a href="#" id="showError">Mostrar Error</a></li>
-            <li><a href="#" id="logout">Cerrar Sesión</a></li>
+            <li><a href="/dashboard"><i class="fas fa-home"></i> Inicio</a></li>
+            <li><a href="#" id="showMessage"><i class="fas fa-code"></i> Ejemplo JS</a></li>
+            <li><a href="#" id="showConstructionServicios"><i class="fas fa-cogs"></i> Servicios</a></li>
+            <li><a href="#" id="showConstructionContacto"><i class="fas fa-envelope"></i> Contacto</a></li>
+            <li><a href="#" id="showError"><i class="fas fa-exclamation-triangle"></i> Mostrar Error</a></li>
+            <li><a href="#" id="logout"><i class="fas fa-sign-out-alt"></i> Cerrar Sesión</a></li>
         </ul>
     </nav>
 
+    <!-- Breadcrumbs -->
     <div class="breadcrumb" id="breadcrumb"></div>
 
+    <!-- Contenedor principal -->
     <div class="dashboard-container">
         <h1>Bienvenido al Dashboard</h1>
         <p>Selecciona una opción en el menú.</p>
+
+        <div class="cards-container">
+            <div class="card">
+                <h3>Usuarios Registrados</h3>
+                <p>150</p>
+            </div>
+            <div class="card">
+                <h3>Proyectos Activos</h3>
+                <p>35</p>
+            </div>
+            <div class="card">
+                <h3>Notificaciones</h3>
+                <p>5</p>
+            </div>
+        </div>
+
         <p id="message"></p>
     </div>
 

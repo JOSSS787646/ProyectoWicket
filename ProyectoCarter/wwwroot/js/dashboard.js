@@ -7,6 +7,7 @@
         navLinks.classList.toggle("active");
     });
 
+    // Verificar si el usuario está en localStorage en lugar de la sesión
     const user = localStorage.getItem("loggedInUser");
 
     if (!user) {
@@ -17,6 +18,8 @@
         localStorage.removeItem("loggedInUser");
         window.location.href = "/login";
     });
+
+    // Resto del código...
 
     // Generar el breadcrumb
     function generateBreadcrumb() {

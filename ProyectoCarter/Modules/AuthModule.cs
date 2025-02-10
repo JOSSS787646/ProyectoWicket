@@ -6,7 +6,6 @@ namespace ProyectoCarter.Modules
     {
         public void AddRoutes(IEndpointRouteBuilder app)
         {
-
             // Redirigir a la página de login al acceder a la raíz
             app.MapGet("/", (HttpContext ctx) =>
             {
@@ -31,14 +30,6 @@ namespace ProyectoCarter.Modules
                 ctx.Response.ContentType = "text/html";
                 await ctx.Response.SendFileAsync("wwwroot/views/construccion.html");
             });
-
-            app.MapGet("/error", async (HttpContext ctx) =>
-            {
-                ctx.Response.ContentType = "text/html";
-                await ctx.Response.SendFileAsync("wwwroot/views/error.html");
-            });
         }
-
-
     }
 }
