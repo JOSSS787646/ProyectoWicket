@@ -21,6 +21,28 @@
 
     // Resto del código...
 
+    //Funcion para el reloj digital
+    function updateClock() {
+        const clock = document.getElementById("clock");
+        const now = new Date();
+
+        let hours = now.getHours().toString().padStart(2, '0');
+        let minutes = now.getMinutes().toString().padStart(2, '0');
+        let seconds = now.getSeconds().toString().padStart(2, '0');
+
+        // Alternar visibilidad de los dos puntos para efecto de parpadeo
+        let separator = now.getSeconds() % 2 === 0 ? ":" : " ";
+
+        clock.innerHTML = `${hours}${separator}${minutes}${separator}${seconds}`;
+    }
+
+    // Actualiza el reloj cada segundo
+    setInterval(updateClock, 1000);
+
+    // Llama a la función para mostrar la hora inmediatamente
+    updateClock();
+
+
     // Generar el breadcrumb
     function generateBreadcrumb() {
         const path = window.location.pathname.split("/").filter(Boolean);

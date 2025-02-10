@@ -7,17 +7,15 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="/css/dashboard.css">
 </head>
-<body>
+<body class="dashboard">
 
     <!-- Menú de navegación -->
     <nav>
         <button class="menu-toggle"><i class="fas fa-bars"></i></button>
         <ul class="nav-links">
             <li><a href="/dashboard"><i class="fas fa-home"></i> Inicio</a></li>
-            <li><a href="#" id="showMessage"><i class="fas fa-code"></i> Ejemplo JS</a></li>
             <li><a href="#" id="showConstructionServicios"><i class="fas fa-cogs"></i> Servicios</a></li>
             <li><a href="#" id="showConstructionContacto"><i class="fas fa-envelope"></i> Contacto</a></li>
-            <li><a href="#" id="showError"><i class="fas fa-exclamation-triangle"></i> Mostrar Error</a></li>
             <li><a href="#" id="logout"><i class="fas fa-sign-out-alt"></i> Cerrar Sesión</a></li>
         </ul>
     </nav>
@@ -29,6 +27,9 @@
     <div class="dashboard-container">
         <h1>Bienvenido al Dashboard</h1>
         <p>Selecciona una opción en el menú.</p>
+
+        <!-- Reloj Digital -->
+        <div id="clock"></div>
 
         <div class="cards-container">
             <div class="card">
@@ -47,6 +48,7 @@
 
         <p id="message"></p>
     </div>
+
 
     <script src="/js/dashboard.js"></script>
 </body>
