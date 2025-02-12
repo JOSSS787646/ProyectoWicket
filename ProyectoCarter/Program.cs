@@ -1,7 +1,10 @@
 using Carter;
+using ProyectoCarter.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddCarter(); // Solo agregar Carter
+builder.Services.AddSingleton<UsuarioRepository>(); // Registrar el repositorio
+
 
 var app = builder.Build();
 
