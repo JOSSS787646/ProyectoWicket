@@ -77,4 +77,14 @@
     document.getElementById("showConstructionContacto").addEventListener("click", function () {
         window.location.href = "/construccion";
     });
+
+    document.addEventListener("DOMContentLoaded", function () {
+        console.log("Dashboard cargado");
+
+        document.getElementById("adminPanel").addEventListener("click", function () {
+            console.log("Clic en Administrar");
+        });
+    });
+
+
 });

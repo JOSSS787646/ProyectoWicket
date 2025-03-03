@@ -7,12 +7,10 @@ builder.Services.AddSingleton<UsuarioRepository>(); // Registrar el repositorio
 
 
 var app = builder.Build();
+app.MapCarter();
 
 // Habilita la redirección HTTPS
 app.UseHttpsRedirection();
-
-// Mapear rutas de Carter
-app.MapCarter();
 
 // Servir archivos estáticos (CSS, JS, imágenes)
 app.UseStaticFiles();
