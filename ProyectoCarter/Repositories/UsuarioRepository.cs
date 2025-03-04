@@ -22,6 +22,7 @@ namespace ProyectoCarter.Repositories
                 "SELECT Id, Nombre, Correo, Contraseña, RolId FROM Usuarios WHERE Nombre = @Nombre",
                 new { Nombre = username }
             );
+
         }
         private MySqlConnection GetConnection() => new MySqlConnection(_connectionString);
         public async Task<IEnumerable<UsuarioDTO>> GetAll()

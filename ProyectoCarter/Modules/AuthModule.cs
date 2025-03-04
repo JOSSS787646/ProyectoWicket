@@ -10,16 +10,17 @@ namespace ProyectoCarter.Modules
         {
             var group = app.MapGroup("/auth");
 
-            group.MapPost("/login", async (HttpContext http, [FromBody] LoginRequest login, UsuarioRepository repo) =>
+            group.MapPost("/login", (HttpContext http, [FromBody] LoginRequest login) =>
             {
-                var usuario = await repo.GetByUsername(login.Username);
-                if (usuario is null || !BCrypt.Net.BCrypt.Verify(login.Password, usuario.Contraseña))
+                // Usuario estático para pruebas
+                if (login.Username == "admin" && login.Password == "12345")
                 {
-                    return Results.Unauthorized();
+                    return Results.Ok(new { Id = 1, Nombre = "admin", Correo = "admin@example.com", RolId = 1 });
                 }
 
-                return Results.Ok(new { usuario.Id, usuario.Nombre, usuario.Correo, usuario.RolId });
+                return Results.Unauthorized();
             });
+
 
             group.MapPost("/register", async ([FromBody] RegisterRequest request, UsuarioRepository repo) =>
             {
