@@ -11,7 +11,7 @@
         return;
     }
 
-    const response = await fetch("/auth/register", {
+    const response = await fetch(`${window.location.origin}/auth/register`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ Username: username, Email: email, Password: password })

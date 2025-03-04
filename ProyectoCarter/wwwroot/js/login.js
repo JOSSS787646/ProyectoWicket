@@ -9,7 +9,7 @@
     username = username.toLowerCase();
 
     try {
-        const response = await fetch("/auth/login", {
+        const response = await fetch(`${window.location.origin}/auth/login`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

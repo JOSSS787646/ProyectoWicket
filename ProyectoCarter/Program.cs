@@ -15,6 +15,10 @@ app.UseHttpsRedirection();
 // Servir archivos estáticos (CSS, JS, imágenes)
 app.UseStaticFiles();
 
+//Verificar Logs del servidor
+app.UseDeveloperExceptionPage();
+
+
 // Middleware para manejar rutas no encontradas
 app.Use(async (context, next) =>
 {
