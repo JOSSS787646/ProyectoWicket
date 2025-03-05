@@ -5,8 +5,7 @@
     const password = document.getElementById("password").value.trim();
     const errorMessage = document.getElementById("errorMessage");
 
-    // Convertir el nombre de usuario a minúsculas para comparación insensible a mayúsculas
-    username = username.toLowerCase();
+    username = username.toLowerCase(); // Normalizar el nombre de usuario
 
     try {
         const response = await fetch(`${window.location.origin}/auth/login`, {
@@ -21,9 +20,9 @@
 
         if (response.ok) {
             localStorage.setItem("loggedInUser", JSON.stringify(data));
-            window.location.href = "/dashboard";
+            window.location.href = "/dashboard"; // Redirigir al dashboard
         } else {
-            errorMessage.textContent = data.message || "Usuario o contraseña incorrectos";
+            errorMessage.textContent = "Usuario o contraseña incorrectos";
         }
     } catch (error) {
         errorMessage.textContent = "Error de conexión con el servidor";

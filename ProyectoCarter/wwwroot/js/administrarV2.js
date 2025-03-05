@@ -73,6 +73,7 @@ function eliminarUsuario(id) {
             .catch(error => console.error("Error al eliminar usuario:", error));
     }
 }    
+
 function guardarNuevoRol() {
     const rolId = document.getElementById("rolId").value;
     const rolNombre = document.getElementById("rolNombre").value;
