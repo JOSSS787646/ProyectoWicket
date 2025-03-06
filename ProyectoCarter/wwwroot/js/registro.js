@@ -19,7 +19,7 @@
 
     if (response.ok) {
         alert("Registro exitoso. Ahora puedes iniciar sesión.");
-        window.location.href = "/login.html";
+        window.location.href = "/login";
     } else {
         const errorText = await response.text();
         errorMessage.textContent = errorText;

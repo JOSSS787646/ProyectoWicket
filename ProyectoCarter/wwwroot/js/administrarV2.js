@@ -73,7 +73,6 @@ function eliminarUsuario(id) {
             .catch(error => console.error("Error al eliminar usuario:", error));
     }
 }    
-
 function guardarNuevoRol() {
     const rolId = document.getElementById("rolId").value;
     const rolNombre = document.getElementById("rolNombre").value;
@@ -149,9 +148,6 @@ function guardarEdicion() {
         });
 }
 
-
-
-
 async function cargarRoles() {
     try {
         const response = await fetch("/auth/roles");
@@ -223,3 +219,8 @@ document.getElementById("formAgregarUsuario").addEventListener("submit", async f
         console.error("Error al agregar usuario:", error);
     }
 });
+
+document.getElementById("btnRegresar").addEventListener("click", function () {
+    window.location.href = "/dashboard"; // Asegúrate de que la ruta sea correcta
+});
+
