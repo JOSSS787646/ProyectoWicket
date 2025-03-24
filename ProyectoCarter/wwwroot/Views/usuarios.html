@@ -10,8 +10,7 @@
 <body class="admin-page">
 
     <header>
-        <h1><i class="fas fa-user-shield"></i> Administrar Usuarios</h1>
-        <button id="btnAgregarRol" class="btn-primary"><i class="fas fa-plus"></i> Nuevo Rol</button>
+        <h1><i class="fas fa-users"></i> Administrar Usuarios</h1>
         <button id="btnAgregarUsuario" class="btn-agregar">Agregar Usuario</button>
         <button id="btnRegresar" class="btn-secondary"><i class="fas fa-arrow-left"></i> Regresar</button>
     </header>
@@ -74,24 +73,6 @@
             <select id="editRol"></select> <!-- Ahora es un select -->
 
             <button onclick="guardarEdicion()" class="btn-primary">Guardar</button>
-            <button onclick="cerrarModal()" class="btn-secondary">Cancelar</button>
-        </div>
-    </div>
-
-    <!-- Modal para agregar nuevo rol -->
-    <div id="addRolModal" class="modal">
-        <div class="modal-content">
-            <span class="cerrar" onclick="cerrarModal()">&times;</span>
-
-            <h2>Nuevo Rol</h2>
-
-            <label>ID del Rol:</label>
-            <input type="number" id="rolId" placeholder="Ejemplo: 3">
-
-            <label>Nombre del Rol:</label>
-            <input type="text" id="rolNombre" placeholder="Ejemplo: Moderador">
-
-            <button onclick="guardarNuevoRol()" class="btn-primary">Guardar</button>
             <button onclick="cerrarModal()" class="btn-secondary">Cancelar</button>
         </div>
     </div>

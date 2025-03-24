@@ -2,6 +2,7 @@
 using System.Threading.Tasks;
 using Dapper;
 using MySql.Data.MySqlClient;
+using ProyectoCarter.Repositories;
 
 public class RolRepository
 {
@@ -33,4 +34,12 @@ public class RolRepository
         var query = "SELECT * FROM Roles";
         return await connection.QueryAsync(query);
     }
+
+    public async Task<IEnumerable<Rol>> ObtenerPerfiles()
+    {
+        using var connection = new MySqlConnection(_connectionString);
+        var query = "SELECT Id, Nombre FROM Roles";
+        return await connection.QueryAsync<Rol>(query);
+    }
+
 }

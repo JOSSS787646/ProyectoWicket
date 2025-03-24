@@ -54,6 +54,79 @@ nav {
             color: #f4f4f4; /* Color al pasar el mouse */
         }
 
+
+/* Dropdown menu */
+/* Estilos generales del menú */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #007BFF;
+    list-style: none;
+    padding: 10px;
+    margin: 0;
+    min-width: 200px;
+    z-index: 1000;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+    .dropdown-menu li {
+        padding: 5px 0;
+    }
+
+    /* Estilos para los enlaces del menú */
+    .dropdown-menu a {
+        color: white;
+        display: block;
+        padding: 8px 12px;
+        border-radius: 4px;
+        text-decoration: none;
+    }
+
+        .dropdown-menu a:hover {
+            background-color: #0056b3;
+        }
+
+/* Mostrar el menú al pasar el mouse */
+.dropdown:hover > .dropdown-menu {
+    display: block;
+}
+
+/* Estilos para los submenús */
+.dropdown-submenu {
+    position: relative;
+}
+
+    .dropdown-submenu > .dropdown-menu {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 100%;
+    }
+
+    /* Mostrar el submenú al pasar el mouse */
+    .dropdown-submenu:hover > .dropdown-menu {
+        display: block;
+    }
+
+
 /* Breadcrumbs */
 .breadcrumb {
     margin: 20px auto;
@@ -177,4 +250,45 @@ nav {
         flex-direction: column;
         align-items: center;
     }
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #007BFF;
+        position: absolute;
+        width: 100%;
+        left: 0;
+        top: 50px;
+        padding: 10px 0;
+    }
+
+        .nav-links.active {
+            display: flex;
+        }
+
+        .nav-links li {
+            text-align: center;
+            margin: 10px 0;
+        }
+
+    .dropdown-menu, .dropdown-submenu {
+        position: static;
+        display: none;
+        background-color: #0056b3;
+    }
+
+        .dropdown:hover .dropdown-menu,
+        .dropdown-submenu:hover .dropdown-submenu {
+            display: none;
+        }
+
+        .dropdown-menu.active, .dropdown-submenu.active {
+            display: block;
+        }
 }

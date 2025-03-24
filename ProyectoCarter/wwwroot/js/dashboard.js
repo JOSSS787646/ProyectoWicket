@@ -9,6 +9,20 @@
             navLinks.classList.toggle("active");
         });
 
+        const dropdowns = document.querySelectorAll(".dropdown, .dropdown-submenu");
+
+        dropdowns.forEach(dropdown => {
+            dropdown.addEventListener("click", function (e) {
+                if (window.innerWidth <= 768) {
+                    e.preventDefault();
+                    const submenu = this.querySelector(".dropdown-menu, .dropdown-submenu");
+                    if (submenu) {
+                        submenu.classList.toggle("active");
+                    }
+                }
+            });
+        });
+
         // Verificar si el usuario está en localStorage en lugar de la sesión
         const user = localStorage.getItem("loggedInUser");
 

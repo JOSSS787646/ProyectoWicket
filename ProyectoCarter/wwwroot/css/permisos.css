@@ -1,0 +1,15 @@
+﻿.module-row:hover {
+    background-color: #f8f9fa;
+}
+
+.checkbox-cell {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.sticky-header {
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 100;
+}

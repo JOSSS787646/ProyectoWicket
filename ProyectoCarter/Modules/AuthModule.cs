@@ -95,6 +95,23 @@ namespace ProyectoCarter.Modules
                 return resultado > 0 ? Results.Ok("Usuario actualizado correctamente.") : Results.BadRequest("Error al actualizar el usuario.");
             });
 
+            group.MapGet("/modulos", async (UsuarioRepository repo) =>
+            {
+                var modulos = await repo.GetModulos();
+                return Results.Ok(modulos);
+            });
+
+            group.MapGet("/permisos/{rolId}", async (int rolId, UsuarioRepository repo) =>
+            {
+                var permisos = await repo.GetPermisosPorRol(rolId);
+                return Results.Ok(permisos);
+            });
+
+            group.MapPost("/permisos/{rolId}", async (int rolId, [FromBody] List<PermisoRequest> permisos, UsuarioRepository repo) =>
+            {
+                var resultado = await repo.GuardarPermisos(rolId, permisos);
+                return resultado ? Results.Ok() : Results.BadRequest();
+            });
 
 
             // Redirigir a la página de login al acceder a la raíz
@@ -142,5 +159,16 @@ namespace ProyectoCarter.Modules
         public string Username { get; set; }
         public string Email { get; set; }
         public string Password { get; set; }
+    }
+
+    public class PermisoRequest
+    {
+        public int ModuloId { get; set; }
+        public bool PuedeConsultar { get; set; }
+        public bool PuedeAgregar { get; set; }
+        public bool PuedeEditar { get; set; }
+        public bool PuedeEliminar { get; set; }
+        public bool PuedeExportar { get; set; }
+        public bool PuedeVerBitacora { get; set; }
     }
 }

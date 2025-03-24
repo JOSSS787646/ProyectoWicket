@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asignación de Permisos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/css/permisos.css">
+
+</head>
+<body>
+    <div class="container-fluid mt-4">
+        <div class="card">
+            <div class="card-header bg-primary text-white">
+                <h3 class="card-title"><i class="fas fa-user-shield"></i> Asignación de Permisos</h3>
+            </div>
+            <div class="card-body">
+                <div class="row mb-4 sticky-header">
+                    <div class="col-md-6">
+                        <label for="selectRol" class="form-label">Seleccione un Rol:</label>
+                        <select id="selectRol" class="form-select">
+                            <option value="">-- Seleccione un rol --</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6 d-flex align-items-end justify-content-end">
+                        <button id="btnGuardar" class="btn btn-success" disabled>
+                            <i class="fas fa-save"></i> Guardar Permisos
+                        </button>
+                        <button id="btnRegresar" class="btn btn-secondary ms-2">
+                            <i class="fas fa-arrow-left"></i> Regresar
+                        </button>
+                    </div>
+                </div>
+
+                <div class="table-responsive">
+                    <table class="table table-hover table-bordered">
+                        <thead class="table-light">
+                            <tr>
+                                <th>Módulo</th>
+                                <th class="checkbox-cell">Consultar</th>
+                                <th class="checkbox-cell">Agregar</th>
+                                <th class="checkbox-cell">Editar</th>
+                                <th class="checkbox-cell">Eliminar</th>
+                                <th class="checkbox-cell">Exportar</th>
+                                <th class="checkbox-cell">Bitácora</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tblPermisos">
+                            <!-- Filas se llenarán con JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/permisos.js"></script>
+</body>
+</html>

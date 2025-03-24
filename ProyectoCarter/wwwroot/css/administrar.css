@@ -70,6 +70,7 @@ tr:hover {
     background-color: #f1f1f1;
 }
 
+/* Estilos del modal */
 .modal {
     display: none; /* Ocultar por defecto */
     position: fixed;
@@ -92,6 +93,8 @@ tr:hover {
     border-radius: 10px;
     text-align: center;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Sombra para dar profundidad */
+    position: relative; /* Asegura que el contenido del modal esté posicionado correctamente */
+    margin: auto; /* Centra el contenido del modal */
 }
 
 /* Botón de cerrar */
@@ -104,9 +107,9 @@ tr:hover {
     color: #333;
 }
 
-.cerrar:hover {
-    color: #e74c3c; /* Cambio de color en hover */
-}
+    .cerrar:hover {
+        color: #e74c3c; /* Cambio de color en hover */
+    }
 
 /* Inputs dentro de los modales */
 .modal-content input,

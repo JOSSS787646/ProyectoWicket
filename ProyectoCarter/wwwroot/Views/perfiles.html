@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administrar Perfiles</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="/css/administrar.css">
+</head>
+<body class="admin-page">
+
+    <header>
+        <h1><i class="fas fa-id-badge"></i> Administrar Perfiles</h1>
+        <button id="btnAgregarRol" class="btn-primary"><i class="fas fa-plus"></i> Nuevo Perfil</button>
+        <button id="btnRegresar" class="btn-secondary"><i class="fas fa-arrow-left"></i> Regresar</button>
+    </header>
+
+    <div class="admin-container">
+
+        <table id="rolesTabla">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+
+    </div>
+
+    <!-- Modal para agregar nuevo rol -->
+    <div id="addRolModal" class="modal">
+        <div class="modal-content">
+            <span class="cerrar" onclick="cerrarModal()">&times;</span>
+
+            <h2>Nuevo Rol</h2>
+
+            <label>ID del Rol:</label>
+            <input type="number" id="rolId" placeholder="Ejemplo: 3">
+
+            <label>Nombre del Rol:</label>
+            <input type="text" id="rolNombre" placeholder="Ejemplo: Moderador">
+
+            <button onclick="guardarNuevoRol()" class="btn-primary">Guardar</button>
+            <button onclick="cerrarModal()" class="btn-secondary">Cancelar</button>
+        </div>
+    </div>
+
+
+    <script src="/js/administrarV2.js"></script>
+</body>
+</html>

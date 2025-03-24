@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using System.Data;
 using System.Threading.Tasks;
 using Dapper;
+using System.Reflection;
+using ProyectoCarter.Modules;
+using ProyectoCarter.Models;
 
 namespace ProyectoCarter.Repositories
 {
@@ -13,8 +16,6 @@ namespace ProyectoCarter.Repositories
         {
             _connectionString = configuration.GetConnectionString("DefaultConnection");
         }
-
-
         public async Task<Usuario?> GetByUsername(string username)
         {
             using var connection = GetConnection();
@@ -69,6 +70,66 @@ namespace ProyectoCarter.Repositories
             return await connection.ExecuteAsync(
                 "INSERT INTO Roles (Nombre) VALUES (@Nombre)", rol
             );
+        }
+
+        public async Task<IEnumerable<Modulo>> GetModulos()
+        {
+            using var connection = new MySqlConnection(_connectionString);
+            return await connection.QueryAsync<Modulo>(
+                "SELECT Id, Nombre AS Nombre, Ruta, Icono, Orden FROM Modulo");
+        }
+
+        public async Task<IEnumerable<PermisoRequest>> GetPermisosPorRol(int rolId)
+        {
+            using var connection = new MySqlConnection(_connectionString);
+            return await connection.QueryAsync<PermisoRequest>(
+                "SELECT ModuloId as moduloId, PuedeConsultar, PuedeAgregar, PuedeEditar, " +
+                "PuedeEliminar, PuedeExportar, PuedeVerBitacora FROM RolModulo WHERE RolId = @RolId",
+                new { RolId = rolId });
+        }
+
+        public async Task<bool> GuardarPermisos(int rolId, List<PermisoRequest> permisos)
+        {
+            using var connection = new MySqlConnection(_connectionString);
+            await connection.OpenAsync();
+            using var transaction = await connection.BeginTransactionAsync();
+
+            try
+            {
+                // Eliminar permisos existentes
+                await connection.ExecuteAsync(
+                    "DELETE FROM RolModulo WHERE RolId = @RolId",
+                    new { RolId = rolId }, transaction);
+
+                // Insertar nuevos permisos
+                foreach (var permiso in permisos)
+                {
+                    await connection.ExecuteAsync(
+                        "INSERT INTO RolModulo (RolId, ModuloId, PuedeConsultar, PuedeAgregar, " +
+                        "PuedeEditar, PuedeEliminar, PuedeExportar, PuedeVerBitacora) " +
+                        "VALUES (@RolId, @ModuloId, @PuedeConsultar, @PuedeAgregar, @PuedeEditar, " +
+                        "@PuedeEliminar, @PuedeExportar, @PuedeVerBitacora)",
+                        new
+                        {
+                            RolId = rolId,
+                            permiso.ModuloId,
+                            permiso.PuedeConsultar,
+                            permiso.PuedeAgregar,
+                            permiso.PuedeEditar,
+                            permiso.PuedeEliminar,
+                            permiso.PuedeExportar,
+                            permiso.PuedeVerBitacora
+                        }, transaction);
+                }
+
+                await transaction.CommitAsync();
+                return true;
+            }
+            catch
+            {
+                await transaction.RollbackAsync();
+                return false;
+            }
         }
 
 
