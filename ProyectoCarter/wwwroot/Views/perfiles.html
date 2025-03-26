@@ -16,7 +16,6 @@
     </header>
 
     <div class="admin-container">
-
         <table id="rolesTabla">
             <thead>
                 <tr>
@@ -24,29 +23,25 @@
                     <th>Nombre</th>
                 </tr>
             </thead>
-            <tbody></tbody>
+            <tbody id="rolesBody">
+                <!-- Los roles se cargarán aquí dinámicamente -->
+            </tbody>
         </table>
-
     </div>
 
     <!-- Modal para agregar nuevo rol -->
     <div id="addRolModal" class="modal">
         <div class="modal-content">
             <span class="cerrar" onclick="cerrarModal()">&times;</span>
-
-            <h2>Nuevo Rol</h2>
-
-            <label>ID del Rol:</label>
+            <h2>Nuevo Perfil</h2>
+            <label>ID del Perfil:</label>
             <input type="number" id="rolId" placeholder="Ejemplo: 3">
-
-            <label>Nombre del Rol:</label>
+            <label>Nombre del Perfil:</label>
             <input type="text" id="rolNombre" placeholder="Ejemplo: Moderador">
-
             <button onclick="guardarNuevoRol()" class="btn-primary">Guardar</button>
             <button onclick="cerrarModal()" class="btn-secondary">Cancelar</button>
         </div>
     </div>
-
 
     <script src="/js/administrarV2.js"></script>
 </body>

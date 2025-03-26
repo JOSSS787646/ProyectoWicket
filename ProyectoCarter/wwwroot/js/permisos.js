@@ -64,14 +64,10 @@
     // Cargar módulos desde la API
     function cargarModulos() {
         fetch('/auth/modulos')
-            .then(response => {
-                if (!response.ok) throw new Error('Error al cargar módulos');
-                return response.json();
-            })
+            .then(response => response.json())
             .then(data => {
-                console.log("Respuesta cruda:", data);
+                console.log("Módulos con CRUD recibidos:", data);
                 modulos = data;
-
             })
             .catch(error => {
                 console.error('Error:', error);
@@ -108,7 +104,7 @@
                     tr.dataset.moduloId = modulo.id;
 
                     tr.innerHTML = `
-                        <td>${modulo.nombre}</td>
+                        <td>${modulo.nombreModulo}</td>
                         <td class="checkbox-cell">
                             <input type="checkbox" class="form-check-input permiso-checkbox" data-permiso="consultar" ${permiso.puedeConsultar ? 'checked' : ''}>
                         </td>
@@ -171,7 +167,7 @@
         const filas = document.querySelectorAll('.module-row');
 
         filas.forEach(fila => {
-            const moduloId = fila.dataset.moduloId;
+            const moduloId = parseInt(fila.dataset.moduloId); // Asegurar que es número
 
             permisosAGuardar.push({
                 moduloId: moduloId,
@@ -186,23 +182,122 @@
 
         fetch(`/auth/permisos/${rolSeleccionado}`, {
             method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
             body: JSON.stringify(permisosAGuardar)
         })
-            .then(response => {
-                if (!response.ok) throw new Error('Error al guardar permisos');
+            .then(async response => {
+                const contentType = response.headers.get('content-type');
+
+                if (!contentType || !contentType.includes('application/json')) {
+                    throw new Error('La respuesta no es JSON');
+                }
+
+                if (!response.ok) {
+                    const errorData = await response.json().catch(() => ({}));
+                    throw new Error(errorData.message || `Error HTTP: ${response.status}`);
+                }
+
                 return response.json();
             })
-            .then(() => {
-                mostrarAlerta('Permisos guardados correctamente', 'success');
-                cargarPermisosRol(rolSeleccionado); // Recargar para actualizar
+            .then(data => {
+                if (data.success) {
+                    mostrarAlerta(data.message, 'success');
+                    cargarPermisosRol(rolSeleccionado);
+                } else {
+                    throw new Error(data.message || 'Error al guardar permisos');
+                }
             })
             .catch(error => {
-                console.error('Error:', error);
-                mostrarAlerta('Error al guardar los permisos', 'danger');
+                console.error('Error al guardar permisos:', error);
+                mostrarAlerta(error.message || 'Error al guardar los permisos', 'danger');
             });
     }
 
+    function cargarMenu() {
+        fetch('/auth/modulos/jerarquia')
+            .then(response => response.json())
+            .then(modulos => {
+                const navLinks = document.querySelector('.nav-links');
+                navLinks.innerHTML = ''; // Limpiar menú existente
+
+                // Agregar Dashboard
+                const dashboard = modulos.find(m => m.NombreModulo === 'Dashboard');
+                if (dashboard) {
+                    navLinks.appendChild(crearItemMenu(dashboard));
+                }
+
+                // Procesar módulos con hijos (dropdowns)
+                modulos.filter(m => m.Hijos && m.Hijos.length > 0).forEach(modulo => {
+                    const li = document.createElement('li');
+                    li.className = 'dropdown';
+
+                    const dropbtn = document.createElement('a');
+                    dropbtn.href = modulo.Ruta || '#';
+                    dropbtn.className = 'dropbtn';
+                    dropbtn.innerHTML = `<i class="${modulo.Icono}"></i> ${modulo.NombreModulo} <i class="fas fa-caret-down"></i>`;
+
+                    const dropdownMenu = document.createElement('ul');
+                    dropdownMenu.className = 'dropdown-menu';
+
+                    modulo.Hijos.forEach(hijo => {
+                        if (hijo.Hijos && hijo.Hijos.length > 0) {
+                            // Submenú anidado
+                            const submenuItem = document.createElement('li');
+                            submenuItem.className = 'dropdown-submenu';
+
+                            const submenuLink = document.createElement('a');
+                            submenuLink.href = hijo.Ruta || '#';
+                            submenuLink.innerHTML = `<i class="${hijo.Icono}"></i> ${hijo.NombreModulo} <i class="fas fa-caret-right"></i>`;
+
+                            const submenu = document.createElement('ul');
+                            submenu.className = 'dropdown-menu';
+
+                            hijo.Hijos.forEach(subhijo => {
+                                submenu.appendChild(crearItemMenu(subhijo, true));
+                            });
+
+                            submenuItem.appendChild(submenuLink);
+                            submenuItem.appendChild(submenu);
+                            dropdownMenu.appendChild(submenuItem);
+                        } else {
+                            // Item simple
+                            dropdownMenu.appendChild(crearItemMenu(hijo));
+                        }
+                    });
+
+                    li.appendChild(dropbtn);
+                    li.appendChild(dropdownMenu);
+                    navLinks.appendChild(li);
+                });
+
+                // Agregar logout y usuario
+                const logoutLi = document.createElement('li');
+                logoutLi.innerHTML = `<a href="#" id="logout"><i class="fas fa-sign-out-alt"></i> Cerrar Sesión</a>`;
+                navLinks.appendChild(logoutLi);
+
+                const userLi = document.createElement('li');
+                userLi.id = 'userDisplay';
+                userLi.innerHTML = `<i class="fas fa-user"></i> <span id="usernameDisplay"></span>`;
+                navLinks.appendChild(userLi);
+            });
+    }
+
+    function crearItemMenu(modulo, isSubitem = false) {
+        const li = document.createElement('li');
+        const a = document.createElement('a');
+        a.href = modulo.Ruta;
+        a.innerHTML = isSubitem
+            ? `<i class="${modulo.Icono}"></i> ${modulo.NombreModulo}`
+            : `<i class="${modulo.Icono}"></i> ${modulo.NombreModulo}`;
+        li.appendChild(a);
+        return li;
+    }
+
+    // Llamar al cargar la página
+    document.addEventListener('DOMContentLoaded', cargarMenu);
     // Mostrar alerta
     function mostrarAlerta(mensaje, tipo) {
         const alerta = document.createElement('div');

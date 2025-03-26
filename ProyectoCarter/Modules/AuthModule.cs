@@ -109,8 +109,53 @@ namespace ProyectoCarter.Modules
 
             group.MapPost("/permisos/{rolId}", async (int rolId, [FromBody] List<PermisoRequest> permisos, UsuarioRepository repo) =>
             {
-                var resultado = await repo.GuardarPermisos(rolId, permisos);
-                return resultado ? Results.Ok() : Results.BadRequest();
+                try
+                {
+                    if (permisos == null || !permisos.Any())
+                    {
+                        return Results.BadRequest(new { success = false, message = "No se recibieron permisos para guardar" });
+                    }
+
+                    var resultado = await repo.GuardarPermisos(rolId, permisos);
+
+                    if (resultado)
+                    {
+                        return Results.Ok(new { success = true, message = "Permisos actualizados correctamente" });
+                    }
+                    else
+                    {
+                        return Results.BadRequest(new { success = false, message = "Error al guardar los permisos" });
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"Error en endpoint /permisos: {ex.Message}");
+                    return Results.StatusCode(500);
+                }
+            });
+
+            group.MapGet("/modulos/jerarquia", async (UsuarioRepository repo) =>
+            {
+                var modulos = await repo.GetModulos();
+
+                var modulosRaiz = modulos
+                    .Where(m => m.ModuloPadreId == null)
+                    .OrderBy(m => m.Orden)
+                    .ToList();
+
+                var modulosHijos = modulos
+                    .Where(m => m.ModuloPadreId != null)
+                    .ToList();
+
+                foreach (var modulo in modulosRaiz)
+                {
+                    modulo.Hijos = modulosHijos
+                        .Where(m => m.ModuloPadreId == modulo.Id)
+                        .OrderBy(m => m.Orden)
+                        .ToList();
+                }
+
+                return Results.Ok(modulosRaiz);
             });
 
 

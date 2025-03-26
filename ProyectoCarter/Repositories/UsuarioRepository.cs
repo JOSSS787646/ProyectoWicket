@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Dapper;
 using System.Reflection;
 using ProyectoCarter.Modules;
-using ProyectoCarter.Models;
+using System.Text.Json.Serialization;
 
 namespace ProyectoCarter.Repositories
 {
@@ -71,14 +71,13 @@ namespace ProyectoCarter.Repositories
                 "INSERT INTO Roles (Nombre) VALUES (@Nombre)", rol
             );
         }
-
         public async Task<IEnumerable<Modulo>> GetModulos()
         {
-            using var connection = new MySqlConnection(_connectionString);
-            return await connection.QueryAsync<Modulo>(
-                "SELECT Id, Nombre AS Nombre, Ruta, Icono, Orden FROM Modulo");
+            using var connection = GetConnection();
+            var modulos = await connection.QueryAsync<Modulo>(
+                "SELECT Id, NombreModulo, Ruta, Icono, Orden FROM Modulo ORDER BY Orden");
+            return modulos;
         }
-
         public async Task<IEnumerable<PermisoRequest>> GetPermisosPorRol(int rolId)
         {
             using var connection = new MySqlConnection(_connectionString);
@@ -125,13 +124,13 @@ namespace ProyectoCarter.Repositories
                 await transaction.CommitAsync();
                 return true;
             }
-            catch
+            catch (Exception ex)
             {
                 await transaction.RollbackAsync();
+                Console.WriteLine($"Error al guardar permisos: {ex.Message}");
                 return false;
             }
         }
-
 
     }
 
@@ -156,6 +155,17 @@ namespace ProyectoCarter.Repositories
     {
         public int Id { get; set; }
         public string Nombre { get; set; }
+    }
+
+    public class Modulo
+    {
+        public int Id { get; set; }
+        public string NombreModulo { get; set; }  // Asegúrate que coincida con la BD
+        public string Ruta { get; set; }
+        public string Icono { get; set; }
+        public int Orden { get; set; }
+        public int? ModuloPadreId { get; set; } // Nullable para módulos raíz
+ 
     }
 
 

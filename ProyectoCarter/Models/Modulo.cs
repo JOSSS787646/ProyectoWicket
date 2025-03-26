@@ -1,11 +1,11 @@
-﻿namespace ProyectoCarter.Models
-{
-    public class Modulo
-    {
-        public int id { get; set; }  // Nota: en minúscula para coincidir con el JSON
-        public string nombre { get; set; }  // Cambiado de NombreModulo a nombre
-        public string ruta { get; set; }
-        public string icono { get; set; }
-        public int orden { get; set; }
-    }
-}
+﻿//namespace ProyectoCarter.Models
+//{
+//    public class Modulo
+//    {
+//        public int Id { get; set; }
+//        public string NombreModulo { get; set; }  // Asegúrate que coincida con la BD
+//        public string Ruta { get; set; }
+//        public string Icono { get; set; }
+//        public int Orden { get; set; }
+//    }
+//}

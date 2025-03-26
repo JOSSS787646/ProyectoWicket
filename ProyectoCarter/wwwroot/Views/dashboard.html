@@ -14,9 +14,7 @@
         <button class="menu-toggle"><i class="fas fa-bars"></i></button>
         <ul class="nav-links">
             <li><a href="/dashboard"><i class="fas fa-home"></i> Inicio</a></li>
-            <li><a href="#" id="showConstructionServicios"><i class="fas fa-cogs"></i> Servicios</a></li>
-            <li><a href="#" id="showConstructionContacto"><i class="fas fa-envelope"></i> Contacto</a></li>
-            <!-- <li><a href="/Views/administrar.html" id="adminPanel"><i class="fas fa-user-shield"></i> Administrar</a></li> -->
+             <!--<li><a href="/Views/administrar.html" id="adminPanel"><i class="fas fa-user-shield"></i> Administrar</a></li>--> 
             <!-- Dropdown de Administrar -->
             <li class="dropdown">
                 <a href="#" class="dropbtn"><i class="fas fa-user"></i> Administrar <i class="fas fa-caret-down"></i></a>
@@ -28,8 +26,51 @@
                 </ul>
             </li>
 
-            <!-- Dropdown de Proveedores -->
+            <!-- Dropdown de Personas -->
             <li class="dropdown">
+                <a href="#" class="dropbtn"><i class="fas fa-user"></i> Personas <i class="fas fa-caret-down"></i></a>
+                <ul class="dropdown-menu">
+                    <li class="dropdown-submenu">
+                        <a href="#"><i class="fas fa-users"></i> Cliente <i class="fas fa-caret-right"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/Views/clienteFisica.html"><i class="fas fa-circle"></i> Fisica</a></li>
+                            <li><a href="/Views/clienteMoral.html"><i class="fas fa-circle"></i> Moral</a></li>                            
+                        </ul>
+                    </li>
+                    <li class="dropdown-submenu">
+                        <a href="#"><i class="fas fa-id-badge"></i> Proveedor <i class="fas fa-caret-right"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/Views/proveedorFisica.html"><i class="fas fa-circle"></i> Fisica</a></li>
+                            <li><a href="/Views/proveedorMoral.html"><i class="fas fa-circle"></i> Moral</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- Dropdown de Equipo -->
+            <li class="dropdown">
+                <a href="#" class="dropbtn"><i class="fas fa-user"></i> Equipo <i class="fas fa-caret-down"></i></a>
+                <ul class="dropdown-menu">
+                    <li class="dropdown-submenu">
+                        <a href="#"><i class="fas fa-users"></i> Oficina <i class="fas fa-caret-right"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/Views/oficinaPc.html"><i class="fas fa-circle"></i> PC</a></li>
+                            <li><a href="/Views/oficinaImpresora.html"><i class="fas fa-circle"></i> Impresora</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown-submenu">
+                        <a href="#"><i class="fas fa-id-badge"></i> Mantenimiento <i class="fas fa-caret-right"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/Views/mantenimientoTaladros.html"><i class="fas fa-circle"></i> Taladros</a></li>
+                            <li><a href="/Views/mantenimientoPinzas.html"><i class="fas fa-circle"></i> Pinzas</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+
+            <!-- Dropdown de Proveedores -->
+            <!--<li class="dropdown">
                 <a href="#" class="dropbtn"><i class="fas fa-user"></i> Proveedores <i class="fas fa-caret-down"></i></a>
                 <ul class="dropdown-menu">
                     <li class="dropdown-submenu">
@@ -48,7 +89,7 @@
                         </ul>
                     </li>
                 </ul>
-            </li>
+            </li>-->
 
 
             <li><a href="#" id="logout"><i class="fas fa-sign-out-alt"></i> Cerrar Sesión</a></li>
@@ -82,7 +123,7 @@
                 <p>5</p>
             </div>
         </div>
-
+            
         <p id="message"></p>
     </div>
 
