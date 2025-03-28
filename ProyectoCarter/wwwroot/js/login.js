@@ -5,7 +5,7 @@
     const password = document.getElementById("password").value.trim();
     const errorMessage = document.getElementById("errorMessage");
 
-    username = username.toLowerCase(); // Normalizar el nombre de usuario
+    username = username.toLowerCase();
 
     try {
         const response = await fetch(`${window.location.origin}/auth/login`, {
@@ -20,7 +20,7 @@
 
         if (response.ok) {
             localStorage.setItem("loggedInUser", JSON.stringify(data));
-            window.location.href = "/dashboard"; // Redirigir al dashboard
+            window.location.href = "/dashboard";
         } else {
             errorMessage.textContent = "Usuario o contraseña incorrectos";
         }

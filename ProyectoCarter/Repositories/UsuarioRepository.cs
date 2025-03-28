@@ -1,11 +1,7 @@
-﻿using MySql.Data.MySqlClient;
-using System.Collections.Generic;
-using System.Data;
-using System.Threading.Tasks;
+﻿using System.Text.Json.Serialization;
 using Dapper;
-using System.Reflection;
+using MySql.Data.MySqlClient;
 using ProyectoCarter.Modules;
-using System.Text.Json.Serialization;
 
 namespace ProyectoCarter.Repositories
 {
@@ -25,7 +21,7 @@ namespace ProyectoCarter.Repositories
             );
 
         }
-        private MySqlConnection GetConnection() => new MySqlConnection(_connectionString);
+        public MySqlConnection GetConnection() => new MySqlConnection(_connectionString);
         public async Task<IEnumerable<UsuarioDTO>> GetAll()
         {
             using var connection = GetConnection();
@@ -39,14 +35,29 @@ namespace ProyectoCarter.Repositories
             using var connection = GetConnection();
             return await connection.QueryFirstOrDefaultAsync<Usuario>("SELECT * FROM Usuarios WHERE Id = @Id", new { Id = id });
         }
+
         public async Task<int> Create(Usuario usuario)
         {
             using var connection = GetConnection();
+
+            // Verificar si el correo ya está en uso
+            var existeCorreo = await connection.ExecuteScalarAsync<int>(
+                "SELECT COUNT(1) FROM Usuarios WHERE Correo = @Correo",
+                new { usuario.Correo }
+            );
+
+            if (existeCorreo > 0)
+            {
+                throw new Exception("El correo ya está registrado. Intente con otro.");
+            }
+
+            // Insertar el usuario si el correo no está en uso
             return await connection.ExecuteAsync(
                 "INSERT INTO Usuarios (Nombre, Correo, Contraseña, RolId) VALUES (@Nombre, @Correo, @Contraseña, @RolId)",
                 usuario
             );
         }
+
         public async Task<int> Update(Usuario usuario)
         {
             using var connection = GetConnection();
@@ -55,7 +66,8 @@ namespace ProyectoCarter.Repositories
                 usuario
             );
         }
-        public async Task<int> Delete(int id)        {
+        public async Task<int> Delete(int id)
+        {
             using var connection = GetConnection();
             return await connection.ExecuteAsync("DELETE FROM Usuarios WHERE Id = @Id", new { Id = id });
         }
@@ -86,7 +98,6 @@ namespace ProyectoCarter.Repositories
                 "PuedeEliminar, PuedeExportar, PuedeVerBitacora FROM RolModulo WHERE RolId = @RolId",
                 new { RolId = rolId });
         }
-
         public async Task<bool> GuardarPermisos(int rolId, List<PermisoRequest> permisos)
         {
             using var connection = new MySqlConnection(_connectionString);
@@ -131,7 +142,13 @@ namespace ProyectoCarter.Repositories
                 return false;
             }
         }
-
+        public async Task<Rol?> GetRolById(int rolId)
+        {
+            using var connection = GetConnection();
+            return await connection.QueryFirstOrDefaultAsync<Rol>(
+                "SELECT Id, Nombre FROM Roles WHERE Id = @Id",
+                new { Id = rolId });
+        }
     }
 
     public class Usuario
@@ -164,9 +181,21 @@ namespace ProyectoCarter.Repositories
         public string Ruta { get; set; }
         public string Icono { get; set; }
         public int Orden { get; set; }
-        public int? ModuloPadreId { get; set; } // Nullable para módulos raíz
- 
+        public int? ModuloPadreId { get; set; } = null; // Hacerlo nullable con valor por defecto
+
+        [JsonIgnore] // Para evitar referencias circulares al serializar a JSON
+        public List<Modulo> Hijos { get; set; } = new List<Modulo>();
+
     }
 
+    public class ModuloConPermisos : Modulo
+    {
+        public bool PuedeConsultar { get; set; }
+        public bool PuedeAgregar { get; set; }
+        public bool PuedeEditar { get; set; }
+        public bool PuedeEliminar { get; set; }
+        [JsonIgnore]
+        public new List<ModuloConPermisos> Hijos { get; set; } = new List<ModuloConPermisos>();
+    }
 
 }

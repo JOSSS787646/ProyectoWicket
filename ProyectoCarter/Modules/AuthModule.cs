@@ -1,4 +1,5 @@
 ﻿using Carter;
+using Dapper;
 using Microsoft.AspNetCore.Mvc;
 using ProyectoCarter.Repositories;
 
@@ -10,23 +11,80 @@ namespace ProyectoCarter.Modules
         {
             var group = app.MapGroup("/auth");
 
+            //group.MapPost("/login", async ([FromBody] LoginRequest login, UsuarioRepository repo) =>
+            //{
+            //    var usuario = await repo.GetByUsername(login.Username);
+            //    if (usuario is null)
+            //    {
+            //        return Results.Unauthorized(); // Usuario no encontrado
+            //    }
+
+            //    // Verificar la contraseña usando BCrypt
+            //    bool isPasswordValid = BCrypt.Net.BCrypt.Verify(login.Password, usuario.Contraseña);
+            //    if (!isPasswordValid)
+            //    {
+            //        return Results.Unauthorized(); // Contraseña incorrecta
+            //    }
+
+            //    // Si las credenciales son correctas, devolver los datos del usuario
+            //    return Results.Ok(new { Id = usuario.Id, Nombre = usuario.Nombre, Correo = usuario.Correo, RolId = usuario.RolId });
+            //});
+
             group.MapPost("/login", async ([FromBody] LoginRequest login, UsuarioRepository repo) =>
             {
                 var usuario = await repo.GetByUsername(login.Username);
-                if (usuario is null)
+                if (usuario is null) return Results.Unauthorized();
+
+                if (!BCrypt.Net.BCrypt.Verify(login.Password, usuario.Contraseña))
+                    return Results.Unauthorized();
+
+                // Obtener el nombre del rol
+                var rol = await repo.GetRolById(usuario.RolId);
+
+                return Results.Ok(new
                 {
-                    return Results.Unauthorized(); // Usuario no encontrado
+                    Id = usuario.Id,
+                    Nombre = usuario.Nombre,
+                    Correo = usuario.Correo,
+                    RolId = usuario.RolId,
+                    RolNombre = rol?.Nombre ?? "Sin Rol" // Asegurar que siempre tenga valor
+                });
+            });
+
+            group.MapGet("/menu/{rolId}", async (int rolId, UsuarioRepository repo) =>
+            {
+                var query = @"
+        SELECT m.Id, m.NombreModulo, m.Ruta, m.Icono, m.Orden, m.ModuloPadreId,
+               rm.PuedeConsultar, rm.PuedeAgregar, rm.PuedeEditar, rm.PuedeEliminar
+        FROM Modulo m
+        JOIN RolModulo rm ON m.Id = rm.ModuloId AND rm.RolId = @RolId
+        WHERE rm.PuedeConsultar = true
+        ORDER BY m.Orden";
+
+                var modulos = await repo.GetConnection().QueryAsync<ModuloConPermisos>(query, new { RolId = rolId });
+
+                // Construir jerarquía solo con módulos que tienen al menos un permiso
+                var modulosRaiz = modulos
+                    .Where(m => m.ModuloPadreId == null)
+                    .ToList();
+
+                foreach (var modulo in modulosRaiz)
+                {
+                    modulo.Hijos = modulos
+                        .Where(m => m.ModuloPadreId == modulo.Id)
+                        .ToList();
                 }
 
-                // Verificar la contraseña usando BCrypt
-                bool isPasswordValid = BCrypt.Net.BCrypt.Verify(login.Password, usuario.Contraseña);
-                if (!isPasswordValid)
-                {
-                    return Results.Unauthorized(); // Contraseña incorrecta
-                }
+                // Filtrar módulos raíz que no tienen hijos ni permisos relevantes
+                modulosRaiz = modulosRaiz
+                    .Where(m => m.Hijos.Count > 0 ||
+                               m.PuedeConsultar ||
+                               m.PuedeAgregar ||
+                               m.PuedeEditar ||
+                               m.PuedeEliminar)
+                    .ToList();
 
-                // Si las credenciales son correctas, devolver los datos del usuario
-                return Results.Ok(new { Id = usuario.Id, Nombre = usuario.Nombre, Correo = usuario.Correo, RolId = usuario.RolId });
+                return Results.Ok(modulosRaiz);
             });
 
             group.MapPost("/register", async ([FromBody] RegisterRequest request, UsuarioRepository repo) =>
