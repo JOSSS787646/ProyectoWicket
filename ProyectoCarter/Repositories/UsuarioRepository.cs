@@ -35,7 +35,6 @@ namespace ProyectoCarter.Repositories
             using var connection = GetConnection();
             return await connection.QueryFirstOrDefaultAsync<Usuario>("SELECT * FROM Usuarios WHERE Id = @Id", new { Id = id });
         }
-
         public async Task<int> Create(Usuario usuario)
         {
             using var connection = GetConnection();
@@ -57,7 +56,6 @@ namespace ProyectoCarter.Repositories
                 usuario
             );
         }
-
         public async Task<int> Update(Usuario usuario)
         {
             using var connection = GetConnection();
@@ -194,8 +192,9 @@ namespace ProyectoCarter.Repositories
         public bool PuedeAgregar { get; set; }
         public bool PuedeEditar { get; set; }
         public bool PuedeEliminar { get; set; }
-        [JsonIgnore]
-        public new List<ModuloConPermisos> Hijos { get; set; } = new List<ModuloConPermisos>();
+
+        [JsonPropertyName("hijos")] // Para que se serialice como "hijos" en el JSON
+        public List<ModuloConPermisos> Hijos { get; set; } = new List<ModuloConPermisos>();
     }
 
 }

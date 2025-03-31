@@ -8,93 +8,11 @@
     <link rel="stylesheet" href="/css/dashboard.css">
 </head>
 <body class="dashboard">
-
-    <!-- Menú de navegación -->
+    <!-- Menú de navegación (ahora vacío, se llenará con JS) -->
     <nav>
         <button class="menu-toggle"><i class="fas fa-bars"></i></button>
-        <ul class="nav-links">
-            <li><a href="/dashboard"><i class="fas fa-home"></i> Inicio</a></li>
-            <!--<li><a href="/Views/administrar.html" id="adminPanel"><i class="fas fa-user-shield"></i> Administrar</a></li>-->
-            <!-- Dropdown de Administrar -->
-            <li class="dropdown">
-                <a href="#" class="dropbtn"><i class="fas fa-user"></i> Administrar <i class="fas fa-caret-down"></i></a>
-                <ul class="dropdown-menu">
-                    <li><a href="/Views/usuarios.html"><i class="fas fa-users"></i> Usuarios</a></li>
-                    <li><a href="/Views/perfiles.html"><i class="fas fa-id-badge"></i> Perfiles</a></li>
-                    <li><a href="/Views/permisos.html"><i class="fas fa-user-shield"></i> Permisos</a></li>
-
-                </ul>
-            </li>
-
-            <!-- Dropdown de Personas -->
-            <li class="dropdown">
-                <a href="#" class="dropbtn"><i class="fas fa-user"></i> Personas <i class="fas fa-caret-down"></i></a>
-                <ul class="dropdown-menu">
-                    <li class="dropdown-submenu">
-                        <a href="#"><i class="fas fa-users"></i> Cliente <i class="fas fa-caret-right"></i></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="/Views/clienteFisica.html"><i class="fas fa-circle"></i> Fisica</a></li>
-                            <li><a href="/Views/clienteMoral.html"><i class="fas fa-circle"></i> Moral</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown-submenu">
-                        <a href="#"><i class="fas fa-id-badge"></i> Proveedor <i class="fas fa-caret-right"></i></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="/Views/proveedorFisica.html"><i class="fas fa-circle"></i> Fisica</a></li>
-                            <li><a href="/Views/proveedorMoral.html"><i class="fas fa-circle"></i> Moral</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </li>
-
-            <!-- Dropdown de Equipo -->
-            <li class="dropdown">
-                <a href="#" class="dropbtn"><i class="fas fa-user"></i> Equipo <i class="fas fa-caret-down"></i></a>
-                <ul class="dropdown-menu">
-                    <li class="dropdown-submenu">
-                        <a href="#"><i class="fas fa-users"></i> Oficina <i class="fas fa-caret-right"></i></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="/Views/oficinaPc.html"><i class="fas fa-circle"></i> PC</a></li>
-                            <li><a href="/Views/oficinaImpresora.html"><i class="fas fa-circle"></i> Impresora</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown-submenu">
-                        <a href="#"><i class="fas fa-id-badge"></i> Mantenimiento <i class="fas fa-caret-right"></i></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="/Views/mantenimientoTaladros.html"><i class="fas fa-circle"></i> Taladros</a></li>
-                            <li><a href="/Views/mantenimientoPinzas.html"><i class="fas fa-circle"></i> Pinzas</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </li>
-
-
-            <!-- Dropdown de Proveedores -->
-            <!--<li class="dropdown">
-                <a href="#" class="dropbtn"><i class="fas fa-user"></i> Proveedores <i class="fas fa-caret-down"></i></a>
-                <ul class="dropdown-menu">
-                    <li class="dropdown-submenu">
-                        <a href="#"><i class="fas fa-users"></i> Maíz <i class="fas fa-caret-right"></i></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#"><i class="fas fa-circle"></i> Blanco</a></li>
-                            <li><a href="#"><i class="fas fa-circle"></i> Azul</a></li>
-                            <li><a href="#"><i class="fas fa-circle"></i> Rojo</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown-submenu">
-                        <a href="#"><i class="fas fa-id-badge"></i> Cal <i class="fas fa-caret-right"></i></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#"><i class="fas fa-circle"></i> Hidratada</a></li>
-                            <li><a href="#"><i class="fas fa-circle"></i> Viva</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </li>-->
-
-
-            <li><a href="#" id="logout"><i class="fas fa-sign-out-alt"></i> Cerrar Sesión</a></li>
-            <li id="userDisplay"><i class="fas fa-user"></i> <span id="usernameDisplay"></span></li>
-
+        <ul class="nav-links" id="navLinks">
+            <!-- El menú se generará aquí dinámicamente -->
         </ul>
     </nav>
 
@@ -123,8 +41,6 @@
                 <p>5</p>
             </div>
         </div>
-
-        <p id="message"></p>
     </div>
 
     <script src="/js/dashboard.js"></script>

@@ -11,25 +11,6 @@ namespace ProyectoCarter.Modules
         {
             var group = app.MapGroup("/auth");
 
-            //group.MapPost("/login", async ([FromBody] LoginRequest login, UsuarioRepository repo) =>
-            //{
-            //    var usuario = await repo.GetByUsername(login.Username);
-            //    if (usuario is null)
-            //    {
-            //        return Results.Unauthorized(); // Usuario no encontrado
-            //    }
-
-            //    // Verificar la contraseña usando BCrypt
-            //    bool isPasswordValid = BCrypt.Net.BCrypt.Verify(login.Password, usuario.Contraseña);
-            //    if (!isPasswordValid)
-            //    {
-            //        return Results.Unauthorized(); // Contraseña incorrecta
-            //    }
-
-            //    // Si las credenciales son correctas, devolver los datos del usuario
-            //    return Results.Ok(new { Id = usuario.Id, Nombre = usuario.Nombre, Correo = usuario.Correo, RolId = usuario.RolId });
-            //});
-
             group.MapPost("/login", async ([FromBody] LoginRequest login, UsuarioRepository repo) =>
             {
                 var usuario = await repo.GetByUsername(login.Username);
@@ -53,36 +34,43 @@ namespace ProyectoCarter.Modules
 
             group.MapGet("/menu/{rolId}", async (int rolId, UsuarioRepository repo) =>
             {
+                // 1. Obtener TODOS los módulos a los que el rol tiene acceso (aunque no puedan consultar)
                 var query = @"
         SELECT m.Id, m.NombreModulo, m.Ruta, m.Icono, m.Orden, m.ModuloPadreId,
                rm.PuedeConsultar, rm.PuedeAgregar, rm.PuedeEditar, rm.PuedeEliminar
         FROM Modulo m
-        JOIN RolModulo rm ON m.Id = rm.ModuloId AND rm.RolId = @RolId
-        WHERE rm.PuedeConsultar = true
+        LEFT JOIN RolModulo rm ON m.Id = rm.ModuloId AND rm.RolId = @RolId
         ORDER BY m.Orden";
 
-                var modulos = await repo.GetConnection().QueryAsync<ModuloConPermisos>(query, new { RolId = rolId });
+                var todosModulos = await repo.GetConnection().QueryAsync<ModuloConPermisos>(query, new { RolId = rolId });
 
-                // Construir jerarquía solo con módulos que tienen al menos un permiso
-                var modulosRaiz = modulos
+                // 2. Filtrar solo módulos con permiso de consulta
+                var modulosConPermiso = todosModulos.Where(m => m.PuedeConsultar).ToList();
+
+                // 3. Construir jerarquía completa
+                var modulosRaiz = modulosConPermiso
                     .Where(m => m.ModuloPadreId == null)
+                    .OrderBy(m => m.Orden)
                     .ToList();
 
-                foreach (var modulo in modulosRaiz)
+                // Función recursiva para construir la jerarquía
+                void ConstruirJerarquia(List<ModuloConPermisos> modulosPadre)
                 {
-                    modulo.Hijos = modulos
-                        .Where(m => m.ModuloPadreId == modulo.Id)
-                        .ToList();
+                    foreach (var modulo in modulosPadre)
+                    {
+                        modulo.Hijos = modulosConPermiso
+                            .Where(m => m.ModuloPadreId == modulo.Id)
+                            .OrderBy(m => m.Orden)
+                            .ToList();
+
+                        if (modulo.Hijos.Any())
+                        {
+                            ConstruirJerarquia(modulo.Hijos);
+                        }
+                    }
                 }
 
-                // Filtrar módulos raíz que no tienen hijos ni permisos relevantes
-                modulosRaiz = modulosRaiz
-                    .Where(m => m.Hijos.Count > 0 ||
-                               m.PuedeConsultar ||
-                               m.PuedeAgregar ||
-                               m.PuedeEditar ||
-                               m.PuedeEliminar)
-                    .ToList();
+                ConstruirJerarquia(modulosRaiz);
 
                 return Results.Ok(modulosRaiz);
             });
