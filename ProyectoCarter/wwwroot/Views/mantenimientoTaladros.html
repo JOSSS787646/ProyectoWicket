@@ -2,83 +2,66 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Administrar Usuarios</title>
+    <!-- CAMBIAR título -->
+    <title>Nombre del Módulo</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="stylesheet" href="/css/administrar.css">
+    <link rel="stylesheet" href="/css/crud.css">
 </head>
-<body class="admin-page">
+<body>
+    <div class="crud-container">
+        <!-- CAMBIAR icono y título -->
+        <h1><i class="fas fa-icono"></i> Nombre del Módulo</h1>
 
-    <header>
-        <h1><i class="fas fa-users"></i> Administrar Taladros</h1>
-        <button id="btnAgregarUsuario" class="btn-agregar">Agregar Taladro</button>
-        <button id="btnRegresar" class="btn-secondary"><i class="fas fa-arrow-left"></i> Regresar</button>
-    </header>
+        <div class="toolbar" id="toolbar"></div>
 
-    <div class="admin-container">
-        <table>
-            <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>Usuario</th>
-                    <th>Correo</th>
-                    <th>Rol</th>
-                    <th>Acciones</th>
-                </tr>
-            </thead>
-            <tbody id="usuariosTabla">
-                <!-- Aquí se cargarán los usuarios dinámicamente -->
-            </tbody>
-        </table>
+        <div class="table-responsive">
+            <table id="dataTable">
+                <thead>
+                    <tr>
+                        <!-- CAMBIAR columnas -->
+                        <th>ID</th>
+                        <th>Campo 1</th>
+                        <th>Campo 2</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- CAMBIAR datos de ejemplo -->
+                    <tr>
+                        <td>1</td>
+                        <td>Dato ejemplo 1</td>
+                        <td>Dato ejemplo 2</td>
+                        <td class="actions"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
 
-        <!-- Modal para Agregar Usuario -->
-        <div id="modalAgregarUsuario" class="modal">
+        <!-- Modal (no cambiar estructura) -->
+        <div id="crudModal" class="modal">
             <div class="modal-content">
-                <span class="cerrar" onclick="cerrarModal()">&times;</span>
-                <h2>Agregar Usuario</h2>
-                <form id="formAgregarUsuario">
-                    <label for="nombre">Nombre de usuario:</label>
-                    <input type="text" id="nombre" required>
-
-                    <label for="correo">Correo:</label>
-                    <input type="email" id="correo" required>
-
-                    <label for="rolSelect">Rol:</label>
-                    <select id="rolSelect" required></select>
-
-                    <button type="submit" class=" btn-secondary btn-guardar">Guardar</button>
-                    <button type="button" class="btn-secondary" onclick="cerrarModal()">Cancelar</button>
-
+                <span class="close">&times;</span>
+                <h2 id="modalTitle">Editar Módulo</h2>
+                <form id="dataForm">
+                    <!-- CAMBIAR campos del formulario -->
+                    <input type="hidden" id="id">
+                    <div class="form-group">
+                        <label for="campo1">Campo 1</label>
+                        <input type="text" id="campo1" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="campo2">Campo 2</label>
+                        <input type="text" id="campo2" required>
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit" id="saveBtn">Guardar</button>
+                    </div>
                 </form>
             </div>
         </div>
-
     </div>
 
-    <!-- Modal para Editar Usuario -->
-    <div id="editModal" class="modal">
-        <div class="modal-content">
-            <span class="cerrar" onclick="cerrarModal()">&times;</span>
-
-            <h2>Editar Usuario</h2>
-            <input type="hidden" id="editId">
-
-            <label>Nombre:</label>
-            <input type="text" id="editNombre">
-
-            <label>Correo:</label>
-            <input type="email" id="editCorreo">
-
-            <label>Rol:</label>
-            <select id="editRol"></select> <!-- Ahora es un select -->
-
-            <button onclick="guardarEdicion()" class="btn-primary">Guardar</button>
-            <button onclick="cerrarModal()" class="btn-secondary">Cancelar</button>
-        </div>
-    </div>
-
-
-
-    <script src="/js/administrarV2.js"></script>
+    <!-- CAMBIAR ruta del JS -->
+    <script src="/js/mantenimientoTaladros.js"></script>
 </body>
 </html>
