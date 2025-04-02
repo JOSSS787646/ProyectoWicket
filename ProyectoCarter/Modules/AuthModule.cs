@@ -34,31 +34,79 @@ namespace ProyectoCarter.Modules
 
             group.MapGet("/menu/{rolId}", async (int rolId, UsuarioRepository repo) =>
             {
-                // 1. Obtener TODOS los módulos a los que el rol tiene acceso (aunque no puedan consultar)
-                var query = @"
+                // 1. Primero obtener todos los módulos con permisos directos
+                var queryDirectos = @"
         SELECT m.Id, m.NombreModulo, m.Ruta, m.Icono, m.Orden, m.ModuloPadreId,
-               rm.PuedeConsultar, rm.PuedeAgregar, rm.PuedeEditar, rm.PuedeEliminar
+               rm.PuedeConsultar, rm.PuedeAgregar, rm.PuedeEditar, rm.PuedeEliminar,
+               rm.PuedeExportar, rm.PuedeVerBitacora
         FROM Modulo m
         LEFT JOIN RolModulo rm ON m.Id = rm.ModuloId AND rm.RolId = @RolId
-        ORDER BY m.Orden";
+        WHERE rm.PuedeConsultar = 1 OR rm.PuedeAgregar = 1 OR rm.PuedeEditar = 1 
+           OR rm.PuedeEliminar = 1 OR rm.PuedeExportar = 1 OR rm.PuedeVerBitacora = 1";
 
-                var todosModulos = await repo.GetConnection().QueryAsync<ModuloConPermisos>(query, new { RolId = rolId });
+                var modulosConPermisoDirecto = await repo.GetConnection().QueryAsync<ModuloConPermisos>(queryDirectos, new { RolId = rolId });
 
-                // 2. Filtrar solo módulos con permiso de consulta
-                var modulosConPermiso = todosModulos.Where(m => m.PuedeConsultar).ToList();
+                // 2. Obtener todos los IDs de módulos con permiso directo
+                var idsModulosConPermiso = modulosConPermisoDirecto.Select(m => m.Id).ToList();
 
-                // 3. Construir jerarquía completa
-                var modulosRaiz = modulosConPermiso
+                // 3. Obtener todos los módulos (para construir la jerarquía)
+                var queryTodosModulos = "SELECT Id, NombreModulo, Ruta, Icono, Orden, ModuloPadreId FROM Modulo";
+                var todosModulos = await repo.GetConnection().QueryAsync<ModuloConPermisos>(queryTodosModulos);
+
+                // 4. Función para encontrar todos los ancestros de un módulo
+                List<int> ObtenerAncestros(int moduloId)
+                {
+                    var ancestros = new List<int>();
+                    var moduloActual = todosModulos.FirstOrDefault(m => m.Id == moduloId);
+
+                    while (moduloActual?.ModuloPadreId != null)
+                    {
+                        ancestros.Add(moduloActual.ModuloPadreId.Value);
+                        moduloActual = todosModulos.FirstOrDefault(m => m.Id == moduloActual.ModuloPadreId);
+                    }
+
+                    return ancestros;
+                }
+
+                // 5. Obtener todos los IDs de módulos padres necesarios
+                var idsPadresNecesarios = new List<int>();
+                foreach (var modulo in modulosConPermisoDirecto)
+                {
+                    idsPadresNecesarios.AddRange(ObtenerAncestros(modulo.Id));
+                }
+
+                // 6. Combinar módulos con permiso directo + sus ancestros
+                var todosIdsNecesarios = idsModulosConPermiso.Union(idsPadresNecesarios).Distinct().ToList();
+
+                // 7. Crear lista final de módulos para el menú
+                var modulosParaMenu = todosModulos
+                    .Where(m => todosIdsNecesarios.Contains(m.Id))
+                    .ToList();
+
+                // Asignar los permisos a los módulos que los tienen
+                foreach (var modulo in modulosParaMenu)
+                {
+                    var permisoDirecto = modulosConPermisoDirecto.FirstOrDefault(m => m.Id == modulo.Id);
+                    if (permisoDirecto != null)
+                    {
+                        modulo.PuedeConsultar = permisoDirecto.PuedeConsultar;
+                        modulo.PuedeAgregar = permisoDirecto.PuedeAgregar;
+                        modulo.PuedeEditar = permisoDirecto.PuedeEditar;
+                        modulo.PuedeEliminar = permisoDirecto.PuedeEliminar;
+                    }
+                }
+
+                // 8. Construir jerarquía
+                var modulosRaiz = modulosParaMenu
                     .Where(m => m.ModuloPadreId == null)
                     .OrderBy(m => m.Orden)
                     .ToList();
 
-                // Función recursiva para construir la jerarquía
                 void ConstruirJerarquia(List<ModuloConPermisos> modulosPadre)
                 {
                     foreach (var modulo in modulosPadre)
                     {
-                        modulo.Hijos = modulosConPermiso
+                        modulo.Hijos = modulosParaMenu
                             .Where(m => m.ModuloPadreId == modulo.Id)
                             .OrderBy(m => m.Orden)
                             .ToList();

@@ -65,7 +65,7 @@ function iniciarReloj() {
     setInterval(actualizarReloj, 1000);
 }
 function cargarMenu(rolId) {
-    console.log(`Cargando menú para rol: ${rolId} (Super Administrador)`);
+    console.log(`Cargando menú para rol: ${rolId} `);
 
     fetch(`/auth/menu/${rolId}`)
         .then(response => {
@@ -207,31 +207,30 @@ function construirMenu(modulos) {
 
     navLinks.innerHTML = '';
 
-    // 1. Construir estructura del menú usando la jerarquía que ya viene del backend
+    // Construir estructura del menú considerando permisos directos o hijos con permisos
     modulos.forEach(modulo => {
-        if (modulo.puedeConsultar) {
+        if (tienePermiso(modulo)) {  // Usamos la nueva función de verificación
             const itemMenu = crearItemMenu(modulo);
             if (itemMenu) navLinks.appendChild(itemMenu);
         }
     });
 
-    // 2. Agregar botón de logout y usuario
+    // Agregar elementos adicionales
     agregarBotonLogout(navLinks);
     agregarUsuario(navLinks);
 }
-
 function crearItemMenu(modulo) {
     const li = document.createElement("li");
     const a = document.createElement("a");
 
     // Configurar enlace principal
     a.href = modulo.ruta || "#";
-    a.innerHTML = `<i class="${modulo.icono}"></i> <span class="menu-text">${modulo.nombreModulo}</span>`;
+    a.innerHTML = `<i class="${modulo.icono || 'fas fa-circle'}"></i> <span class="menu-text">${modulo.nombreModulo}</span>`;
 
-    // Verificar si tiene hijos con permisos
-    const tieneHijos = modulo.hijos && modulo.hijos.length > 0;
+    // Verificar si tiene hijos con permisos (usando la nueva función)
+    const tieneHijosConPermiso = modulo.hijos && modulo.hijos.some(hijo => tienePermiso(hijo));
 
-    if (tieneHijos) {
+    if (tieneHijosConPermiso) {
         li.classList.add("dropdown");
         a.classList.add("dropbtn");
         a.innerHTML += ' <i class="fas fa-chevron-down dropdown-arrow"></i>';
@@ -240,21 +239,25 @@ function crearItemMenu(modulo) {
         submenu.classList.add("dropdown-menu");
 
         modulo.hijos.forEach(hijo => {
-            if (hijo.puedeConsultar) {
+            if (tienePermiso(hijo)) {  // Solo agregar hijos con permisos
                 const itemHijo = crearItemMenu(hijo);
                 if (itemHijo) submenu.appendChild(itemHijo);
             }
         });
 
-        li.appendChild(a);
-        li.appendChild(submenu);
+        // Solo añadir submenu si tiene hijos válidos
+        if (submenu.children.length > 0) {
+            li.appendChild(a);
+            li.appendChild(submenu);
+        } else {
+            li.appendChild(a);
+        }
     } else {
         li.appendChild(a);
     }
 
     return li;
-}
-function agregarBotonLogout(container) {
+} function agregarBotonLogout(container) {
     const logoutLi = document.createElement("li");
     logoutLi.innerHTML = `
         <a href="#" id="logout-btn">
@@ -311,4 +314,14 @@ function configurarDropdownsMobile() {
             }
         });
     });
+}
+function tienePermiso(modulo) {
+    // Verifica permisos directos del módulo
+    const permisosDirectos = modulo.puedeConsultar || modulo.puedeAgregar ||
+        modulo.puedeEditar || modulo.puedeEliminar;
+
+    // Verifica permisos en hijos recursivamente
+    const hijosConPermiso = modulo.hijos && modulo.hijos.some(hijo => tienePermiso(hijo));
+
+    return permisosDirectos || hijosConPermiso;
 }

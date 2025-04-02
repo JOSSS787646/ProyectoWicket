@@ -216,72 +216,58 @@
             });
     }
 
-    function cargarMenu() {
-        fetch('/auth/modulos/jerarquia')
-            .then(response => response.json())
-            .then(modulos => {
-                const navLinks = document.querySelector('.nav-links');
-                navLinks.innerHTML = ''; // Limpiar menú existente
+    function cargarMenu(rolId) {
+        console.log(`Cargando menú para rol: ${rolId}`);
 
-                // Agregar Dashboard
-                const dashboard = modulos.find(m => m.NombreModulo === 'Dashboard');
-                if (dashboard) {
-                    navLinks.appendChild(crearItemMenu(dashboard));
-                }
+        fetch(`/auth/menu/${rolId}`)
+            .then(response => {
+                if (!response.ok) throw new Error("Error en la respuesta del servidor");
+                return response.json();
+            })
+            .then(data => {
+                console.group("ESTRUCTURA COMPLETA DEL MENÚ RECIBIDA:");
+                console.log("Total módulos recibidos:", data.length);
+                console.log("Detalle completo:", data);
 
-                // Procesar módulos con hijos (dropdowns)
-                modulos.filter(m => m.Hijos && m.Hijos.length > 0).forEach(modulo => {
-                    const li = document.createElement('li');
-                    li.className = 'dropdown';
-
-                    const dropbtn = document.createElement('a');
-                    dropbtn.href = modulo.Ruta || '#';
-                    dropbtn.className = 'dropbtn';
-                    dropbtn.innerHTML = `<i class="${modulo.Icono}"></i> ${modulo.NombreModulo} <i class="fas fa-caret-down"></i>`;
-
-                    const dropdownMenu = document.createElement('ul');
-                    dropdownMenu.className = 'dropdown-menu';
-
-                    modulo.Hijos.forEach(hijo => {
-                        if (hijo.Hijos && hijo.Hijos.length > 0) {
-                            // Submenú anidado
-                            const submenuItem = document.createElement('li');
-                            submenuItem.className = 'dropdown-submenu';
-
-                            const submenuLink = document.createElement('a');
-                            submenuLink.href = hijo.Ruta || '#';
-                            submenuLink.innerHTML = `<i class="${hijo.Icono}"></i> ${hijo.NombreModulo} <i class="fas fa-caret-right"></i>`;
-
-                            const submenu = document.createElement('ul');
-                            submenu.className = 'dropdown-menu';
-
-                            hijo.Hijos.forEach(subhijo => {
-                                submenu.appendChild(crearItemMenu(subhijo, true));
+                // Función para aplanar la estructura y ver permisos
+                const flattenWithPermissions = (modules, level = 0) => {
+                    const result = [];
+                    modules.forEach(mod => {
+                        const tienePermiso = mod.puedeConsultar || mod.puedeAgregar || mod.puedeEditar || mod.puedeEliminar;
+                        if (tienePermiso) {
+                            result.push({
+                                level,
+                                id: mod.id,
+                                nombre: mod.nombreModulo,
+                                ruta: mod.ruta,
+                                padre: mod.moduloPadreId,
+                                permisos: {
+                                    consultar: mod.puedeConsultar,
+                                    agregar: mod.puedeAgregar,
+                                    editar: mod.puedeEditar,
+                                    eliminar: mod.puedeEliminar
+                                }
                             });
 
-                            submenuItem.appendChild(submenuLink);
-                            submenuItem.appendChild(submenu);
-                            dropdownMenu.appendChild(submenuItem);
-                        } else {
-                            // Item simple
-                            dropdownMenu.appendChild(crearItemMenu(hijo));
+                            if (mod.hijos && mod.hijos.length) {
+                                result.push(...flattenWithPermissions(mod.hijos, level + 1));
+                            }
                         }
                     });
+                    return result;
+                };
 
-                    li.appendChild(dropbtn);
-                    li.appendChild(dropdownMenu);
-                    navLinks.appendChild(li);
-                });
+                const allModules = flattenWithPermissions(data);
+                console.groupCollapsed("LISTA PLANA DE MÓDULOS CON ACCESO");
+                console.table(allModules);
+                console.groupEnd();
 
-                // Agregar logout y usuario
-                const logoutLi = document.createElement('li');
-                logoutLi.innerHTML = `<a href="#" id="logout"><i class="fas fa-sign-out-alt"></i> Cerrar Sesión</a>`;
-                navLinks.appendChild(logoutLi);
-
-                const userLi = document.createElement('li');
-                userLi.id = 'userDisplay';
-                userLi.innerHTML = `<i class="fas fa-user"></i> <span id="usernameDisplay"></span>`;
-                navLinks.appendChild(userLi);
+                construirMenu(data);
+                configurarDropdownsMobile();
+            })
+            .catch(error => {
+                console.error("Error al cargar menú:", error);
+                mostrarError("Error al cargar el menú. Intenta recargar la página.");
             });
     }
 
