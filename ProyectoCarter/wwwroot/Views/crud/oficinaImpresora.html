@@ -1,0 +1,119 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impresoras</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .action-column {
+            white-space: nowrap;
+            width: 1%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid mt-4">
+        <div class="card">
+            <div class="card-header bg-primary text-white">
+                <h3 class="card-title"><i class="fas fa-print"></i> Impresoras</h3>
+            </div>
+            <div class="card-body">
+                <div class="row mb-4">
+                    <div class="col-md-6">
+                        <h4>Listado de Impresoras</h4>
+                    </div>
+                    <div class="col-md-6 d-flex align-items-end justify-content-end">
+                        <button id="btnAdd" class="btn btn-success">
+                            <i class="fas fa-plus"></i> Nueva Impresora
+                        </button>
+                    </div>
+                </div>
+
+                <div id="noAccessMessage" class="alert alert-warning" style="display: none;">
+                    No tienes permisos para ver esta información.
+                </div>
+
+                <div class="table-responsive">
+                    <table id="tblOficinaImpresora" class="table table-hover table-bordered">
+                        <thead class="table-light">
+                            <tr>
+                                <th>ID</th>
+                                <th>Marca</th>
+                                <th>Modelo</th>
+                                <th>N° Serie</th>
+                                <th>Ubicación</th>
+                                <th>Tipo</th>
+                                <th>Estado</th>
+                                <th class="action-column">Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Datos se llenarán con JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal para formulario -->
+    <div class="modal fade" id="oficinaImpresoraModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalTitle">Nueva Impresora</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="formOficinaImpresora">
+                        <input type="hidden" id="impresoraId" value="">
+                        <div class="mb-3">
+                            <label for="marca" class="form-label">Marca</label>
+                            <input type="text" class="form-control" id="marca" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="modelo" class="form-label">Modelo</label>
+                            <input type="text" class="form-control" id="modelo" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="numeroSerie" class="form-label">Número de Serie</label>
+                            <input type="text" class="form-control" id="numeroSerie" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="ubicacion" class="form-label">Ubicación</label>
+                            <input type="text" class="form-control" id="ubicacion" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="tipo" class="form-label">Tipo</label>
+                            <select class="form-select" id="tipo">
+                                <option value="Láser">Láser</option>
+                                <option value="Inyección de tinta">Inyección de tinta</option>
+                                <option value="Matricial">Matricial</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="status" class="form-label">Estado</label>
+                            <select class="form-select" id="status">
+                                <option value="Operativa">Operativa</option>
+                                <option value="En mantenimiento">En mantenimiento</option>
+                                <option value="Baja">Baja</option>
+                            </select>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary" onclick="crud.saveItem()">Guardar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/crud/crudBase.js"></script>
+    <script src="/js/crud/oficinaImpresora.js"></script>
+</body>
+</html>

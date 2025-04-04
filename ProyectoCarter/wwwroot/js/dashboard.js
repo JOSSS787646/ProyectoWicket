@@ -257,7 +257,8 @@ function crearItemMenu(modulo) {
     }
 
     return li;
-} function agregarBotonLogout(container) {
+}
+function agregarBotonLogout(container) {
     const logoutLi = document.createElement("li");
     logoutLi.innerHTML = `
         <a href="#" id="logout-btn">

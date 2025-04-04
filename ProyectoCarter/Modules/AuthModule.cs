@@ -1,5 +1,8 @@
-﻿using Carter;
+﻿using System.Security.Claims;
+using Carter;
 using Dapper;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Mvc;
 using ProyectoCarter.Repositories;
 
@@ -11,24 +14,54 @@ namespace ProyectoCarter.Modules
         {
             var group = app.MapGroup("/auth");
 
-            group.MapPost("/login", async ([FromBody] LoginRequest login, UsuarioRepository repo) =>
+            group.MapPost("/login", async ([FromBody] LoginRequest login, HttpContext context, UsuarioRepository repo) =>
             {
+                // 1. Verificar credenciales
                 var usuario = await repo.GetByUsername(login.Username);
                 if (usuario is null) return Results.Unauthorized();
 
                 if (!BCrypt.Net.BCrypt.Verify(login.Password, usuario.Contraseña))
                     return Results.Unauthorized();
 
-                // Obtener el nombre del rol
+                // 2. Obtener información del rol
                 var rol = await repo.GetRolById(usuario.RolId);
 
+                // 3. Crear claims (información del usuario)
+                var claims = new List<Claim>
+    {
+        new Claim(ClaimTypes.NameIdentifier, usuario.Id.ToString()),
+        new Claim(ClaimTypes.Name, usuario.Nombre),
+        new Claim(ClaimTypes.Email, usuario.Correo),
+        new Claim("RolId", usuario.RolId.ToString()), // Claim especial para tu sistema
+        new Claim(ClaimTypes.Role, rol?.Nombre ?? "Sin Rol")
+    };
+
+                // 4. Crear identidad y principal
+                var claimsIdentity = new ClaimsIdentity(
+                    claims,
+                    CookieAuthenticationDefaults.AuthenticationScheme);
+
+                var authProperties = new AuthenticationProperties
+                {
+                    // Opciones adicionales de la cookie
+                    IsPersistent = true, // Cookie persistente
+                    ExpiresUtc = DateTimeOffset.UtcNow.AddMinutes(30) // Tiempo de expiración
+                };
+
+                // 5. Iniciar sesión (crear la cookie)
+                await context.SignInAsync(
+                    CookieAuthenticationDefaults.AuthenticationScheme,
+                    new ClaimsPrincipal(claimsIdentity),
+                    authProperties);
+
+                // 6. Devolver respuesta
                 return Results.Ok(new
                 {
                     Id = usuario.Id,
                     Nombre = usuario.Nombre,
                     Correo = usuario.Correo,
                     RolId = usuario.RolId,
-                    RolNombre = rol?.Nombre ?? "Sin Rol" // Asegurar que siempre tenga valor
+                    RolNombre = rol?.Nombre ?? "Sin Rol"
                 });
             });
 
@@ -252,6 +285,69 @@ namespace ProyectoCarter.Modules
                 return Results.Ok(modulosRaiz);
             });
 
+            group.MapGet("/permisos-modulo/{moduloNombre}", async (string moduloNombre, HttpContext ctx, UsuarioRepository repo) =>
+            {
+                // Obtener el rol del usuario
+                var rolIdClaim = ctx.User.Claims.FirstOrDefault(c => c.Type == "RolId")?.Value;
+
+                if (string.IsNullOrEmpty(rolIdClaim) || !int.TryParse(rolIdClaim, out int rolId))
+                {
+                    return Results.Json(new
+                    {
+                        PuedeConsultar = false,
+                        PuedeAgregar = false,
+                        PuedeEditar = false,
+                        PuedeEliminar = false,
+                        PuedeExportar = false,
+                        PuedeVerBitacora = false
+                    });
+                }
+
+                // Query para obtener permisos
+                var query = @"
+        SELECT 
+            rm.PuedeConsultar, 
+            rm.PuedeAgregar, 
+            rm.PuedeEditar, 
+            rm.PuedeEliminar,
+            rm.PuedeExportar,
+            rm.PuedeVerBitacora
+        FROM RolModulo rm
+        JOIN Modulo m ON rm.ModuloId = m.Id
+        WHERE rm.RolId = @RolId AND m.NombreModulo = @ModuloNombre";
+
+                try
+                {
+                    var permisos = await repo.GetConnection().QueryFirstOrDefaultAsync(query, new
+                    {
+                        RolId = rolId,
+                        ModuloNombre = moduloNombre
+                    });
+
+                    return Results.Json(permisos ?? new
+                    {
+                        PuedeConsultar = false,
+                        PuedeAgregar = false,
+                        PuedeEditar = false,
+                        PuedeEliminar = false,
+                        PuedeExportar = false,
+                        PuedeVerBitacora = false
+                    });
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"Error al obtener permisos: {ex.Message}");
+                    return Results.Json(new
+                    {
+                        PuedeConsultar = false,
+                        PuedeAgregar = false,
+                        PuedeEditar = false,
+                        PuedeEliminar = false,
+                        PuedeExportar = false,
+                        PuedeVerBitacora = false
+                    }, statusCode: 500);
+                }
+            }).RequireAuthorization();
 
             // Redirigir a la página de login al acceder a la raíz
             app.MapGet("/", (HttpContext ctx) =>
