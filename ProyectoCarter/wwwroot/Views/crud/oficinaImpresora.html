@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Impresoras</title>
+    <title>Oficina - Impresoras</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -17,7 +17,7 @@
     <div class="container-fluid mt-4">
         <div class="card">
             <div class="card-header bg-primary text-white">
-                <h3 class="card-title"><i class="fas fa-print"></i> Impresoras</h3>
+                <h3 class="card-title"><i class="fas fa-print"></i> Impresoras de Oficina</h3>
             </div>
             <div class="card-body">
                 <div class="row mb-4">
@@ -42,16 +42,13 @@
                                 <th>ID</th>
                                 <th>Marca</th>
                                 <th>Modelo</th>
-                                <th>N° Serie</th>
+                                <th>Serial</th>
                                 <th>Ubicación</th>
                                 <th>Tipo</th>
-                                <th>Estado</th>
                                 <th class="action-column">Acciones</th>
                             </tr>
                         </thead>
-                        <tbody>
-                            <!-- Datos se llenarán con JavaScript -->
-                        </tbody>
+                        <tbody id="impresorasBody"></tbody>
                     </table>
                 </div>
             </div>
@@ -78,8 +75,8 @@
                             <input type="text" class="form-control" id="modelo" required>
                         </div>
                         <div class="mb-3">
-                            <label for="numeroSerie" class="form-label">Número de Serie</label>
-                            <input type="text" class="form-control" id="numeroSerie" required>
+                            <label for="serial" class="form-label">Número de Serie</label>
+                            <input type="text" class="form-control" id="serial" required>
                         </div>
                         <div class="mb-3">
                             <label for="ubicacion" class="form-label">Ubicación</label>
@@ -87,18 +84,10 @@
                         </div>
                         <div class="mb-3">
                             <label for="tipo" class="form-label">Tipo</label>
-                            <select class="form-select" id="tipo">
+                            <select class="form-control" id="tipo" required>
                                 <option value="Láser">Láser</option>
-                                <option value="Inyección de tinta">Inyección de tinta</option>
-                                <option value="Matricial">Matricial</option>
-                            </select>
-                        </div>
-                        <div class="mb-3">
-                            <label for="status" class="form-label">Estado</label>
-                            <select class="form-select" id="status">
-                                <option value="Operativa">Operativa</option>
-                                <option value="En mantenimiento">En mantenimiento</option>
-                                <option value="Baja">Baja</option>
+                                <option value="Inyección">Inyección</option>
+                                <option value="Matriz">Matriz</option>
                             </select>
                         </div>
                     </form>
@@ -113,7 +102,6 @@
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="/js/crud/crudBase.js"></script>
     <script src="/js/crud/oficinaImpresora.js"></script>
 </body>
 </html>

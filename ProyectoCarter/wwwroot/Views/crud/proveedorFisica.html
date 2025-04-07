@@ -17,7 +17,7 @@
     <div class="container-fluid mt-4">
         <div class="card">
             <div class="card-header bg-primary text-white">
-                <h3 class="card-title"><i class="fas fa-truck"></i> Proveedores Físicos</h3>
+                <h3 class="card-title"><i class="fas fa-user-tie"></i> Proveedores Físicos</h3>
             </div>
             <div class="card-body">
                 <div class="row mb-4">
@@ -42,16 +42,13 @@
                                 <th>ID</th>
                                 <th>Nombre</th>
                                 <th>RFC</th>
-                                <th>Especialidad</th>
                                 <th>Teléfono</th>
                                 <th>Email</th>
-                                <th>Estado</th>
+                                <th>Dirección</th>
                                 <th class="action-column">Acciones</th>
                             </tr>
                         </thead>
-                        <tbody>
-                            <!-- Datos se llenarán con JavaScript -->
-                        </tbody>
+                        <tbody id="proveedoresBody"></tbody>
                     </table>
                 </div>
             </div>
@@ -70,16 +67,12 @@
                     <form id="formProveedorFisica">
                         <input type="hidden" id="proveedorId" value="">
                         <div class="mb-3">
-                            <label for="nombre" class="form-label">Nombre completo</label>
+                            <label for="nombre" class="form-label">Nombre Completo</label>
                             <input type="text" class="form-control" id="nombre" required>
                         </div>
                         <div class="mb-3">
                             <label for="rfc" class="form-label">RFC</label>
                             <input type="text" class="form-control" id="rfc" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="especialidad" class="form-label">Especialidad</label>
-                            <input type="text" class="form-control" id="especialidad" required>
                         </div>
                         <div class="mb-3">
                             <label for="telefono" class="form-label">Teléfono</label>
@@ -90,11 +83,8 @@
                             <input type="email" class="form-control" id="email" required>
                         </div>
                         <div class="mb-3">
-                            <label for="status" class="form-label">Estado</label>
-                            <select class="form-select" id="status">
-                                <option value="Activo">Activo</option>
-                                <option value="Inactivo">Inactivo</option>
-                            </select>
+                            <label for="direccion" class="form-label">Dirección</label>
+                            <input type="text" class="form-control" id="direccion" required>
                         </div>
                     </form>
                 </div>
@@ -108,7 +98,6 @@
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="/js/crud/crudBase.js"></script>
     <script src="/js/crud/proveedorFisica.js"></script>
 </body>
 </html>

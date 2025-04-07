@@ -1,50 +1,185 @@
-﻿// wwwroot/js/crud/proveedorFisica.js
-class ProveedorFisicaCRUD extends CRUDDynamic {
-    constructor() {
-        super('ProveedorFisica', 'tblProveedoresFisica', 'formProveedorFisica', {
-            hasStatus: true
+﻿const crud = {
+    proveedores: [],
+    permisos: {
+        puedeConsultar: false,
+        puedeAgregar: false,
+        puedeEditar: false,
+        puedeEliminar: false,
+        puedeExportar: false,
+        puedeVerBitacora: false
+    },
+
+    async init() {
+        try {
+            await this.waitForDOMReady();
+            await this.cargarPermisos();
+
+            if (!this.permisos.puedeConsultar) {
+                document.getElementById("noAccessMessage").style.display = "block";
+                document.getElementById("tblProveedoresFisica").style.display = "none";
+                document.getElementById("btnAdd").style.display = "none";
+                return;
+            }
+
+            if (!localStorage.getItem("proveedores")) {
+                localStorage.setItem("proveedores", JSON.stringify([
+                    { id: 1, nombre: "Juan Pérez", rfc: "PERJ123456", telefono: "555-1234", email: "juan@proveedor.com", direccion: "Calle 123" },
+                    { id: 2, nombre: "María López", rfc: "LOPM654321", telefono: "555-5678", email: "maria@proveedor.com", direccion: "Avenida 456" }
+                ]));
+            }
+
+            this.loadItems();
+            document.getElementById("btnAdd").style.display = this.permisos.puedeAgregar ? "block" : "none";
+        } catch (error) {
+            console.error("Error inicializando CRUD:", error);
+            this.showError("Error al inicializar la página: " + error.message);
+        }
+    },
+
+    waitForDOMReady() {
+        return new Promise(resolve => {
+            if (document.readyState === 'complete') {
+                resolve();
+            } else {
+                window.addEventListener('DOMContentLoaded', resolve);
+            }
         });
-        this.mockData = [
-            { id: 1, nombre: 'Luis Martínez', rfc: 'MALX800101', especialidad: 'Electricista', telefono: '5551112233', email: 'luis@electricista.com', status: 'Activo' }
-        ];
-    }
+    },
 
-    loadData() {
-        const tbody = document.querySelector(`#${this.tableId} tbody`);
-        tbody.innerHTML = '';
+    showError(message) {
+        const errorDiv = document.createElement("div");
+        errorDiv.className = "alert alert-danger m-3";
+        errorDiv.textContent = message;
+        document.body.prepend(errorDiv);
+    },
 
-        this.mockData.forEach(item => {
-            const tr = document.createElement('tr');
-            tr.innerHTML = `
-                <td>${item.id}</td>
-                <td>${item.nombre}</td>
-                <td>${item.rfc}</td>
-                <td>${item.especialidad}</td>
-                <td>${item.telefono}</td>
-                <td>${item.email}</td>
-                ${this.options.hasStatus ? `<td><span class="badge ${item.status === 'Activo' ? 'bg-success' : 'bg-secondary'}">${item.status}</span></td>` : ''}
-                <td class="action-column">
-                    ${this.currentPermissions.canEdit ?
-                    `<button class="btn btn-sm btn-warning btn-edit" data-id="${item.id}">
-                            <i class="fas fa-edit"></i> Editar
-                        </button>` : ''
+    async cargarPermisos() {
+        try {
+            const response = await fetch('/auth/permisos-modulo/Proveedor Fisica', {
+                credentials: 'include',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
                 }
-                    ${this.currentPermissions.canDelete ?
-                    `<button class="btn btn-sm btn-danger btn-delete ms-2" data-id="${item.id}">
-                            <i class="fas fa-trash"></i> Eliminar
-                        </button>` : ''
-                }
-                </td>
-            `;
-            tbody.appendChild(tr);
-        });
+            });
 
-        this.setupRowEvents();
+            if (!response.ok) throw new Error(`Error HTTP: ${response.status}`);
+
+            const data = await response.json();
+            console.log(`[${this.moduleName}] Permisos recibidos:`, JSON.stringify(data, null, 2));
+
+            this.permisos = {
+                puedeConsultar: data.PuedeConsultar || false,
+                puedeAgregar: data.PuedeAgregar || false,
+                puedeEditar: data.PuedeEditar || false,
+                puedeEliminar: data.PuedeEliminar || false,
+                puedeExportar: data.PuedeExportar || false,
+                puedeVerBitacora: data.PuedeVerBitacora || false
+            };
+        } catch (error) {
+            console.error("Error cargando permisos:", error);
+            throw error;
+        }
+    },
+
+    loadItems() {
+        try {
+            const proveedoresStr = localStorage.getItem("proveedores");
+            this.proveedores = proveedoresStr ? JSON.parse(proveedoresStr) : [];
+
+            const tbody = document.getElementById("proveedoresBody");
+            if (!tbody) throw new Error("Elemento 'proveedoresBody' no encontrado");
+
+            tbody.innerHTML = "";
+
+            if (this.proveedores.length === 0) {
+                const tr = document.createElement("tr");
+                tr.innerHTML = `<td colspan="7" class="text-center">No hay proveedores registrados</td>`;
+                tbody.appendChild(tr);
+                return;
+            }
+
+            this.proveedores.forEach(proveedor => {
+                const tr = document.createElement("tr");
+                tr.innerHTML = `
+                    <td>${proveedor.id}</td>
+                    <td>${proveedor.nombre}</td>
+                    <td>${proveedor.rfc}</td>
+                    <td>${proveedor.telefono}</td>
+                    <td>${proveedor.email}</td>
+                    <td>${proveedor.direccion}</td>
+                    <td class="action-column">
+                        ${this.permisos.puedeEditar ?
+                        `<button class="btn btn-warning btn-sm" onclick="crud.editItem(${proveedor.id})">
+                            <i class="fas fa-edit"></i>
+                        </button>` : ''}
+                        ${this.permisos.puedeEliminar ?
+                        `<button class="btn btn-danger btn-sm" onclick="crud.deleteItem(${proveedor.id})">
+                            <i class="fas fa-trash"></i>
+                        </button>` : ''}
+                    </td>
+                `;
+                tbody.appendChild(tr);
+            });
+        } catch (error) {
+            console.error("Error en loadItems:", error);
+            throw error;
+        }
+    },
+
+    openModal(id = null) {
+        document.getElementById("formProveedorFisica").reset();
+        document.getElementById("proveedorId").value = id ?? "";
+        document.getElementById("modalTitle").textContent = id ? "Editar Proveedor" : "Nuevo Proveedor";
+        new bootstrap.Modal(document.getElementById("proveedorFisicaModal")).show();
+    },
+
+    saveItem() {
+        const id = document.getElementById("proveedorId").value;
+        const nuevoProveedor = {
+            id: id ? parseInt(id) : this.proveedores.length + 1,
+            nombre: document.getElementById("nombre").value,
+            rfc: document.getElementById("rfc").value,
+            telefono: document.getElementById("telefono").value,
+            email: document.getElementById("email").value,
+            direccion: document.getElementById("direccion").value
+        };
+
+        if (id) {
+            this.proveedores = this.proveedores.map(proveedor => proveedor.id == id ? nuevoProveedor : proveedor);
+        } else {
+            this.proveedores.push(nuevoProveedor);
+        }
+
+        localStorage.setItem("proveedores", JSON.stringify(this.proveedores));
+        this.loadItems();
+        bootstrap.Modal.getInstance(document.getElementById("proveedorFisicaModal")).hide();
+    },
+
+    editItem(id) {
+        const proveedor = this.proveedores.find(p => p.id == id);
+        if (proveedor) {
+            this.openModal(id);
+            document.getElementById("nombre").value = proveedor.nombre;
+            document.getElementById("rfc").value = proveedor.rfc;
+            document.getElementById("telefono").value = proveedor.telefono;
+            document.getElementById("email").value = proveedor.email;
+            document.getElementById("direccion").value = proveedor.direccion;
+        }
+    },
+
+    deleteItem(id) {
+        this.proveedores = this.proveedores.filter(proveedor => proveedor.id !== id);
+        localStorage.setItem("proveedores", JSON.stringify(this.proveedores));
+        this.loadItems();
     }
+};
 
-    // ... (otros métodos similares)
-}
-
-document.addEventListener("DOMContentLoaded", function () {
-    window.crud = new ProveedorFisicaCRUD();
-});
+(async function () {
+    try {
+        await crud.init();
+    } catch (error) {
+        console.error("Error inicializando aplicación:", error);
+        crud.showError("Error crítico al cargar la aplicación: " + error.message);
+    }
+})();
