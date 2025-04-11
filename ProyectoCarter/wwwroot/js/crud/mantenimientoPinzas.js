@@ -55,7 +55,8 @@
 
     async cargarPermisos() {
         try {
-            const response = await fetch('/auth/permisos-modulo/Pinzas', {
+            // Cambiado el endpoint para que coincida con el nuevo módulo "Maquinaria sutil"
+            const response = await fetch('/auth/permisos-modulo/Maquinaria sutil', {
                 credentials: 'include',
                 headers: {
                     'Content-Type': 'application/json',
@@ -65,7 +66,7 @@
             if (!response.ok) throw new Error(`Error HTTP: ${response.status}`);
 
             const data = await response.json();
-            console.log(`[${this.moduleName}] Permisos recibidos:`, JSON.stringify(data, null, 2));
+            console.log(`[Mantenimiento Pinzas] Permisos recibidos:`, JSON.stringify(data, null, 2));
 
             this.permisos = {
                 puedeConsultar: data.PuedeConsultar || false,
@@ -165,9 +166,11 @@
     },
 
     deleteItem(id) {
-        this.pinzas = this.pinzas.filter(pinza => pinza.id !== id);
-        localStorage.setItem("pinzas", JSON.stringify(this.pinzas));
-        this.loadItems();
+        if (confirm("¿Está seguro que desea eliminar esta pinza?")) {
+            this.pinzas = this.pinzas.filter(pinza => pinza.id !== id);
+            localStorage.setItem("pinzas", JSON.stringify(this.pinzas));
+            this.loadItems();
+        }
     }
 };
 

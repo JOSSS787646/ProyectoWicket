@@ -1,0 +1,78 @@
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\wwwroot\js\permisos.js
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\wwwroot\Views\administrar.html
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\wwwroot\css\crud.css
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\wwwroot\css\dashboard.css
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\wwwroot\css\registro.css
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\wwwroot\Views\perfiles.html
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\wwwroot\css\permisos.css
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\wwwroot\Views\construccion.html
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\wwwroot\js\registro.js
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\wwwroot\Views\dashboard.html
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\wwwroot\js\crud\mantenimientoPinzas.js
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\wwwroot\js\crud\clienteMoral.js
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\wwwroot\Views\crud\clienteFisica.html
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\wwwroot\Views\permisos.html
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\wwwroot\js\crud\mantenimientoTaladros.js
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\wwwroot\Views\crud\oficinaImpresora.html
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\wwwroot\js\crud\proveedorFisica.js
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\wwwroot\Views\crud\clienteMoral.html
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\wwwroot\css\administrarusuarios.css
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\wwwroot\js\dashboard.js
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\wwwroot\Views\usuarios.html
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\wwwroot\Views\crud\mantenimientoTaladros.html
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\wwwroot\js\crud\crudBase.js
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\wwwroot\css\administrar.css
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\wwwroot\css\login.css
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\wwwroot\js\login.js
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\wwwroot\Views\crud\mantenimientoPinzas.html
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\wwwroot\js\crud\oficinaPc.js
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\wwwroot\js\administrarV2.js
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\wwwroot\Views\error.html
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\wwwroot\js\crud\oficinaImpresora.js
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\wwwroot\css\error.css
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\wwwroot\Views\registro.html
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\wwwroot\Views\crud\oficinaPc.html
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\wwwroot\Views\login.html
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\wwwroot\js\crud\proveedorMoral.js
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\wwwroot\js\crud\clienteFisica.js
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\wwwroot\Views\crud\proveedorMoral.html
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\wwwroot\Views\crud\proveedorFisica.html
+wwwroot\css\administrar.css
+wwwroot\css\administrarusuarios.css
+wwwroot\css\crud.css
+wwwroot\css\dashboard.css
+wwwroot\css\error.css
+wwwroot\css\login.css
+wwwroot\css\permisos.css
+wwwroot\css\registro.css
+wwwroot\js\administrarV2.js
+wwwroot\js\crud\clienteFisica.js
+wwwroot\js\crud\clienteMoral.js
+wwwroot\js\crud\crudBase.js
+wwwroot\js\crud\mantenimientoPinzas.js
+wwwroot\js\crud\mantenimientoTaladros.js
+wwwroot\js\crud\oficinaImpresora.js
+wwwroot\js\crud\oficinaPc.js
+wwwroot\js\crud\proveedorFisica.js
+wwwroot\js\crud\proveedorMoral.js
+wwwroot\js\dashboard.js
+wwwroot\js\login.js
+wwwroot\js\permisos.js
+wwwroot\js\registro.js
+wwwroot\Views\administrar.html
+wwwroot\Views\construccion.html
+wwwroot\Views\crud\clienteFisica.html
+wwwroot\Views\crud\clienteMoral.html
+wwwroot\Views\crud\mantenimientoPinzas.html
+wwwroot\Views\crud\mantenimientoTaladros.html
+wwwroot\Views\crud\oficinaImpresora.html
+wwwroot\Views\crud\oficinaPc.html
+wwwroot\Views\crud\proveedorFisica.html
+wwwroot\Views\crud\proveedorMoral.html
+wwwroot\Views\dashboard.html
+wwwroot\Views\error.html
+wwwroot\Views\login.html
+wwwroot\Views\perfiles.html
+wwwroot\Views\permisos.html
+wwwroot\Views\registro.html
+wwwroot\Views\usuarios.html

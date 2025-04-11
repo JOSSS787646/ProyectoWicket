@@ -1,6 +1,15 @@
 ﻿document.getElementById("registerForm").addEventListener("submit", async function (event) {
     event.preventDefault();
 
+    // Mostrar estado de carga
+    btn.classList.add('btn-loading');
+    btn.querySelector('span').style.visibility = 'hidden';
+
+    // Ocultar mensajes de error previos
+    document.querySelectorAll('.error-message').forEach(el => {
+        el.style.display = 'none';
+    });
+
     const username = document.getElementById("username").value.trim();
     const email = document.getElementById("email").value.trim();
     const password = document.getElementById("password").value.trim();

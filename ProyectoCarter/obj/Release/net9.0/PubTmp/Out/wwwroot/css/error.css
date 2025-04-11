@@ -1,0 +1,57 @@
+﻿/* Página de error */
+.error-container {
+    text-align: center;
+    margin-top: 50px;
+}
+
+    .error-container h1 {
+        font-size: 50px;
+        color: red;
+    }
+
+    .error-container p {
+        font-size: 20px;
+    }
+
+.back-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+    .back-button:hover {
+        background-color: #0056b3;
+    }
+
+/* Página de construccion */
+.construccion-container {
+    text-align: center;
+    margin-top: 50px;
+}
+
+    .construccion-container h1 {
+        font-size: 50px;
+        color: darkorange;
+    }
+
+    .construccion-container p {
+        font-size: 20px;
+    }
+
+.back-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+    .back-button:hover {
+        background-color: #0056b3;
+    }

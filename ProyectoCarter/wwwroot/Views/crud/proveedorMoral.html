@@ -1,22 +1,138 @@
 ﻿<!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Proveedores Morales</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <style>
+        /* ===== PALETA DE COLORES CAFÉ ===== */
+        :root {
+            --cafe-oscuro: #5D4037;
+            --cafe-medio: #8D6E63;
+            --cafe-claro: #D7CCC8;
+            --cafe-suave: #EFEBE9;
+            --beige: #F5F1EE;
+            --texto-oscuro: #3E2723;
+            --texto-claro: #FFFFFF;
+            --cafe-dorado: #A1887F;
+            --cafe-gradient: linear-gradient(135deg, #D4B483 0%, #B58A5A 100%);
+        }
+
+        body {
+            background-color: var(--cafe-suave);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: var(--texto-oscuro);
+            padding: 20px;
+        }
+
+        .card {
+            border: none;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+            overflow: hidden;
+        }
+
+        .card-header {
+            background: var(--cafe-gradient) !important;
+            color: var(--texto-claro);
+            padding: 16px 24px;
+            border-bottom: none;
+        }
+
+        .card-title {
+            font-weight: 600;
+            letter-spacing: 0.3px;
+        }
+
+        .card-body {
+            background-color: var(--beige);
+            padding: 24px;
+        }
+
+        .btn-success {
+            background-color: var(--cafe-medio);
+            border-color: var(--cafe-medio);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+            .btn-success:hover {
+                background-color: var(--cafe-oscuro);
+                transform: translateY(-2px);
+                box-shadow: 0 4px 12px rgba(93, 64, 55, 0.2);
+            }
+
+        .btn-secondary {
+            background-color: var(--cafe-claro);
+            border-color: var(--cafe-claro);
+            color: var(--texto-oscuro);
+        }
+
+        .btn-primary {
+            background-color: var(--cafe-medio);
+            border-color: var(--cafe-medio);
+        }
+
+        .table {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .table-light {
+            background-color: var(--cafe-dorado) !important;
+            color: white;
+        }
+
+        .table-hover tbody tr:hover {
+            background-color: var(--cafe-suave) !important;
+        }
+
+        .table-bordered {
+            border-color: var(--cafe-claro);
+        }
+
+        .alert-warning {
+            background-color: rgba(193, 154, 107, 0.2);
+            border-color: var(--cafe-medio);
+            color: var(--texto-oscuro);
+        }
+
         .action-column {
             white-space: nowrap;
             width: 1%;
+        }
+
+            .action-column .btn {
+                padding: 5px 10px;
+                margin: 0 3px;
+            }
+
+        h4 {
+            color: var(--cafe-oscuro);
+            font-weight: 500;
+        }
+
+        @media (max-width: 768px) {
+            .card-body {
+                padding: 16px;
+            }
+
+            .btn-success {
+                padding: 6px 12px;
+                font-size: 14px;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container-fluid mt-4">
         <div class="card">
-            <div class="card-header bg-primary text-white">
+            <div class="card-header">
                 <h3 class="card-title"><i class="fas fa-building"></i> Proveedores Morales</h3>
             </div>
             <div class="card-body">
@@ -25,7 +141,7 @@
                         <h4>Listado de Proveedores Morales</h4>
                     </div>
                     <div class="col-md-6 d-flex align-items-end justify-content-end">
-                        <button id="btnAdd" class="btn btn-success">
+                        <button id="btnAdd" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#proveedorMoralModal">
                             <i class="fas fa-plus"></i> Nuevo Proveedor
                         </button>
                     </div>
@@ -55,7 +171,7 @@
         </div>
     </div>
 
-    <!-- Modal para formulario -->
+    <!-- Modal -->
     <div class="modal fade" id="proveedorMoralModal" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -65,26 +181,26 @@
                 </div>
                 <div class="modal-body">
                     <form id="formProveedorMoral">
-                        <input type="hidden" id="proveedorId" value="">
+                        <input type="hidden" id="proveedorId" value="" />
                         <div class="mb-3">
                             <label for="razonSocial" class="form-label">Razón Social</label>
-                            <input type="text" class="form-control" id="razonSocial" required>
+                            <input type="text" class="form-control" id="razonSocial" required />
                         </div>
                         <div class="mb-3">
                             <label for="rfc" class="form-label">RFC</label>
-                            <input type="text" class="form-control" id="rfc" required>
+                            <input type="text" class="form-control" id="rfc" required />
                         </div>
                         <div class="mb-3">
                             <label for="representante" class="form-label">Representante Legal</label>
-                            <input type="text" class="form-control" id="representante" required>
+                            <input type="text" class="form-control" id="representante" required />
                         </div>
                         <div class="mb-3">
                             <label for="telefono" class="form-label">Teléfono</label>
-                            <input type="tel" class="form-control" id="telefono" required>
+                            <input type="tel" class="form-control" id="telefono" required />
                         </div>
                         <div class="mb-3">
                             <label for="email" class="form-label">Email</label>
-                            <input type="email" class="form-control" id="email" required>
+                            <input type="email" class="form-control" id="email" required />
                         </div>
                     </form>
                 </div>

@@ -7,9 +7,126 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
+        /* ===== PALETA DE COLORES CAFÉ ===== */
+        :root {
+            --cafe-oscuro: #5D4037;
+            --cafe-medio: #8D6E63;
+            --cafe-claro: #D7CCC8;
+            --cafe-suave: #EFEBE9;
+            --beige: #F5F1EE;
+            --texto-oscuro: #3E2723;
+            --texto-claro: #FFFFFF;
+            --cafe-dorado: #A1887F;
+            --cafe-gradient: linear-gradient(135deg, #D4B483 0%, #B58A5A 100%);
+        }
+
+        /* ===== ESTILOS GENERALES ===== */
+        body {
+            background-color: var(--cafe-suave);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: var(--texto-oscuro);
+            padding: 20px;
+        }
+
+        .card {
+            border: none;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+            overflow: hidden;
+        }
+
+        .card-header {
+            background: var(--cafe-gradient) !important;
+            color: var(--texto-claro);
+            padding: 16px 24px;
+            border-bottom: none;
+        }
+
+        .card-title {
+            font-weight: 600;
+            letter-spacing: 0.3px;
+        }
+
+        .card-body {
+            background-color: var(--beige);
+            padding: 24px;
+        }
+
+        .btn-success {
+            background-color: var(--cafe-medio);
+            border-color: var(--cafe-medio);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+            .btn-success:hover {
+                background-color: var(--cafe-oscuro);
+                transform: translateY(-2px);
+                box-shadow: 0 4px 12px rgba(93, 64, 55, 0.2);
+            }
+
+        .btn-secondary {
+            background-color: var(--cafe-claro);
+            border-color: var(--cafe-claro);
+            color: var(--texto-oscuro);
+        }
+
+        .btn-primary {
+            background-color: var(--cafe-medio);
+            border-color: var(--cafe-medio);
+        }
+
+        .table {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .table-light {
+            background-color: var(--cafe-dorado) !important;
+            color: white;
+        }
+
+        .table-hover tbody tr:hover {
+            background-color: var(--cafe-suave) !important;
+        }
+
+        .table-bordered {
+            border-color: var(--cafe-claro);
+        }
+
+        .alert-warning {
+            background-color: rgba(193, 154, 107, 0.2);
+            border-color: var(--cafe-medio);
+            color: var(--texto-oscuro);
+        }
+
         .action-column {
             white-space: nowrap;
             width: 1%;
+        }
+
+            .action-column .btn {
+                padding: 5px 10px;
+                margin: 0 3px;
+            }
+
+        h4 {
+            color: var(--cafe-oscuro);
+            font-weight: 500;
+        }
+
+        @media (max-width: 768px) {
+            .card-body {
+                padding: 16px;
+            }
+
+            .btn-success {
+                padding: 6px 12px;
+                font-size: 14px;
+            }
         }
     </style>
 </head>

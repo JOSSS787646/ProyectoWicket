@@ -4,42 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="/css/dashboard.css">
 </head>
 <body class="dashboard">
-    <!-- Menú de navegación (ahora vacío, se llenará con JS) -->
+    <!-- Menú de navegación -->
     <nav>
         <button class="menu-toggle"><i class="fas fa-bars"></i></button>
-        <ul class="nav-links">
+        <ul class="nav-links" id="menuDinamico">
             <!-- El menú se generará aquí dinámicamente -->
         </ul>
     </nav>
 
-    <!-- Breadcrumbs -->
-    <div class="breadcrumb" id="breadcrumb"></div>
+    <!-- Barra superior -->
+    <div class="top-bar">
+        <span id="">Panel de Control</span>
+ 
+        <span id="usernameDisplay">Usuario</span>
+    </div>
 
     <!-- Contenedor principal -->
     <div class="dashboard-container">
         <h1>Bienvenido al Dashboard</h1>
-        <p>Selecciona una opción en el menú.</p>
-
-        <!-- Reloj Digital -->
-        <div id="clock"></div>
+        <span id="usernameDisplay" style="color: black; font-weight: bold; font-size: 1.1rem;">Usuario</span>
 
         <div class="cards-container">
-            <div class="card">
-                <h3>Usuarios Registrados</h3>
-                <p>150</p>
-            </div>
-            <div class="card">
-                <h3>Proyectos Activos</h3>
-                <p>35</p>
-            </div>
-            <div class="card">
-                <h3>Notificaciones</h3>
-                <p>5</p>
-            </div>
+          
         </div>
     </div>
 

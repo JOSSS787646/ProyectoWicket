@@ -1,0 +1,296 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+/* Estilos generales */
+body.dashboard {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Menú de navegación */
+nav {
+    width: 100%;
+    background-color: #007BFF;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centra las opciones */
+}
+
+.menu-toggle {
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    display: none;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: center; /* Centra los elementos dentro del contenedor */
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+    .nav-links li {
+        display: inline;
+    }
+
+    .nav-links a {
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+        .nav-links a:hover {
+            color: #f4f4f4; /* Color al pasar el mouse */
+        }
+
+
+/* Dropdown menu */
+/* Estilos generales del menú */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #007BFF;
+    list-style: none;
+    padding: 10px;
+    margin: 0;
+    min-width: 200px;
+    z-index: 1000;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+    .dropdown-menu li {
+        padding: 5px 0;
+    }
+
+    /* Estilos para los enlaces del menú */
+    .dropdown-menu a {
+        color: white;
+        display: block;
+        padding: 8px 12px;
+        border-radius: 4px;
+        text-decoration: none;
+    }
+
+        .dropdown-menu a:hover {
+            background-color: #0056b3;
+        }
+
+/* Mostrar el menú al pasar el mouse */
+.dropdown:hover > .dropdown-menu {
+    display: block;
+}
+
+/* Estilos para los submenús */
+.dropdown-submenu {
+    position: relative;
+}
+
+    .dropdown-submenu > .dropdown-menu {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 100%;
+    }
+
+    /* Mostrar el submenú al pasar el mouse */
+    .dropdown-submenu:hover > .dropdown-menu {
+        display: block;
+    }
+
+    n
+
+
+/* Breadcrumbs */
+.breadcrumb {
+    margin: 20px auto;
+    font-size: 14px;
+    color: #007BFF; /* Color del texto */
+    font-weight: bold;
+}
+
+    .breadcrumb a {
+        text-decoration: none;
+        color: #007BFF; /* Color de los enlaces */
+    }
+
+        .breadcrumb a:hover {
+            color: #0056b3; /* Color al pasar el mouse */
+        }
+
+    .breadcrumb span {
+        margin: 0 5px;
+        color: #555; /* Color del separador */
+    }
+
+    .breadcrumb i {
+        margin-right: 5px; /* Espacio entre el ícono y el texto */
+    }
+
+/* Contenedor principal */
+.dashboard-container {
+    text-align: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    margin: 20px auto;
+}
+
+/* Tarjetas */
+.cards-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.card {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 150px;
+}
+
+    .card h3 {
+        margin: 0;
+        color: #007BFF;
+    }
+
+/* Estilo del reloj digital */
+#clock {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 3rem;
+    font-weight: bold;
+    color: #333; /* Texto negro */
+    text-align: center;
+    margin-top: 20px;
+    padding: 15px 30px;
+    background: #f8f8f8; /* Fondo blanco */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Sombra ligera */
+    display: inline-block;
+    letter-spacing: 5px;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.2), 0 0 10px rgba(0, 0, 0, 0.1);
+    width: fit-content;
+    margin: 0 auto;
+}
+
+/* Animación de aparición del reloj */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+#clock {
+    animation: fadeIn 1s ease-out;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #007BFF;
+        position: absolute;
+        width: 100%;
+        left: 0;
+        top: 50px;
+        padding: 10px 0;
+    }
+
+        .nav-links.active {
+            display: flex;
+        }
+
+        .nav-links li {
+            text-align: center;
+            margin: 10px 0;
+        }
+
+    .cards-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #007BFF;
+        position: absolute;
+        width: 100%;
+        left: 0;
+        top: 50px;
+        padding: 10px 0;
+    }
+
+        .nav-links.active {
+            display: flex;
+        }
+
+        .nav-links li {
+            text-align: center;
+            margin: 10px 0;
+        }
+
+    .dropdown-menu, .dropdown-submenu {
+        position: static;
+        display: none;
+        background-color: #0056b3;
+    }
+
+        .dropdown:hover .dropdown-menu,
+        .dropdown-submenu:hover .dropdown-submenu {
+            display: none;
+        }
+
+        .dropdown-menu.active, .dropdown-submenu.active {
+            display: block;
+        }
+}

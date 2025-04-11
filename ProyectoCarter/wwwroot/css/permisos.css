@@ -1,15 +1,152 @@
-﻿.module-row:hover {
-    background-color: #f8f9fa;
+﻿/* Estilos base */
+body {
+    background-color: #f8f9fa !important;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+    color: #3E2723 !important;
 }
 
-.checkbox-cell {
-    text-align: center;
-    vertical-align: middle;
+/* Estructura principal */
+.admin-container {
+    max-width: 1200px !important;
+    padding: 20px !important;
 }
 
-.sticky-header {
-    position: sticky;
-    top: 0;
-    background-color: white;
-    z-index: 100;
+.admin-header {
+    border-bottom: 1px solid #D7CCC8 !important;
+    padding-bottom: 15px !important;
+}
+
+.admin-title {
+    color: #5D4037 !important;
+    font-weight: 600 !important;
+    margin-top: 10px !important;
+}
+
+/* Tarjeta principal */
+.admin-card {
+    border: none !important;
+    border-radius: 10px !important;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05) !important;
+    overflow: hidden !important;
+}
+
+.admin-card-header {
+    background-color: #5D4037 !important;
+    color: white !important;
+    padding: 15px 20px !important;
+    border-bottom: 1px solid rgba(255,255,255,0.1) !important;
+}
+
+.admin-card-footer {
+    background-color: #F5F1EE !important;
+    border-top: 1px solid #D7CCC8 !important;
+    padding: 10px 20px !important;
+}
+
+/* Panel de controles */
+.admin-control-panel {
+    background-color: #F5F1EE !important;
+    border: 1px solid #D7CCC8 !important;
+}
+
+.select-role {
+    border-left: none !important;
+}
+
+.input-group-text {
+    background-color: white !important;
+    border-right: none !important;
+}
+
+/* Tabla de permisos */
+.table-permissions {
+    border-radius: 8px !important;
+    overflow: hidden !important;
+}
+
+.table-permissions-header {
+    background-color: #8D6E63 !important;
+    color: white !important;
+}
+
+    .table-permissions-header th {
+        font-weight: 500 !important;
+        padding: 15px !important;
+        vertical-align: middle !important;
+    }
+
+.table-permissions-body tr {
+    transition: all 0.2s ease !important;
+}
+
+    .table-permissions-body tr:hover {
+        background-color: #EFEBE9 !important;
+    }
+
+.table-permissions-body td {
+    padding: 12px 15px !important;
+    vertical-align: middle !important;
+}
+
+/* Botones */
+.btn-save {
+    background-color: #8D6E63 !important;
+    border-color: #8D6E63 !important;
+    color: white !important;
+    padding: 8px 20px !important;
+    border-radius: 6px !important;
+    transition: all 0.3s ease !important;
+}
+
+    .btn-save:hover {
+        background-color: #5D4037 !important;
+        transform: translateY(-2px) !important;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1) !important;
+    }
+
+.btn-back {
+    background-color: white !important;
+    border: 1px solid #D7CCC8 !important;
+    color: #3E2723 !important;
+    padding: 8px 20px !important;
+    border-radius: 6px !important;
+    transition: all 0.3s ease !important;
+}
+
+    .btn-back:hover {
+        background-color: #f0f0f0 !important;
+    }
+
+/* Checkboxes */
+.form-check-input {
+    width: 1.2em !important;
+    height: 1.2em !important;
+    cursor: pointer !important;
+}
+
+    .form-check-input:checked {
+        background-color: #8D6E63 !important;
+        border-color: #8D6E63 !important;
+    }
+
+/* Breadcrumb */
+.breadcrumb {
+    background-color: transparent !important;
+    padding: 0 !important;
+    font-size: 0.9rem !important;
+}
+
+.breadcrumb-item a {
+    color: #8D6E63 !important;
+    text-decoration: none !important;
+}
+
+.breadcrumb-item.active {
+    color: #3E2723 !important;
+}
+
+/* Badge */
+.badge {
+    padding: 6px 10px !important;
+    font-weight: 500 !important;
 }

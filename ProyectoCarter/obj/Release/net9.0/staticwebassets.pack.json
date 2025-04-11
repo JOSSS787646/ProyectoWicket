@@ -1,0 +1,173 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\LENOVO\\source\\repos\\ProyectoCarter\\ProyectoCarter\\wwwroot\\Views\\administrar.html",
+      "PackagePath": "staticwebassets\\Views\\administrar.html"
+    },
+    {
+      "Id": "C:\\Users\\LENOVO\\source\\repos\\ProyectoCarter\\ProyectoCarter\\wwwroot\\Views\\clienteFisica.html",
+      "PackagePath": "staticwebassets\\Views\\clienteFisica.html"
+    },
+    {
+      "Id": "C:\\Users\\LENOVO\\source\\repos\\ProyectoCarter\\ProyectoCarter\\wwwroot\\Views\\clienteMoral.html",
+      "PackagePath": "staticwebassets\\Views\\clienteMoral.html"
+    },
+    {
+      "Id": "C:\\Users\\LENOVO\\source\\repos\\ProyectoCarter\\ProyectoCarter\\wwwroot\\Views\\construccion.html",
+      "PackagePath": "staticwebassets\\Views\\construccion.html"
+    },
+    {
+      "Id": "C:\\Users\\LENOVO\\source\\repos\\ProyectoCarter\\ProyectoCarter\\wwwroot\\Views\\dashboard.html",
+      "PackagePath": "staticwebassets\\Views\\dashboard.html"
+    },
+    {
+      "Id": "C:\\Users\\LENOVO\\source\\repos\\ProyectoCarter\\ProyectoCarter\\wwwroot\\Views\\error.html",
+      "PackagePath": "staticwebassets\\Views\\error.html"
+    },
+    {
+      "Id": "C:\\Users\\LENOVO\\source\\repos\\ProyectoCarter\\ProyectoCarter\\wwwroot\\Views\\login.html",
+      "PackagePath": "staticwebassets\\Views\\login.html"
+    },
+    {
+      "Id": "C:\\Users\\LENOVO\\source\\repos\\ProyectoCarter\\ProyectoCarter\\wwwroot\\Views\\mantenimientoPinzas.html",
+      "PackagePath": "staticwebassets\\Views\\mantenimientoPinzas.html"
+    },
+    {
+      "Id": "C:\\Users\\LENOVO\\source\\repos\\ProyectoCarter\\ProyectoCarter\\wwwroot\\Views\\mantenimientoTaladros.html",
+      "PackagePath": "staticwebassets\\Views\\mantenimientoTaladros.html"
+    },
+    {
+      "Id": "C:\\Users\\LENOVO\\source\\repos\\ProyectoCarter\\ProyectoCarter\\wwwroot\\Views\\oficinaImpresora.html",
+      "PackagePath": "staticwebassets\\Views\\oficinaImpresora.html"
+    },
+    {
+      "Id": "C:\\Users\\LENOVO\\source\\repos\\ProyectoCarter\\ProyectoCarter\\wwwroot\\Views\\oficinaPc.html",
+      "PackagePath": "staticwebassets\\Views\\oficinaPc.html"
+    },
+    {
+      "Id": "C:\\Users\\LENOVO\\source\\repos\\ProyectoCarter\\ProyectoCarter\\wwwroot\\Views\\perfiles.html",
+      "PackagePath": "staticwebassets\\Views\\perfiles.html"
+    },
+    {
+      "Id": "C:\\Users\\LENOVO\\source\\repos\\ProyectoCarter\\ProyectoCarter\\wwwroot\\Views\\permisos.html",
+      "PackagePath": "staticwebassets\\Views\\permisos.html"
+    },
+    {
+      "Id": "C:\\Users\\LENOVO\\source\\repos\\ProyectoCarter\\ProyectoCarter\\wwwroot\\Views\\proveedorFisica.html",
+      "PackagePath": "staticwebassets\\Views\\proveedorFisica.html"
+    },
+    {
+      "Id": "C:\\Users\\LENOVO\\source\\repos\\ProyectoCarter\\ProyectoCarter\\wwwroot\\Views\\proveedorMoral.html",
+      "PackagePath": "staticwebassets\\Views\\proveedorMoral.html"
+    },
+    {
+      "Id": "C:\\Users\\LENOVO\\source\\repos\\ProyectoCarter\\ProyectoCarter\\wwwroot\\Views\\registro.html",
+      "PackagePath": "staticwebassets\\Views\\registro.html"
+    },
+    {
+      "Id": "C:\\Users\\LENOVO\\source\\repos\\ProyectoCarter\\ProyectoCarter\\wwwroot\\Views\\usuarios.html",
+      "PackagePath": "staticwebassets\\Views\\usuarios.html"
+    },
+    {
+      "Id": "C:\\Users\\LENOVO\\source\\repos\\ProyectoCarter\\ProyectoCarter\\wwwroot\\css\\administrar.css",
+      "PackagePath": "staticwebassets\\css\\administrar.css"
+    },
+    {
+      "Id": "C:\\Users\\LENOVO\\source\\repos\\ProyectoCarter\\ProyectoCarter\\wwwroot\\css\\crud.css",
+      "PackagePath": "staticwebassets\\css\\crud.css"
+    },
+    {
+      "Id": "C:\\Users\\LENOVO\\source\\repos\\ProyectoCarter\\ProyectoCarter\\wwwroot\\css\\dashboard.css",
+      "PackagePath": "staticwebassets\\css\\dashboard.css"
+    },
+    {
+      "Id": "C:\\Users\\LENOVO\\source\\repos\\ProyectoCarter\\ProyectoCarter\\wwwroot\\css\\error.css",
+      "PackagePath": "staticwebassets\\css\\error.css"
+    },
+    {
+      "Id": "C:\\Users\\LENOVO\\source\\repos\\ProyectoCarter\\ProyectoCarter\\wwwroot\\css\\login.css",
+      "PackagePath": "staticwebassets\\css\\login.css"
+    },
+    {
+      "Id": "C:\\Users\\LENOVO\\source\\repos\\ProyectoCarter\\ProyectoCarter\\wwwroot\\css\\permisos.css",
+      "PackagePath": "staticwebassets\\css\\permisos.css"
+    },
+    {
+      "Id": "C:\\Users\\LENOVO\\source\\repos\\ProyectoCarter\\ProyectoCarter\\wwwroot\\css\\registro.css",
+      "PackagePath": "staticwebassets\\css\\registro.css"
+    },
+    {
+      "Id": "C:\\Users\\LENOVO\\source\\repos\\ProyectoCarter\\ProyectoCarter\\wwwroot\\js\\administrarV2.js",
+      "PackagePath": "staticwebassets\\js\\administrarV2.js"
+    },
+    {
+      "Id": "C:\\Users\\LENOVO\\source\\repos\\ProyectoCarter\\ProyectoCarter\\wwwroot\\js\\clienteFisica.js",
+      "PackagePath": "staticwebassets\\js\\clienteFisica.js"
+    },
+    {
+      "Id": "C:\\Users\\LENOVO\\source\\repos\\ProyectoCarter\\ProyectoCarter\\wwwroot\\js\\crudPermisos.js",
+      "PackagePath": "staticwebassets\\js\\crudPermisos.js"
+    },
+    {
+      "Id": "C:\\Users\\LENOVO\\source\\repos\\ProyectoCarter\\ProyectoCarter\\wwwroot\\js\\dashboard.js",
+      "PackagePath": "staticwebassets\\js\\dashboard.js"
+    },
+    {
+      "Id": "C:\\Users\\LENOVO\\source\\repos\\ProyectoCarter\\ProyectoCarter\\wwwroot\\js\\login.js",
+      "PackagePath": "staticwebassets\\js\\login.js"
+    },
+    {
+      "Id": "C:\\Users\\LENOVO\\source\\repos\\ProyectoCarter\\ProyectoCarter\\wwwroot\\js\\mantenimientoPinzas.js",
+      "PackagePath": "staticwebassets\\js\\mantenimientoPinzas.js"
+    },
+    {
+      "Id": "C:\\Users\\LENOVO\\source\\repos\\ProyectoCarter\\ProyectoCarter\\wwwroot\\js\\mantenimientoTaladros.js",
+      "PackagePath": "staticwebassets\\js\\mantenimientoTaladros.js"
+    },
+    {
+      "Id": "C:\\Users\\LENOVO\\source\\repos\\ProyectoCarter\\ProyectoCarter\\wwwroot\\js\\oficinaImpresora.js",
+      "PackagePath": "staticwebassets\\js\\oficinaImpresora.js"
+    },
+    {
+      "Id": "C:\\Users\\LENOVO\\source\\repos\\ProyectoCarter\\ProyectoCarter\\wwwroot\\js\\oficinaPc.js",
+      "PackagePath": "staticwebassets\\js\\oficinaPc.js"
+    },
+    {
+      "Id": "C:\\Users\\LENOVO\\source\\repos\\ProyectoCarter\\ProyectoCarter\\wwwroot\\js\\permisos.js",
+      "PackagePath": "staticwebassets\\js\\permisos.js"
+    },
+    {
+      "Id": "C:\\Users\\LENOVO\\source\\repos\\ProyectoCarter\\ProyectoCarter\\wwwroot\\js\\proveedorFisica.js",
+      "PackagePath": "staticwebassets\\js\\proveedorFisica.js"
+    },
+    {
+      "Id": "C:\\Users\\LENOVO\\source\\repos\\ProyectoCarter\\ProyectoCarter\\wwwroot\\js\\proveedorMoral.js",
+      "PackagePath": "staticwebassets\\js\\proveedorMoral.js"
+    },
+    {
+      "Id": "C:\\Users\\LENOVO\\source\\repos\\ProyectoCarter\\ProyectoCarter\\wwwroot\\js\\registro.js",
+      "PackagePath": "staticwebassets\\js\\registro.js"
+    },
+    {
+      "Id": "obj\\Release\\net9.0\\staticwebassets\\msbuild.ProyectoCarter.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Release\\net9.0\\staticwebassets\\msbuild.ProyectoCarter.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Release\\net9.0\\staticwebassets\\msbuild.build.ProyectoCarter.props",
+      "PackagePath": "build\\ProyectoCarter.props"
+    },
+    {
+      "Id": "obj\\Release\\net9.0\\staticwebassets\\msbuild.buildMultiTargeting.ProyectoCarter.props",
+      "PackagePath": "buildMultiTargeting\\ProyectoCarter.props"
+    },
+    {
+      "Id": "obj\\Release\\net9.0\\staticwebassets\\msbuild.buildTransitive.ProyectoCarter.props",
+      "PackagePath": "buildTransitive\\ProyectoCarter.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

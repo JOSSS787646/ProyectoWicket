@@ -1,6 +1,12 @@
 ﻿document.getElementById("loginForm").addEventListener("submit", async function (event) {
-    event.preventDefault();
+    event.preventDefault(); // Corregí 'e' por 'event'
+    const btn = this.querySelector('button[type="submit"]');
 
+    // Mostrar estado de carga
+    btn.classList.add('btn-loading');
+    btn.querySelector('span').style.visibility = 'hidden';
+
+    // Obtener valores de los campos
     let username = document.getElementById("username").value.trim();
     const password = document.getElementById("password").value.trim();
     const errorMessage = document.getElementById("errorMessage");
@@ -23,8 +29,18 @@
             window.location.href = "/dashboard";
         } else {
             errorMessage.textContent = "Usuario o contraseña incorrectos";
+            errorMessage.style.display = "block";
+
+            // Restaurar botón
+            btn.classList.remove('btn-loading');
+            btn.querySelector('span').style.visibility = 'visible';
         }
     } catch (error) {
         errorMessage.textContent = "Error de conexión con el servidor";
+        errorMessage.style.display = "block";
+
+        // Restaurar botón
+        btn.classList.remove('btn-loading');
+        btn.querySelector('span').style.visibility = 'visible';
     }
 });

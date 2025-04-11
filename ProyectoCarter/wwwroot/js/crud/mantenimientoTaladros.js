@@ -8,6 +8,7 @@
         puedeExportar: false,
         puedeVerBitacora: false
     },
+    moduleName: "Maquinaria pesada", // Nombre del módulo que debe coincidir con el del backend
 
     async init() {
         try {
@@ -55,29 +56,37 @@
 
     async cargarPermisos() {
         try {
-            const response = await fetch('/auth/permisos-modulo/Taladros', {
+            const response = await fetch(`/auth/permisos-modulo/${this.moduleName}`, {
                 credentials: 'include',
                 headers: {
                     'Content-Type': 'application/json',
                     'Accept': 'application/json'
                 }
             });
-            if (!response.ok) throw new Error(`Error HTTP: ${response.status}`);
+
+            if (!response.ok) {
+                throw new Error(`Error HTTP: ${response.status}`);
+            }
 
             const data = await response.json();
-            console.log(`[${this.moduleName}] Permisos recibidos:`, JSON.stringify(data, null, 2));
+            console.log(`[${this.moduleName}] Permisos recibidos:`, data);
 
-            this.permisos = {
-                puedeConsultar: data.PuedeConsultar || false,
-                puedeAgregar: data.PuedeAgregar || false,
-                puedeEditar: data.PuedeEditar || false,
-                puedeEliminar: data.PuedeEliminar || false,
-                puedeExportar: data.PuedeExportar || false,
-                puedeVerBitacora: data.PuedeVerBitacora || false
-            };
+            if (data && typeof data === 'object') {
+                this.permisos = {
+                    puedeConsultar: data.PuedeConsultar || false,
+                    puedeAgregar: data.PuedeAgregar || false,
+                    puedeEditar: data.PuedeEditar || false,
+                    puedeEliminar: data.PuedeEliminar || false,
+                    puedeExportar: data.PuedeExportar || false,
+                    puedeVerBitacora: data.PuedeVerBitacora || false
+                };
+            } else {
+                console.warn("Los permisos recibidos no tienen el formato esperado:", data);
+            }
         } catch (error) {
             console.error("Error cargando permisos:", error);
-            throw error;
+            // Mostrar un mensaje al usuario pero permitir que la aplicación continúe
+            this.showError("No se pudieron cargar los permisos. Usando permisos por defecto.");
         }
     },
 
@@ -168,17 +177,20 @@
     },
 
     deleteItem(id) {
-        this.taladros = this.taladros.filter(taladro => taladro.id !== id);
-        localStorage.setItem("taladros", JSON.stringify(this.taladros));
-        this.loadItems();
+        if (confirm("¿Estás seguro de que deseas eliminar este taladro?")) {
+            this.taladros = this.taladros.filter(taladro => taladro.id !== id);
+            localStorage.setItem("taladros", JSON.stringify(this.taladros));
+            this.loadItems();
+        }
     }
 };
 
-(async function () {
+// Inicialización
+document.addEventListener('DOMContentLoaded', async () => {
     try {
         await crud.init();
     } catch (error) {
         console.error("Error inicializando aplicación:", error);
         crud.showError("Error crítico al cargar la aplicación: " + error.message);
     }
-})();
+});

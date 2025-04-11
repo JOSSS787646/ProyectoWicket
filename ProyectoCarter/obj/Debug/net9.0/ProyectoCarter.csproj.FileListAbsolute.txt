@@ -1,0 +1,245 @@
+C:\Users\LENOVO\source\repos\ProyectoCarter\ProyectoCarter\bin\Debug\net9.0\appsettings.Development.json
+C:\Users\LENOVO\source\repos\ProyectoCarter\ProyectoCarter\bin\Debug\net9.0\appsettings.json
+C:\Users\LENOVO\source\repos\ProyectoCarter\ProyectoCarter\bin\Debug\net9.0\ProyectoCarter.staticwebassets.runtime.json
+C:\Users\LENOVO\source\repos\ProyectoCarter\ProyectoCarter\bin\Debug\net9.0\ProyectoCarter.staticwebassets.endpoints.json
+C:\Users\LENOVO\source\repos\ProyectoCarter\ProyectoCarter\bin\Debug\net9.0\ProyectoCarter.exe
+C:\Users\LENOVO\source\repos\ProyectoCarter\ProyectoCarter\bin\Debug\net9.0\ProyectoCarter.deps.json
+C:\Users\LENOVO\source\repos\ProyectoCarter\ProyectoCarter\bin\Debug\net9.0\ProyectoCarter.runtimeconfig.json
+C:\Users\LENOVO\source\repos\ProyectoCarter\ProyectoCarter\bin\Debug\net9.0\ProyectoCarter.dll
+C:\Users\LENOVO\source\repos\ProyectoCarter\ProyectoCarter\bin\Debug\net9.0\ProyectoCarter.pdb
+C:\Users\LENOVO\source\repos\ProyectoCarter\ProyectoCarter\bin\Debug\net9.0\BCrypt.Net.dll
+C:\Users\LENOVO\source\repos\ProyectoCarter\ProyectoCarter\bin\Debug\net9.0\BouncyCastle.Cryptography.dll
+C:\Users\LENOVO\source\repos\ProyectoCarter\ProyectoCarter\bin\Debug\net9.0\Carter.dll
+C:\Users\LENOVO\source\repos\ProyectoCarter\ProyectoCarter\bin\Debug\net9.0\Carter.Analyzers.dll
+C:\Users\LENOVO\source\repos\ProyectoCarter\ProyectoCarter\bin\Debug\net9.0\Dapper.dll
+C:\Users\LENOVO\source\repos\ProyectoCarter\ProyectoCarter\bin\Debug\net9.0\FluentValidation.dll
+C:\Users\LENOVO\source\repos\ProyectoCarter\ProyectoCarter\bin\Debug\net9.0\Google.Protobuf.dll
+C:\Users\LENOVO\source\repos\ProyectoCarter\ProyectoCarter\bin\Debug\net9.0\K4os.Compression.LZ4.dll
+C:\Users\LENOVO\source\repos\ProyectoCarter\ProyectoCarter\bin\Debug\net9.0\K4os.Compression.LZ4.Streams.dll
+C:\Users\LENOVO\source\repos\ProyectoCarter\ProyectoCarter\bin\Debug\net9.0\K4os.Hash.xxHash.dll
+C:\Users\LENOVO\source\repos\ProyectoCarter\ProyectoCarter\bin\Debug\net9.0\Microsoft.CodeAnalysis.dll
+C:\Users\LENOVO\source\repos\ProyectoCarter\ProyectoCarter\bin\Debug\net9.0\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\LENOVO\source\repos\ProyectoCarter\ProyectoCarter\bin\Debug\net9.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\LENOVO\source\repos\ProyectoCarter\ProyectoCarter\bin\Debug\net9.0\MySql.Data.dll
+C:\Users\LENOVO\source\repos\ProyectoCarter\ProyectoCarter\bin\Debug\net9.0\System.Configuration.ConfigurationManager.dll
+C:\Users\LENOVO\source\repos\ProyectoCarter\ProyectoCarter\bin\Debug\net9.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\LENOVO\source\repos\ProyectoCarter\ProyectoCarter\bin\Debug\net9.0\System.Security.Permissions.dll
+C:\Users\LENOVO\source\repos\ProyectoCarter\ProyectoCarter\bin\Debug\net9.0\System.Windows.Extensions.dll
+C:\Users\LENOVO\source\repos\ProyectoCarter\ProyectoCarter\bin\Debug\net9.0\ZstdSharp.dll
+C:\Users\LENOVO\source\repos\ProyectoCarter\ProyectoCarter\bin\Debug\net9.0\cs\Microsoft.CodeAnalysis.resources.dll
+C:\Users\LENOVO\source\repos\ProyectoCarter\ProyectoCarter\bin\Debug\net9.0\de\Microsoft.CodeAnalysis.resources.dll
+C:\Users\LENOVO\source\repos\ProyectoCarter\ProyectoCarter\bin\Debug\net9.0\es\Microsoft.CodeAnalysis.resources.dll
+C:\Users\LENOVO\source\repos\ProyectoCarter\ProyectoCarter\bin\Debug\net9.0\fr\Microsoft.CodeAnalysis.resources.dll
+C:\Users\LENOVO\source\repos\ProyectoCarter\ProyectoCarter\bin\Debug\net9.0\it\Microsoft.CodeAnalysis.resources.dll
+C:\Users\LENOVO\source\repos\ProyectoCarter\ProyectoCarter\bin\Debug\net9.0\ja\Microsoft.CodeAnalysis.resources.dll
+C:\Users\LENOVO\source\repos\ProyectoCarter\ProyectoCarter\bin\Debug\net9.0\ko\Microsoft.CodeAnalysis.resources.dll
+C:\Users\LENOVO\source\repos\ProyectoCarter\ProyectoCarter\bin\Debug\net9.0\pl\Microsoft.CodeAnalysis.resources.dll
+C:\Users\LENOVO\source\repos\ProyectoCarter\ProyectoCarter\bin\Debug\net9.0\pt-BR\Microsoft.CodeAnalysis.resources.dll
+C:\Users\LENOVO\source\repos\ProyectoCarter\ProyectoCarter\bin\Debug\net9.0\ru\Microsoft.CodeAnalysis.resources.dll
+C:\Users\LENOVO\source\repos\ProyectoCarter\ProyectoCarter\bin\Debug\net9.0\tr\Microsoft.CodeAnalysis.resources.dll
+C:\Users\LENOVO\source\repos\ProyectoCarter\ProyectoCarter\bin\Debug\net9.0\zh-Hans\Microsoft.CodeAnalysis.resources.dll
+C:\Users\LENOVO\source\repos\ProyectoCarter\ProyectoCarter\bin\Debug\net9.0\zh-Hant\Microsoft.CodeAnalysis.resources.dll
+C:\Users\LENOVO\source\repos\ProyectoCarter\ProyectoCarter\bin\Debug\net9.0\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\LENOVO\source\repos\ProyectoCarter\ProyectoCarter\bin\Debug\net9.0\de\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\LENOVO\source\repos\ProyectoCarter\ProyectoCarter\bin\Debug\net9.0\es\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\LENOVO\source\repos\ProyectoCarter\ProyectoCarter\bin\Debug\net9.0\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\LENOVO\source\repos\ProyectoCarter\ProyectoCarter\bin\Debug\net9.0\it\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\LENOVO\source\repos\ProyectoCarter\ProyectoCarter\bin\Debug\net9.0\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\LENOVO\source\repos\ProyectoCarter\ProyectoCarter\bin\Debug\net9.0\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\LENOVO\source\repos\ProyectoCarter\ProyectoCarter\bin\Debug\net9.0\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\LENOVO\source\repos\ProyectoCarter\ProyectoCarter\bin\Debug\net9.0\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\LENOVO\source\repos\ProyectoCarter\ProyectoCarter\bin\Debug\net9.0\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\LENOVO\source\repos\ProyectoCarter\ProyectoCarter\bin\Debug\net9.0\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\LENOVO\source\repos\ProyectoCarter\ProyectoCarter\bin\Debug\net9.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\LENOVO\source\repos\ProyectoCarter\ProyectoCarter\bin\Debug\net9.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\LENOVO\source\repos\ProyectoCarter\ProyectoCarter\bin\Debug\net9.0\runtimes\win-x64\native\comerr64.dll
+C:\Users\LENOVO\source\repos\ProyectoCarter\ProyectoCarter\bin\Debug\net9.0\runtimes\win-x64\native\gssapi64.dll
+C:\Users\LENOVO\source\repos\ProyectoCarter\ProyectoCarter\bin\Debug\net9.0\runtimes\win-x64\native\k5sprt64.dll
+C:\Users\LENOVO\source\repos\ProyectoCarter\ProyectoCarter\bin\Debug\net9.0\runtimes\win-x64\native\krb5_64.dll
+C:\Users\LENOVO\source\repos\ProyectoCarter\ProyectoCarter\bin\Debug\net9.0\runtimes\win-x64\native\krbcc64.dll
+C:\Users\LENOVO\source\repos\ProyectoCarter\ProyectoCarter\bin\Debug\net9.0\runtimes\win\lib\net8.0\System.Windows.Extensions.dll
+C:\Users\LENOVO\source\repos\ProyectoCarter\ProyectoCarter\obj\Debug\net9.0\ProyectoCarter.csproj.AssemblyReference.cache
+C:\Users\LENOVO\source\repos\ProyectoCarter\ProyectoCarter\obj\Debug\net9.0\ProyectoCarter.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\LENOVO\source\repos\ProyectoCarter\ProyectoCarter\obj\Debug\net9.0\ProyectoCarter.AssemblyInfoInputs.cache
+C:\Users\LENOVO\source\repos\ProyectoCarter\ProyectoCarter\obj\Debug\net9.0\ProyectoCarter.AssemblyInfo.cs
+C:\Users\LENOVO\source\repos\ProyectoCarter\ProyectoCarter\obj\Debug\net9.0\ProyectoCarter.csproj.CoreCompileInputs.cache
+C:\Users\LENOVO\source\repos\ProyectoCarter\ProyectoCarter\obj\Debug\net9.0\ProyectoCarter.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\LENOVO\source\repos\ProyectoCarter\ProyectoCarter\obj\Debug\net9.0\ProyectoCarter.sourcelink.json
+C:\Users\LENOVO\source\repos\ProyectoCarter\ProyectoCarter\obj\Debug\net9.0\scopedcss\bundle\ProyectoCarter.styles.css
+C:\Users\LENOVO\source\repos\ProyectoCarter\ProyectoCarter\obj\Debug\net9.0\compressed\ougcfxr68e-dld65uzhrz.gz
+C:\Users\LENOVO\source\repos\ProyectoCarter\ProyectoCarter\obj\Debug\net9.0\compressed\j2412i9dch-nb8tsky79z.gz
+C:\Users\LENOVO\source\repos\ProyectoCarter\ProyectoCarter\obj\Debug\net9.0\compressed\3uklhd8ffe-dyjx89twm7.gz
+C:\Users\LENOVO\source\repos\ProyectoCarter\ProyectoCarter\obj\Debug\net9.0\compressed\5uwjp4hp8u-ge3upss3dk.gz
+C:\Users\LENOVO\source\repos\ProyectoCarter\ProyectoCarter\obj\Debug\net9.0\compressed\mlfj9bri7h-uujazevrpw.gz
+C:\Users\LENOVO\source\repos\ProyectoCarter\ProyectoCarter\obj\Debug\net9.0\compressed\si4e4tcbby-jxvddtl6zp.gz
+C:\Users\LENOVO\source\repos\ProyectoCarter\ProyectoCarter\obj\Debug\net9.0\compressed\rebu30sd94-kl6vmakn6i.gz
+C:\Users\LENOVO\source\repos\ProyectoCarter\ProyectoCarter\obj\Debug\net9.0\staticwebassets.build.json
+C:\Users\LENOVO\source\repos\ProyectoCarter\ProyectoCarter\obj\Debug\net9.0\staticwebassets.development.json
+C:\Users\LENOVO\source\repos\ProyectoCarter\ProyectoCarter\obj\Debug\net9.0\staticwebassets.build.endpoints.json
+C:\Users\LENOVO\source\repos\ProyectoCarter\ProyectoCarter\obj\Debug\net9.0\staticwebassets\msbuild.ProyectoCarter.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\LENOVO\source\repos\ProyectoCarter\ProyectoCarter\obj\Debug\net9.0\staticwebassets\msbuild.ProyectoCarter.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+C:\Users\LENOVO\source\repos\ProyectoCarter\ProyectoCarter\obj\Debug\net9.0\staticwebassets\msbuild.build.ProyectoCarter.props
+C:\Users\LENOVO\source\repos\ProyectoCarter\ProyectoCarter\obj\Debug\net9.0\staticwebassets\msbuild.buildMultiTargeting.ProyectoCarter.props
+C:\Users\LENOVO\source\repos\ProyectoCarter\ProyectoCarter\obj\Debug\net9.0\staticwebassets\msbuild.buildTransitive.ProyectoCarter.props
+C:\Users\LENOVO\source\repos\ProyectoCarter\ProyectoCarter\obj\Debug\net9.0\staticwebassets.pack.json
+C:\Users\LENOVO\source\repos\ProyectoCarter\ProyectoCarter\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
+C:\Users\LENOVO\source\repos\ProyectoCarter\ProyectoCarter\obj\Debug\net9.0\Proyecto.DE7A2254.Up2Date
+C:\Users\LENOVO\source\repos\ProyectoCarter\ProyectoCarter\obj\Debug\net9.0\ProyectoCarter.dll
+C:\Users\LENOVO\source\repos\ProyectoCarter\ProyectoCarter\obj\Debug\net9.0\refint\ProyectoCarter.dll
+C:\Users\LENOVO\source\repos\ProyectoCarter\ProyectoCarter\obj\Debug\net9.0\ProyectoCarter.pdb
+C:\Users\LENOVO\source\repos\ProyectoCarter\ProyectoCarter\obj\Debug\net9.0\ProyectoCarter.genruntimeconfig.cache
+C:\Users\LENOVO\source\repos\ProyectoCarter\ProyectoCarter\obj\Debug\net9.0\ref\ProyectoCarter.dll
+C:\Users\LENOVO\source\repos\ProyectoCarter\ProyectoCarter\obj\Debug\net9.0\compressed\6d923p8s5w-nwfq6nbanx.gz
+C:\Users\LENOVO\source\repos\ProyectoCarter\ProyectoCarter\obj\Debug\net9.0\compressed\i5qje7ws74-p0tarbm9yb.gz
+C:\Users\LENOVO\source\repos\ProyectoCarter\ProyectoCarter\obj\Debug\net9.0\compressed\0tsg9ewcn9-u0pbznw7gd.gz
+C:\Users\LENOVO\source\repos\ProyectoCarter\ProyectoCarter\obj\Debug\net9.0\compressed\5tlprasut4-ekw75f83ti.gz
+C:\Users\LENOVO\source\repos\ProyectoCarter\ProyectoCarter\obj\Debug\net9.0\compressed\lmrd41rfle-pqq9qdy8ha.gz
+C:\Users\LENOVO\source\repos\ProyectoCarter\ProyectoCarter\obj\Debug\net9.0\compressed\4ncfheby1r-tbgcabpoz3.gz
+C:\Users\LENOVO\source\repos\ProyectoCarter\ProyectoCarter\obj\Debug\net9.0\compressed\gjc4zb6p46-b04vjxv2eh.gz
+C:\Users\LENOVO\source\repos\ProyectoCarter\ProyectoCarter\obj\Debug\net9.0\compressed\72pd0bi5q2-lpv3utxgwa.gz
+C:\Users\LENOVO\source\repos\ProyectoCarter\ProyectoCarter\obj\Debug\net9.0\compressed\2lrathnp0j-d7rlj4vqnw.gz
+C:\Users\LENOVO\source\repos\ProyectoCarter\ProyectoCarter\obj\Debug\net9.0\compressed\31bdxly9t0-xaxgu5otas.gz
+C:\Users\LENOVO\source\repos\ProyectoCarter\ProyectoCarter\obj\Debug\net9.0\compressed\fxk0qebcle-cube3ec3nt.gz
+C:\Users\LENOVO\source\repos\ProyectoCarter\ProyectoCarter\obj\Debug\net9.0\compressed\jlkhfdeig7-hespnlaep7.gz
+C:\Users\LENOVO\source\repos\ProyectoCarter\ProyectoCarter\obj\Debug\net9.0\compressed\0dcs2rr3bs-f1cx2ykbe0.gz
+C:\Users\LENOVO\source\repos\ProyectoCarter\ProyectoCarter\obj\Debug\net9.0\compressed\c2915iz64t-tu738w0ler.gz
+C:\Users\LENOVO\source\repos\ProyectoCarter\ProyectoCarter\obj\Debug\net9.0\compressed\96dkebvu7j-w66agjbnw2.gz
+C:\Users\LENOVO\source\repos\ProyectoCarter\ProyectoCarter\obj\Debug\net9.0\compressed\ecbyz4qtt1-f17auuc3e8.gz
+C:\Users\LENOVO\source\repos\ProyectoCarter\ProyectoCarter\obj\Debug\net9.0\compressed\hrtu0va2br-d64rbhojv4.gz
+C:\Users\LENOVO\source\repos\ProyectoCarter\ProyectoCarter\obj\Debug\net9.0\compressed\t1vj53barj-itavngj2pp.gz
+C:\Users\LENOVO\source\repos\ProyectoCarter\ProyectoCarter\obj\Debug\net9.0\compressed\7wi1zcey12-gfbbvvmly0.gz
+C:\Users\LENOVO\source\repos\ProyectoCarter\ProyectoCarter\obj\Debug\net9.0\compressed\ck7skio5ub-i9selyjw08.gz
+C:\Users\LENOVO\source\repos\ProyectoCarter\ProyectoCarter\obj\Debug\net9.0\compressed\n6sqphh345-sgubmosazd.gz
+C:\Users\LENOVO\source\repos\ProyectoCarter\ProyectoCarter\obj\Debug\net9.0\compressed\klu1u83na3-gdsxvro0y0.gz
+C:\Users\LENOVO\source\repos\ProyectoCarter\ProyectoCarter\obj\Debug\net9.0\compressed\dx08ye1ef1-ymx6hty2bl.gz
+C:\Users\LENOVO\source\repos\ProyectoCarter\ProyectoCarter\obj\Debug\net9.0\compressed\sk16vpmst1-t7uxxnzwjj.gz
+C:\Users\LENOVO\source\repos\ProyectoCarter\ProyectoCarter\obj\Debug\net9.0\compressed\an2t3gx335-2zzz2vt0rx.gz
+C:\Users\LENOVO\source\repos\ProyectoCarter\ProyectoCarter\obj\Debug\net9.0\compressed\jpti2avl45-0tmbcmnegz.gz
+C:\Users\LENOVO\source\repos\ProyectoCarter\ProyectoCarter\obj\Debug\net9.0\compressed\hfcekrbpk2-2h4hh1nwwa.gz
+C:\Users\LENOVO\source\repos\ProyectoCarter\ProyectoCarter\obj\Debug\net9.0\compressed\czexuydrur-2ydufvbfzx.gz
+C:\Users\LENOVO\source\repos\ProyectoCarter\ProyectoCarter\obj\Debug\net9.0\compressed\rle5d78pq2-q7o6b4762v.gz
+C:\Users\LENOVO\source\repos\ProyectoCarter\ProyectoCarter\obj\Debug\net9.0\compressed\zp5lkjqf5d-lcgj6axxtb.gz
+C:\Users\LENOVO\source\repos\ProyectoCarter\ProyectoCarter\obj\Debug\net9.0\compressed\w9x5j3t0qd-jne1rhua9d.gz
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\bin\Debug\net9.0\appsettings.Development.json
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\bin\Debug\net9.0\appsettings.json
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\bin\Debug\net9.0\ProyectoCarter.staticwebassets.runtime.json
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\bin\Debug\net9.0\ProyectoCarter.staticwebassets.endpoints.json
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\bin\Debug\net9.0\ProyectoCarter.exe
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\bin\Debug\net9.0\ProyectoCarter.deps.json
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\bin\Debug\net9.0\ProyectoCarter.runtimeconfig.json
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\bin\Debug\net9.0\ProyectoCarter.dll
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\bin\Debug\net9.0\ProyectoCarter.pdb
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\bin\Debug\net9.0\BCrypt.Net.dll
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\bin\Debug\net9.0\BouncyCastle.Cryptography.dll
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\bin\Debug\net9.0\Carter.dll
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\bin\Debug\net9.0\Carter.Analyzers.dll
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\bin\Debug\net9.0\Dapper.dll
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\bin\Debug\net9.0\FluentValidation.dll
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\bin\Debug\net9.0\Google.Protobuf.dll
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\bin\Debug\net9.0\K4os.Compression.LZ4.dll
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\bin\Debug\net9.0\K4os.Compression.LZ4.Streams.dll
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\bin\Debug\net9.0\K4os.Hash.xxHash.dll
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\bin\Debug\net9.0\Microsoft.CodeAnalysis.dll
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\bin\Debug\net9.0\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\bin\Debug\net9.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\bin\Debug\net9.0\MySql.Data.dll
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\bin\Debug\net9.0\System.Configuration.ConfigurationManager.dll
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\bin\Debug\net9.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\bin\Debug\net9.0\System.Security.Permissions.dll
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\bin\Debug\net9.0\System.Windows.Extensions.dll
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\bin\Debug\net9.0\ZstdSharp.dll
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\bin\Debug\net9.0\cs\Microsoft.CodeAnalysis.resources.dll
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\bin\Debug\net9.0\de\Microsoft.CodeAnalysis.resources.dll
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\bin\Debug\net9.0\es\Microsoft.CodeAnalysis.resources.dll
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\bin\Debug\net9.0\fr\Microsoft.CodeAnalysis.resources.dll
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\bin\Debug\net9.0\it\Microsoft.CodeAnalysis.resources.dll
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\bin\Debug\net9.0\ja\Microsoft.CodeAnalysis.resources.dll
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\bin\Debug\net9.0\ko\Microsoft.CodeAnalysis.resources.dll
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\bin\Debug\net9.0\pl\Microsoft.CodeAnalysis.resources.dll
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\bin\Debug\net9.0\pt-BR\Microsoft.CodeAnalysis.resources.dll
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\bin\Debug\net9.0\ru\Microsoft.CodeAnalysis.resources.dll
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\bin\Debug\net9.0\tr\Microsoft.CodeAnalysis.resources.dll
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\bin\Debug\net9.0\zh-Hans\Microsoft.CodeAnalysis.resources.dll
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\bin\Debug\net9.0\zh-Hant\Microsoft.CodeAnalysis.resources.dll
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\bin\Debug\net9.0\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\bin\Debug\net9.0\de\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\bin\Debug\net9.0\es\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\bin\Debug\net9.0\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\bin\Debug\net9.0\it\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\bin\Debug\net9.0\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\bin\Debug\net9.0\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\bin\Debug\net9.0\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\bin\Debug\net9.0\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\bin\Debug\net9.0\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\bin\Debug\net9.0\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\bin\Debug\net9.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\bin\Debug\net9.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\bin\Debug\net9.0\runtimes\win-x64\native\comerr64.dll
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\bin\Debug\net9.0\runtimes\win-x64\native\gssapi64.dll
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\bin\Debug\net9.0\runtimes\win-x64\native\k5sprt64.dll
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\bin\Debug\net9.0\runtimes\win-x64\native\krb5_64.dll
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\bin\Debug\net9.0\runtimes\win-x64\native\krbcc64.dll
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\bin\Debug\net9.0\runtimes\win\lib\net8.0\System.Windows.Extensions.dll
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\obj\Debug\net9.0\ProyectoCarter.csproj.AssemblyReference.cache
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\obj\Debug\net9.0\ProyectoCarter.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\obj\Debug\net9.0\ProyectoCarter.AssemblyInfoInputs.cache
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\obj\Debug\net9.0\ProyectoCarter.AssemblyInfo.cs
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\obj\Debug\net9.0\ProyectoCarter.csproj.CoreCompileInputs.cache
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\obj\Debug\net9.0\ProyectoCarter.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\obj\Debug\net9.0\ProyectoCarter.sourcelink.json
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\obj\Debug\net9.0\scopedcss\bundle\ProyectoCarter.styles.css
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\obj\Debug\net9.0\compressed\2lrathnp0j-d7rlj4vqnw.gz
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\obj\Debug\net9.0\compressed\ougcfxr68e-dld65uzhrz.gz
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\obj\Debug\net9.0\compressed\t1vj53barj-itavngj2pp.gz
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\obj\Debug\net9.0\compressed\96dkebvu7j-w66agjbnw2.gz
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\obj\Debug\net9.0\compressed\hrtu0va2br-d64rbhojv4.gz
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\obj\Debug\net9.0\compressed\n6sqphh345-w0zz8jekv7.gz
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\obj\Debug\net9.0\compressed\klu1u83na3-r546b2upif.gz
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\obj\Debug\net9.0\compressed\dx08ye1ef1-cbk29df7zj.gz
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\obj\Debug\net9.0\compressed\sk16vpmst1-jjoqjzk1in.gz
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\obj\Debug\net9.0\compressed\0dcs2rr3bs-f1cx2ykbe0.gz
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\obj\Debug\net9.0\compressed\5uwjp4hp8u-ge3upss3dk.gz
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\obj\Debug\net9.0\compressed\mlfj9bri7h-uujazevrpw.gz
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\obj\Debug\net9.0\staticwebassets.build.json
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\obj\Debug\net9.0\staticwebassets.development.json
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\obj\Debug\net9.0\staticwebassets.build.endpoints.json
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\obj\Debug\net9.0\staticwebassets\msbuild.ProyectoCarter.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\obj\Debug\net9.0\staticwebassets\msbuild.ProyectoCarter.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\obj\Debug\net9.0\staticwebassets\msbuild.build.ProyectoCarter.props
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\obj\Debug\net9.0\staticwebassets\msbuild.buildMultiTargeting.ProyectoCarter.props
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\obj\Debug\net9.0\staticwebassets\msbuild.buildTransitive.ProyectoCarter.props
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\obj\Debug\net9.0\staticwebassets.pack.json
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\obj\Debug\net9.0\Proyecto.DE7A2254.Up2Date
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\obj\Debug\net9.0\ProyectoCarter.dll
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\obj\Debug\net9.0\refint\ProyectoCarter.dll
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\obj\Debug\net9.0\ProyectoCarter.pdb
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\obj\Debug\net9.0\ProyectoCarter.genruntimeconfig.cache
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\obj\Debug\net9.0\ref\ProyectoCarter.dll
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\obj\Debug\net9.0\compressed\3uklhd8ffe-5p3awt37yj.gz
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\obj\Debug\net9.0\compressed\0tsg9ewcn9-l76y97m6ga.gz
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\obj\Debug\net9.0\compressed\lmrd41rfle-pqq9qdy8ha.gz
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\obj\Debug\net9.0\compressed\i5qje7ws74-tbjokrd1v2.gz
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\obj\Debug\net9.0\compressed\eix70e1iyl-ltkho8suqf.gz
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\obj\Debug\net9.0\compressed\5tlprasut4-zvxos7iksu.gz
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\obj\Debug\net9.0\compressed\an2t3gx335-dy8mjjilhs.gz
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\obj\Debug\net9.0\compressed\ecbyz4qtt1-dgpqj7khp8.gz
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\obj\Debug\net9.0\compressed\czexuydrur-q2fmauordp.gz
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\obj\Debug\net9.0\compressed\rle5d78pq2-e3q3ini8r5.gz
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\obj\Debug\net9.0\compressed\zp5lkjqf5d-k14cjzyxds.gz
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\obj\Debug\net9.0\compressed\w9x5j3t0qd-upzzwq1yrw.gz
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\obj\Debug\net9.0\compressed\j2412i9dch-jzb2udvymt.gz
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\obj\Debug\net9.0\compressed\fxk0qebcle-cube3ec3nt.gz
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\obj\Debug\net9.0\compressed\72pd0bi5q2-mniiqjgiot.gz
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\obj\Debug\net9.0\compressed\31bdxly9t0-7k4x1u9d5t.gz
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\obj\Debug\net9.0\compressed\jlkhfdeig7-rpp3qimu5f.gz
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\obj\Debug\net9.0\compressed\6d923p8s5w-2jmj5pr9mg.gz
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\obj\Debug\net9.0\compressed\4ncfheby1r-d5d79o4rna.gz
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\obj\Debug\net9.0\compressed\rebu30sd94-8b7d1a83oc.gz
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\obj\Debug\net9.0\compressed\gjc4zb6p46-txveuadgmt.gz
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\obj\Debug\net9.0\compressed\c2915iz64t-dsl1rfqggn.gz
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\obj\Debug\net9.0\compressed\7wi1zcey12-l1wzmjg234.gz
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\obj\Debug\net9.0\compressed\ck7skio5ub-extfos7usg.gz
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\obj\Debug\net9.0\compressed\jpti2avl45-ndaya59dvx.gz
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\obj\Debug\net9.0\compressed\hfcekrbpk2-9bl71zhi7d.gz
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\obj\Debug\net9.0\compressed\si4e4tcbby-q2rdec2f2s.gz

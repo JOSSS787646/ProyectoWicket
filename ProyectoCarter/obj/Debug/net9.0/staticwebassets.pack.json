@@ -1,0 +1,181 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\josea\\Documents\\Universidad\\8 cuatrimestre\\edel\\ProyectpUnidada3\\ProyectoCarter\\ProyectoCarter\\ProyectoCarter\\wwwroot\\Views\\administrar.html",
+      "PackagePath": "staticwebassets\\Views\\administrar.html"
+    },
+    {
+      "Id": "C:\\Users\\josea\\Documents\\Universidad\\8 cuatrimestre\\edel\\ProyectpUnidada3\\ProyectoCarter\\ProyectoCarter\\ProyectoCarter\\wwwroot\\Views\\construccion.html",
+      "PackagePath": "staticwebassets\\Views\\construccion.html"
+    },
+    {
+      "Id": "C:\\Users\\josea\\Documents\\Universidad\\8 cuatrimestre\\edel\\ProyectpUnidada3\\ProyectoCarter\\ProyectoCarter\\ProyectoCarter\\wwwroot\\Views\\crud\\clienteFisica.html",
+      "PackagePath": "staticwebassets\\Views\\crud\\clienteFisica.html"
+    },
+    {
+      "Id": "C:\\Users\\josea\\Documents\\Universidad\\8 cuatrimestre\\edel\\ProyectpUnidada3\\ProyectoCarter\\ProyectoCarter\\ProyectoCarter\\wwwroot\\Views\\crud\\clienteMoral.html",
+      "PackagePath": "staticwebassets\\Views\\crud\\clienteMoral.html"
+    },
+    {
+      "Id": "C:\\Users\\josea\\Documents\\Universidad\\8 cuatrimestre\\edel\\ProyectpUnidada3\\ProyectoCarter\\ProyectoCarter\\ProyectoCarter\\wwwroot\\Views\\crud\\mantenimientoPinzas.html",
+      "PackagePath": "staticwebassets\\Views\\crud\\mantenimientoPinzas.html"
+    },
+    {
+      "Id": "C:\\Users\\josea\\Documents\\Universidad\\8 cuatrimestre\\edel\\ProyectpUnidada3\\ProyectoCarter\\ProyectoCarter\\ProyectoCarter\\wwwroot\\Views\\crud\\mantenimientoTaladros.html",
+      "PackagePath": "staticwebassets\\Views\\crud\\mantenimientoTaladros.html"
+    },
+    {
+      "Id": "C:\\Users\\josea\\Documents\\Universidad\\8 cuatrimestre\\edel\\ProyectpUnidada3\\ProyectoCarter\\ProyectoCarter\\ProyectoCarter\\wwwroot\\Views\\crud\\oficinaImpresora.html",
+      "PackagePath": "staticwebassets\\Views\\crud\\oficinaImpresora.html"
+    },
+    {
+      "Id": "C:\\Users\\josea\\Documents\\Universidad\\8 cuatrimestre\\edel\\ProyectpUnidada3\\ProyectoCarter\\ProyectoCarter\\ProyectoCarter\\wwwroot\\Views\\crud\\oficinaPc.html",
+      "PackagePath": "staticwebassets\\Views\\crud\\oficinaPc.html"
+    },
+    {
+      "Id": "C:\\Users\\josea\\Documents\\Universidad\\8 cuatrimestre\\edel\\ProyectpUnidada3\\ProyectoCarter\\ProyectoCarter\\ProyectoCarter\\wwwroot\\Views\\crud\\proveedorFisica.html",
+      "PackagePath": "staticwebassets\\Views\\crud\\proveedorFisica.html"
+    },
+    {
+      "Id": "C:\\Users\\josea\\Documents\\Universidad\\8 cuatrimestre\\edel\\ProyectpUnidada3\\ProyectoCarter\\ProyectoCarter\\ProyectoCarter\\wwwroot\\Views\\crud\\proveedorMoral.html",
+      "PackagePath": "staticwebassets\\Views\\crud\\proveedorMoral.html"
+    },
+    {
+      "Id": "C:\\Users\\josea\\Documents\\Universidad\\8 cuatrimestre\\edel\\ProyectpUnidada3\\ProyectoCarter\\ProyectoCarter\\ProyectoCarter\\wwwroot\\Views\\dashboard.html",
+      "PackagePath": "staticwebassets\\Views\\dashboard.html"
+    },
+    {
+      "Id": "C:\\Users\\josea\\Documents\\Universidad\\8 cuatrimestre\\edel\\ProyectpUnidada3\\ProyectoCarter\\ProyectoCarter\\ProyectoCarter\\wwwroot\\Views\\error.html",
+      "PackagePath": "staticwebassets\\Views\\error.html"
+    },
+    {
+      "Id": "C:\\Users\\josea\\Documents\\Universidad\\8 cuatrimestre\\edel\\ProyectpUnidada3\\ProyectoCarter\\ProyectoCarter\\ProyectoCarter\\wwwroot\\Views\\login.html",
+      "PackagePath": "staticwebassets\\Views\\login.html"
+    },
+    {
+      "Id": "C:\\Users\\josea\\Documents\\Universidad\\8 cuatrimestre\\edel\\ProyectpUnidada3\\ProyectoCarter\\ProyectoCarter\\ProyectoCarter\\wwwroot\\Views\\perfiles.html",
+      "PackagePath": "staticwebassets\\Views\\perfiles.html"
+    },
+    {
+      "Id": "C:\\Users\\josea\\Documents\\Universidad\\8 cuatrimestre\\edel\\ProyectpUnidada3\\ProyectoCarter\\ProyectoCarter\\ProyectoCarter\\wwwroot\\Views\\permisos.html",
+      "PackagePath": "staticwebassets\\Views\\permisos.html"
+    },
+    {
+      "Id": "C:\\Users\\josea\\Documents\\Universidad\\8 cuatrimestre\\edel\\ProyectpUnidada3\\ProyectoCarter\\ProyectoCarter\\ProyectoCarter\\wwwroot\\Views\\registro.html",
+      "PackagePath": "staticwebassets\\Views\\registro.html"
+    },
+    {
+      "Id": "C:\\Users\\josea\\Documents\\Universidad\\8 cuatrimestre\\edel\\ProyectpUnidada3\\ProyectoCarter\\ProyectoCarter\\ProyectoCarter\\wwwroot\\Views\\usuarios.html",
+      "PackagePath": "staticwebassets\\Views\\usuarios.html"
+    },
+    {
+      "Id": "C:\\Users\\josea\\Documents\\Universidad\\8 cuatrimestre\\edel\\ProyectpUnidada3\\ProyectoCarter\\ProyectoCarter\\ProyectoCarter\\wwwroot\\css\\administrar.css",
+      "PackagePath": "staticwebassets\\css\\administrar.css"
+    },
+    {
+      "Id": "C:\\Users\\josea\\Documents\\Universidad\\8 cuatrimestre\\edel\\ProyectpUnidada3\\ProyectoCarter\\ProyectoCarter\\ProyectoCarter\\wwwroot\\css\\administrarusuarios.css",
+      "PackagePath": "staticwebassets\\css\\administrarusuarios.css"
+    },
+    {
+      "Id": "C:\\Users\\josea\\Documents\\Universidad\\8 cuatrimestre\\edel\\ProyectpUnidada3\\ProyectoCarter\\ProyectoCarter\\ProyectoCarter\\wwwroot\\css\\crud.css",
+      "PackagePath": "staticwebassets\\css\\crud.css"
+    },
+    {
+      "Id": "C:\\Users\\josea\\Documents\\Universidad\\8 cuatrimestre\\edel\\ProyectpUnidada3\\ProyectoCarter\\ProyectoCarter\\ProyectoCarter\\wwwroot\\css\\dashboard.css",
+      "PackagePath": "staticwebassets\\css\\dashboard.css"
+    },
+    {
+      "Id": "C:\\Users\\josea\\Documents\\Universidad\\8 cuatrimestre\\edel\\ProyectpUnidada3\\ProyectoCarter\\ProyectoCarter\\ProyectoCarter\\wwwroot\\css\\error.css",
+      "PackagePath": "staticwebassets\\css\\error.css"
+    },
+    {
+      "Id": "C:\\Users\\josea\\Documents\\Universidad\\8 cuatrimestre\\edel\\ProyectpUnidada3\\ProyectoCarter\\ProyectoCarter\\ProyectoCarter\\wwwroot\\css\\login.css",
+      "PackagePath": "staticwebassets\\css\\login.css"
+    },
+    {
+      "Id": "C:\\Users\\josea\\Documents\\Universidad\\8 cuatrimestre\\edel\\ProyectpUnidada3\\ProyectoCarter\\ProyectoCarter\\ProyectoCarter\\wwwroot\\css\\permisos.css",
+      "PackagePath": "staticwebassets\\css\\permisos.css"
+    },
+    {
+      "Id": "C:\\Users\\josea\\Documents\\Universidad\\8 cuatrimestre\\edel\\ProyectpUnidada3\\ProyectoCarter\\ProyectoCarter\\ProyectoCarter\\wwwroot\\css\\registro.css",
+      "PackagePath": "staticwebassets\\css\\registro.css"
+    },
+    {
+      "Id": "C:\\Users\\josea\\Documents\\Universidad\\8 cuatrimestre\\edel\\ProyectpUnidada3\\ProyectoCarter\\ProyectoCarter\\ProyectoCarter\\wwwroot\\js\\administrarV2.js",
+      "PackagePath": "staticwebassets\\js\\administrarV2.js"
+    },
+    {
+      "Id": "C:\\Users\\josea\\Documents\\Universidad\\8 cuatrimestre\\edel\\ProyectpUnidada3\\ProyectoCarter\\ProyectoCarter\\ProyectoCarter\\wwwroot\\js\\crud\\clienteFisica.js",
+      "PackagePath": "staticwebassets\\js\\crud\\clienteFisica.js"
+    },
+    {
+      "Id": "C:\\Users\\josea\\Documents\\Universidad\\8 cuatrimestre\\edel\\ProyectpUnidada3\\ProyectoCarter\\ProyectoCarter\\ProyectoCarter\\wwwroot\\js\\crud\\clienteMoral.js",
+      "PackagePath": "staticwebassets\\js\\crud\\clienteMoral.js"
+    },
+    {
+      "Id": "C:\\Users\\josea\\Documents\\Universidad\\8 cuatrimestre\\edel\\ProyectpUnidada3\\ProyectoCarter\\ProyectoCarter\\ProyectoCarter\\wwwroot\\js\\crud\\crudBase.js",
+      "PackagePath": "staticwebassets\\js\\crud\\crudBase.js"
+    },
+    {
+      "Id": "C:\\Users\\josea\\Documents\\Universidad\\8 cuatrimestre\\edel\\ProyectpUnidada3\\ProyectoCarter\\ProyectoCarter\\ProyectoCarter\\wwwroot\\js\\crud\\mantenimientoPinzas.js",
+      "PackagePath": "staticwebassets\\js\\crud\\mantenimientoPinzas.js"
+    },
+    {
+      "Id": "C:\\Users\\josea\\Documents\\Universidad\\8 cuatrimestre\\edel\\ProyectpUnidada3\\ProyectoCarter\\ProyectoCarter\\ProyectoCarter\\wwwroot\\js\\crud\\mantenimientoTaladros.js",
+      "PackagePath": "staticwebassets\\js\\crud\\mantenimientoTaladros.js"
+    },
+    {
+      "Id": "C:\\Users\\josea\\Documents\\Universidad\\8 cuatrimestre\\edel\\ProyectpUnidada3\\ProyectoCarter\\ProyectoCarter\\ProyectoCarter\\wwwroot\\js\\crud\\oficinaImpresora.js",
+      "PackagePath": "staticwebassets\\js\\crud\\oficinaImpresora.js"
+    },
+    {
+      "Id": "C:\\Users\\josea\\Documents\\Universidad\\8 cuatrimestre\\edel\\ProyectpUnidada3\\ProyectoCarter\\ProyectoCarter\\ProyectoCarter\\wwwroot\\js\\crud\\oficinaPc.js",
+      "PackagePath": "staticwebassets\\js\\crud\\oficinaPc.js"
+    },
+    {
+      "Id": "C:\\Users\\josea\\Documents\\Universidad\\8 cuatrimestre\\edel\\ProyectpUnidada3\\ProyectoCarter\\ProyectoCarter\\ProyectoCarter\\wwwroot\\js\\crud\\proveedorFisica.js",
+      "PackagePath": "staticwebassets\\js\\crud\\proveedorFisica.js"
+    },
+    {
+      "Id": "C:\\Users\\josea\\Documents\\Universidad\\8 cuatrimestre\\edel\\ProyectpUnidada3\\ProyectoCarter\\ProyectoCarter\\ProyectoCarter\\wwwroot\\js\\crud\\proveedorMoral.js",
+      "PackagePath": "staticwebassets\\js\\crud\\proveedorMoral.js"
+    },
+    {
+      "Id": "C:\\Users\\josea\\Documents\\Universidad\\8 cuatrimestre\\edel\\ProyectpUnidada3\\ProyectoCarter\\ProyectoCarter\\ProyectoCarter\\wwwroot\\js\\dashboard.js",
+      "PackagePath": "staticwebassets\\js\\dashboard.js"
+    },
+    {
+      "Id": "C:\\Users\\josea\\Documents\\Universidad\\8 cuatrimestre\\edel\\ProyectpUnidada3\\ProyectoCarter\\ProyectoCarter\\ProyectoCarter\\wwwroot\\js\\login.js",
+      "PackagePath": "staticwebassets\\js\\login.js"
+    },
+    {
+      "Id": "C:\\Users\\josea\\Documents\\Universidad\\8 cuatrimestre\\edel\\ProyectpUnidada3\\ProyectoCarter\\ProyectoCarter\\ProyectoCarter\\wwwroot\\js\\permisos.js",
+      "PackagePath": "staticwebassets\\js\\permisos.js"
+    },
+    {
+      "Id": "C:\\Users\\josea\\Documents\\Universidad\\8 cuatrimestre\\edel\\ProyectpUnidada3\\ProyectoCarter\\ProyectoCarter\\ProyectoCarter\\wwwroot\\js\\registro.js",
+      "PackagePath": "staticwebassets\\js\\registro.js"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.ProyectoCarter.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.ProyectoCarter.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.build.ProyectoCarter.props",
+      "PackagePath": "build\\ProyectoCarter.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.buildMultiTargeting.ProyectoCarter.props",
+      "PackagePath": "buildMultiTargeting\\ProyectoCarter.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.buildTransitive.ProyectoCarter.props",
+      "PackagePath": "buildTransitive\\ProyectoCarter.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

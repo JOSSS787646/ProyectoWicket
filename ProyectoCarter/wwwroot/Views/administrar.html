@@ -5,99 +5,125 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Administrar Usuarios</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/css/administrar.css">
 </head>
 <body class="admin-page">
 
     <header>
         <h1><i class="fas fa-user-shield"></i> Administrar Usuarios</h1>
-        <button id="btnAgregarRol" class="btn-primary"><i class="fas fa-plus"></i> Nuevo Rol</button>
-        <button id="btnAgregarUsuario" class="btn-agregar">Agregar Usuario</button>
-        <button id="btnRegresar" class="btn-secondary"><i class="fas fa-arrow-left"></i> Regresar</button>
+        <div class="header-buttons">
+            <button id="btnAgregarRol" class="btn-primary"><i class="fas fa-plus"></i> Nuevo Rol</button>
+            <button id="btnAgregarUsuario" class="btn-primary"><i class="fas fa-user-plus"></i> Agregar Usuario</button>
+            <button id="btnRegresar" class="btn-secondary"><i class="fas fa-arrow-left"></i> Regresar</button>
+        </div>
     </header>
 
     <div class="admin-container">
-        <table>
-            <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>Usuario</th>
-                    <th>Correo</th>
-                    <th>Rol</th>
-                    <th>Acciones</th>
-                </tr>
-            </thead>
-            <tbody id="usuariosTabla">
-                <!-- Aquí se cargarán los usuarios dinámicamente -->
-            </tbody>
-        </table>
+        <div class="table-responsive">
+            <table class="user-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Usuario</th>
+                        <th>Correo</th>
+                        <th>Rol</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="usuariosTabla">
+                    <!-- Aquí se cargarán los usuarios dinámicamente -->
+                </tbody>
+            </table>
+        </div>
 
         <!-- Modal para Agregar Usuario -->
         <div id="modalAgregarUsuario" class="modal">
             <div class="modal-content">
                 <span class="cerrar" onclick="cerrarModal()">&times;</span>
-                <h2>Agregar Usuario</h2>
+                <h2><i class="fas fa-user-plus"></i> Agregar Usuario</h2>
                 <form id="formAgregarUsuario">
-                    <label for="nombre">Nombre de usuario:</label>
-                    <input type="text" id="nombre" required>
+                    <div class="form-group">
+                        <label for="nombre">Nombre de usuario:</label>
+                        <input type="text" id="nombre" class="form-input" required>
+                    </div>
 
-                    <label for="correo">Correo:</label>
-                    <input type="email" id="correo" required>
+                    <div class="form-group">
+                        <label for="correo">Correo:</label>
+                        <input type="email" id="correo" class="form-input" required>
+                    </div>
 
-                    <label for="rolSelect">Rol:</label>
-                    <select id="rolSelect" required></select>
+                    <div class="form-group">
+                        <label for="rolSelect">Rol:</label>
+                        <select id="rolSelect" class="form-input" required></select>
+                    </div>
 
-                    <button type="submit" class=" btn-secondary btn-guardar">Guardar</button>
-                    <button type="button" class="btn-secondary" onclick="cerrarModal()">Cancelar</button>
-
+                    <div class="modal-buttons">
+                        <button type="submit" class="btn-primary"><i class="fas fa-save"></i> Guardar</button>
+                        <button type="button" class="btn-secondary" onclick="cerrarModal()"><i class="fas fa-times"></i> Cancelar</button>
+                    </div>
                 </form>
             </div>
         </div>
 
-    </div>
+        <!-- Modal para Editar Usuario -->
+        <div id="editModal" class="modal">
+            <div class="modal-content">
+                <span class="cerrar" onclick="cerrarModal()">&times;</span>
+                <h2><i class="fas fa-user-edit"></i> Editar Usuario</h2>
+                <input type="hidden" id="editId">
 
-    <!-- Modal para Editar Usuario -->
-    <div id="editModal" class="modal">
-        <div class="modal-content">
-            <span class="cerrar" onclick="cerrarModal()">&times;</span>
+                <form id="formEditarUsuario">
+                    <div class="form-group">
+                        <label>Nombre:</label>
+                        <input type="text" id="editNombre" class="form-input">
+                    </div>
 
-            <h2>Editar Usuario</h2>
-            <input type="hidden" id="editId">
+                    <div class="form-group">
+                        <label>Correo:</label>
+                        <input type="email" id="editCorreo" class="form-input">
+                    </div>
 
-            <label>Nombre:</label>
-            <input type="text" id="editNombre">
+                    <div class="form-group">
+                        <label>Rol:</label>
+                        <select id="editRol" class="form-input"></select>
+                    </div>
 
-            <label>Correo:</label>
-            <input type="email" id="editCorreo">
+                    <div class="modal-buttons">
+                        <button type="button" onclick="guardarEdicion()" class="btn-primary"><i class="fas fa-save"></i> Guardar</button>
+                        <button type="button" onclick="cerrarModal()" class="btn-secondary"><i class="fas fa-times"></i> Cancelar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
 
-            <label>Rol:</label>
-            <select id="editRol"></select> <!-- Ahora es un select -->
+        <!-- Modal para agregar nuevo rol -->
+        <div id="addRolModal" class="modal">
+            <div class="modal-content">
+                <span class="cerrar" onclick="cerrarModal()">&times;</span>
+                <h2><i class="fas fa-plus-circle"></i> Nuevo Rol</h2>
 
-            <button onclick="guardarEdicion()" class="btn-primary">Guardar</button>
-            <button onclick="cerrarModal()" class="btn-secondary">Cancelar</button>
+                <form id="formAgregarRol">
+                    <div class="form-group">
+                        <label>ID del Rol:</label>
+                        <input type="number" id="rolId" class="form-input" placeholder="Ejemplo: 3">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Nombre del Rol:</label>
+                        <input type="text" id="rolNombre" class="form-input" placeholder="Ejemplo: Moderador">
+                    </div>
+
+                    <div class="modal-buttons">
+                        <button type="button" onclick="guardarNuevoRol()" class="btn-primary"><i class="fas fa-save"></i> Guardar</button>
+                        <button type="button" onclick="cerrarModal()" class="btn-secondary"><i class="fas fa-times"></i> Cancelar</button>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
 
-    <!-- Modal para agregar nuevo rol -->
-    <div id="addRolModal" class="modal">
-        <div class="modal-content">
-            <span class="cerrar" onclick="cerrarModal()">&times;</span>
-
-            <h2>Nuevo Rol</h2>
-
-            <label>ID del Rol:</label>
-            <input type="number" id="rolId" placeholder="Ejemplo: 3">
-
-            <label>Nombre del Rol:</label>
-            <input type="text" id="rolNombre" placeholder="Ejemplo: Moderador">
-
-            <button onclick="guardarNuevoRol()" class="btn-primary">Guardar</button>
-            <button onclick="cerrarModal()" class="btn-secondary">Cancelar</button>
-        </div>
-    </div>
-
-
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="/js/administrarV2.js"></script>
 </body>
 </html>
