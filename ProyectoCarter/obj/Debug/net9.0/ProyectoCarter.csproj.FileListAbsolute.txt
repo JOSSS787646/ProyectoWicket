@@ -235,11 +235,11 @@ C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\Proyec
 C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\obj\Debug\net9.0\compressed\jlkhfdeig7-rpp3qimu5f.gz
 C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\obj\Debug\net9.0\compressed\6d923p8s5w-2jmj5pr9mg.gz
 C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\obj\Debug\net9.0\compressed\4ncfheby1r-d5d79o4rna.gz
-C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\obj\Debug\net9.0\compressed\rebu30sd94-8b7d1a83oc.gz
 C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\obj\Debug\net9.0\compressed\gjc4zb6p46-txveuadgmt.gz
 C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\obj\Debug\net9.0\compressed\c2915iz64t-dsl1rfqggn.gz
 C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\obj\Debug\net9.0\compressed\7wi1zcey12-l1wzmjg234.gz
 C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\obj\Debug\net9.0\compressed\ck7skio5ub-extfos7usg.gz
 C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\obj\Debug\net9.0\compressed\jpti2avl45-ndaya59dvx.gz
 C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\obj\Debug\net9.0\compressed\hfcekrbpk2-9bl71zhi7d.gz
-C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\obj\Debug\net9.0\compressed\si4e4tcbby-q2rdec2f2s.gz
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\obj\Debug\net9.0\compressed\si4e4tcbby-5rhhsp87y1.gz
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\obj\Debug\net9.0\compressed\zs4wco5qze-8b7d1a83oc.gz

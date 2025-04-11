@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ProyectoCarter")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5262718c084493fd9f7e3b30e5bc137f56ad430b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ec1df7642f3b5e9b2cfb90b5b25dbcdc18dd000d")]
 [assembly: System.Reflection.AssemblyProductAttribute("ProyectoCarter")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ProyectoCarter")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

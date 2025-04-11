@@ -1,6 +1,10 @@
 {
   "Files": [
     {
+      "Id": "C:\\Users\\josea\\Documents\\Universidad\\8 cuatrimestre\\edel\\ProyectpUnidada3\\ProyectoCarter\\ProyectoCarter\\ProyectoCarter\\wwwroot\\Views\\Registro.html",
+      "PackagePath": "staticwebassets\\Views\\Registro.html"
+    },
+    {
       "Id": "C:\\Users\\josea\\Documents\\Universidad\\8 cuatrimestre\\edel\\ProyectpUnidada3\\ProyectoCarter\\ProyectoCarter\\ProyectoCarter\\wwwroot\\Views\\administrar.html",
       "PackagePath": "staticwebassets\\Views\\administrar.html"
     },
@@ -59,10 +63,6 @@
     {
       "Id": "C:\\Users\\josea\\Documents\\Universidad\\8 cuatrimestre\\edel\\ProyectpUnidada3\\ProyectoCarter\\ProyectoCarter\\ProyectoCarter\\wwwroot\\Views\\permisos.html",
       "PackagePath": "staticwebassets\\Views\\permisos.html"
-    },
-    {
-      "Id": "C:\\Users\\josea\\Documents\\Universidad\\8 cuatrimestre\\edel\\ProyectpUnidada3\\ProyectoCarter\\ProyectoCarter\\ProyectoCarter\\wwwroot\\Views\\registro.html",
-      "PackagePath": "staticwebassets\\Views\\registro.html"
     },
     {
       "Id": "C:\\Users\\josea\\Documents\\Universidad\\8 cuatrimestre\\edel\\ProyectpUnidada3\\ProyectoCarter\\ProyectoCarter\\ProyectoCarter\\wwwroot\\Views\\usuarios.html",

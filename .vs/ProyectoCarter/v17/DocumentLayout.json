@@ -7,6 +7,13 @@
       "RelativeMoniker": "D:0:0:{870160E3-878E-4F33-99D1-F47AC4AD31E4}|ProyectoCarter\\ProyectoCarter.csproj|solutionrelative:proyectocarter\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{870160E3-878E-4F33-99D1-F47AC4AD31E4}|ProyectoCarter\\ProyectoCarter.csproj|c:\\users\\josea\\documents\\universidad\\8 cuatrimestre\\edel\\proyectpunidada3\\proyectocarter\\proyectocarter\\proyectocarter\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{870160E3-878E-4F33-99D1-F47AC4AD31E4}|ProyectoCarter\\ProyectoCarter.csproj|solutionrelative:proyectocarter\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\josea\\AppData\\Local\\Temp\\.vsdbgsrc\\ed88ee97a3c5ebb1e3bcc9b21be6b09024f5f20cfb4eba15160aa2a6e5908a21\\CancellationTokenSource.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{870160E3-878E-4F33-99D1-F47AC4AD31E4}|ProyectoCarter\\ProyectoCarter.csproj|c:\\users\\josea\\documents\\universidad\\8 cuatrimestre\\edel\\proyectpunidada3\\proyectocarter\\proyectocarter\\proyectocarter\\wwwroot\\views\\login.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{870160E3-878E-4F33-99D1-F47AC4AD31E4}|ProyectoCarter\\ProyectoCarter.csproj|solutionrelative:proyectocarter\\wwwroot\\views\\login.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -122,11 +129,11 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 10,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "login.js",
               "DocumentMoniker": "C:\\Users\\josea\\Documents\\Universidad\\8 cuatrimestre\\edel\\ProyectpUnidada3\\ProyectoCarter\\ProyectoCarter\\ProyectoCarter\\wwwroot\\js\\login.js",
               "RelativeDocumentMoniker": "ProyectoCarter\\wwwroot\\js\\login.js",
@@ -135,8 +142,7 @@
               "ViewState": "AgIAAAMAAAAAAAAAAAAcwCwAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
               "WhenOpened": "2025-04-10T23:57:41.377Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Bookmark",
@@ -156,19 +162,46 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "clienteMoral.js",
-              "DocumentMoniker": "C:\\Users\\josea\\Documents\\Universidad\\8 cuatrimestre\\edel\\ProyectpUnidada3\\ProyectoCarter\\ProyectoCarter\\ProyectoCarter\\wwwroot\\js\\crud\\clienteMoral.js",
-              "RelativeDocumentMoniker": "ProyectoCarter\\wwwroot\\js\\crud\\clienteMoral.js",
-              "ToolTip": "C:\\Users\\josea\\Documents\\Universidad\\8 cuatrimestre\\edel\\ProyectpUnidada3\\ProyectoCarter\\ProyectoCarter\\ProyectoCarter\\wwwroot\\js\\crud\\clienteMoral.js",
-              "RelativeToolTip": "ProyectoCarter\\wwwroot\\js\\crud\\clienteMoral.js",
-              "ViewState": "AgIAAD8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2025-04-11T02:03:40.705Z"
+              "DocumentIndex": 2,
+              "Title": "CancellationTokenSource.cs",
+              "DocumentMoniker": "C:\\Users\\josea\\AppData\\Local\\Temp\\.vsdbgsrc\\ed88ee97a3c5ebb1e3bcc9b21be6b09024f5f20cfb4eba15160aa2a6e5908a21\\CancellationTokenSource.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\ed88ee97a3c5ebb1e3bcc9b21be6b09024f5f20cfb4eba15160aa2a6e5908a21\\CancellationTokenSource.cs",
+              "ToolTip": "C:\\Users\\josea\\AppData\\Local\\Temp\\.vsdbgsrc\\ed88ee97a3c5ebb1e3bcc9b21be6b09024f5f20cfb4eba15160aa2a6e5908a21\\CancellationTokenSource.cs [Solo lectura]",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\ed88ee97a3c5ebb1e3bcc9b21be6b09024f5f20cfb4eba15160aa2a6e5908a21\\CancellationTokenSource.cs [Solo lectura]",
+              "ViewState": "AgIAAIYCAAAAAAAAAAAMwJoCAAACAAAAAQAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-11T23:26:38.514Z",
+              "EditorCaption": " [Solo lectura]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 0,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\josea\\Documents\\Universidad\\8 cuatrimestre\\edel\\ProyectpUnidada3\\ProyectoCarter\\ProyectoCarter\\ProyectoCarter\\appsettings.json",
+              "RelativeDocumentMoniker": "ProyectoCarter\\appsettings.json",
+              "ToolTip": "C:\\Users\\josea\\Documents\\Universidad\\8 cuatrimestre\\edel\\ProyectpUnidada3\\ProyectoCarter\\ProyectoCarter\\ProyectoCarter\\appsettings.json",
+              "RelativeToolTip": "ProyectoCarter\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-04-11T01:03:47.952Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "C:\\Users\\josea\\Documents\\Universidad\\8 cuatrimestre\\edel\\ProyectpUnidada3\\ProyectoCarter\\ProyectoCarter\\ProyectoCarter\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "ProyectoCarter\\appsettings.Development.json",
+              "ToolTip": "C:\\Users\\josea\\Documents\\Universidad\\8 cuatrimestre\\edel\\ProyectpUnidada3\\ProyectoCarter\\ProyectoCarter\\ProyectoCarter\\appsettings.Development.json",
+              "RelativeToolTip": "ProyectoCarter\\appsettings.Development.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-04-11T22:51:10.954Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "mantenimientoPinzas.js",
               "DocumentMoniker": "C:\\Users\\josea\\Documents\\Universidad\\8 cuatrimestre\\edel\\ProyectpUnidada3\\ProyectoCarter\\ProyectoCarter\\ProyectoCarter\\wwwroot\\js\\crud\\mantenimientoPinzas.js",
               "RelativeDocumentMoniker": "ProyectoCarter\\wwwroot\\js\\crud\\mantenimientoPinzas.js",
@@ -180,7 +213,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "AuthModule.cs",
               "DocumentMoniker": "C:\\Users\\josea\\Documents\\Universidad\\8 cuatrimestre\\edel\\ProyectpUnidada3\\ProyectoCarter\\ProyectoCarter\\ProyectoCarter\\Modules\\AuthModule.cs",
               "RelativeDocumentMoniker": "ProyectoCarter\\Modules\\AuthModule.cs",
@@ -192,7 +225,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "registro.css",
               "DocumentMoniker": "C:\\Users\\josea\\Documents\\Universidad\\8 cuatrimestre\\edel\\ProyectpUnidada3\\ProyectoCarter\\ProyectoCarter\\ProyectoCarter\\wwwroot\\css\\registro.css",
               "RelativeDocumentMoniker": "ProyectoCarter\\wwwroot\\css\\registro.css",
@@ -204,7 +237,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "login.html",
               "DocumentMoniker": "C:\\Users\\josea\\Documents\\Universidad\\8 cuatrimestre\\edel\\ProyectpUnidada3\\ProyectoCarter\\ProyectoCarter\\ProyectoCarter\\wwwroot\\Views\\login.html",
               "RelativeDocumentMoniker": "ProyectoCarter\\wwwroot\\Views\\login.html",
@@ -212,25 +245,23 @@
               "RelativeToolTip": "ProyectoCarter\\wwwroot\\Views\\login.html",
               "ViewState": "AgIAAAkBAAAAAAAAAAAAwCQBAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-04-10T23:54:49.555Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-10T23:54:49.555Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\josea\\Documents\\Universidad\\8 cuatrimestre\\edel\\ProyectpUnidada3\\ProyectoCarter\\ProyectoCarter\\ProyectoCarter\\appsettings.json",
-              "RelativeDocumentMoniker": "ProyectoCarter\\appsettings.json",
-              "ToolTip": "C:\\Users\\josea\\Documents\\Universidad\\8 cuatrimestre\\edel\\ProyectpUnidada3\\ProyectoCarter\\ProyectoCarter\\ProyectoCarter\\appsettings.json",
-              "RelativeToolTip": "ProyectoCarter\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-04-11T01:03:47.952Z",
-              "EditorCaption": ""
+              "DocumentIndex": 11,
+              "Title": "clienteMoral.js",
+              "DocumentMoniker": "C:\\Users\\josea\\Documents\\Universidad\\8 cuatrimestre\\edel\\ProyectpUnidada3\\ProyectoCarter\\ProyectoCarter\\ProyectoCarter\\wwwroot\\js\\crud\\clienteMoral.js",
+              "RelativeDocumentMoniker": "ProyectoCarter\\wwwroot\\js\\crud\\clienteMoral.js",
+              "ToolTip": "C:\\Users\\josea\\Documents\\Universidad\\8 cuatrimestre\\edel\\ProyectpUnidada3\\ProyectoCarter\\ProyectoCarter\\ProyectoCarter\\wwwroot\\js\\crud\\clienteMoral.js",
+              "RelativeToolTip": "ProyectoCarter\\wwwroot\\js\\crud\\clienteMoral.js",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-04-11T02:03:40.705Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "mantenimientoPinzas.html",
               "DocumentMoniker": "C:\\Users\\josea\\Documents\\Universidad\\8 cuatrimestre\\edel\\ProyectpUnidada3\\ProyectoCarter\\ProyectoCarter\\ProyectoCarter\\wwwroot\\Views\\crud\\mantenimientoPinzas.html",
               "RelativeDocumentMoniker": "ProyectoCarter\\wwwroot\\Views\\crud\\mantenimientoPinzas.html",
@@ -242,7 +273,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "mantenimientoTaladros.js",
               "DocumentMoniker": "C:\\Users\\josea\\Documents\\Universidad\\8 cuatrimestre\\edel\\ProyectpUnidada3\\ProyectoCarter\\ProyectoCarter\\ProyectoCarter\\wwwroot\\js\\crud\\mantenimientoTaladros.js",
               "RelativeDocumentMoniker": "ProyectoCarter\\wwwroot\\js\\crud\\mantenimientoTaladros.js",
@@ -254,7 +285,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "mantenimientoTaladros.html",
               "DocumentMoniker": "C:\\Users\\josea\\Documents\\Universidad\\8 cuatrimestre\\edel\\ProyectpUnidada3\\ProyectoCarter\\ProyectoCarter\\ProyectoCarter\\wwwroot\\Views\\crud\\mantenimientoTaladros.html",
               "RelativeDocumentMoniker": "ProyectoCarter\\wwwroot\\Views\\crud\\mantenimientoTaladros.html",
@@ -266,7 +297,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "clienteMoral.html",
               "DocumentMoniker": "C:\\Users\\josea\\Documents\\Universidad\\8 cuatrimestre\\edel\\ProyectpUnidada3\\ProyectoCarter\\ProyectoCarter\\ProyectoCarter\\wwwroot\\Views\\crud\\clienteMoral.html",
               "RelativeDocumentMoniker": "ProyectoCarter\\wwwroot\\Views\\crud\\clienteMoral.html",
@@ -278,7 +309,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 18,
               "Title": "permisos.css",
               "DocumentMoniker": "C:\\Users\\josea\\Documents\\Universidad\\8 cuatrimestre\\edel\\ProyectpUnidada3\\ProyectoCarter\\ProyectoCarter\\ProyectoCarter\\wwwroot\\css\\permisos.css",
               "RelativeDocumentMoniker": "ProyectoCarter\\wwwroot\\css\\permisos.css",
@@ -290,7 +321,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 16,
               "Title": "permisos.js",
               "DocumentMoniker": "C:\\Users\\josea\\Documents\\Universidad\\8 cuatrimestre\\edel\\ProyectpUnidada3\\ProyectoCarter\\ProyectoCarter\\ProyectoCarter\\wwwroot\\js\\permisos.js",
               "RelativeDocumentMoniker": "ProyectoCarter\\wwwroot\\js\\permisos.js",
@@ -302,7 +333,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 13,
               "Title": "login.css",
               "DocumentMoniker": "C:\\Users\\josea\\Documents\\Universidad\\8 cuatrimestre\\edel\\ProyectpUnidada3\\ProyectoCarter\\ProyectoCarter\\ProyectoCarter\\wwwroot\\css\\login.css",
               "RelativeDocumentMoniker": "ProyectoCarter\\wwwroot\\css\\login.css",
@@ -314,7 +345,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 14,
               "Title": "clienteFisica.js",
               "DocumentMoniker": "C:\\Users\\josea\\Documents\\Universidad\\8 cuatrimestre\\edel\\ProyectpUnidada3\\ProyectoCarter\\ProyectoCarter\\ProyectoCarter\\wwwroot\\js\\crud\\clienteFisica.js",
               "RelativeDocumentMoniker": "ProyectoCarter\\wwwroot\\js\\crud\\clienteFisica.js",
@@ -326,7 +357,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 19,
               "Title": "dashboard.js",
               "DocumentMoniker": "C:\\Users\\josea\\Documents\\Universidad\\8 cuatrimestre\\edel\\ProyectpUnidada3\\ProyectoCarter\\ProyectoCarter\\ProyectoCarter\\wwwroot\\js\\dashboard.js",
               "RelativeDocumentMoniker": "ProyectoCarter\\wwwroot\\js\\dashboard.js",
@@ -338,7 +369,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 17,
               "Title": "registro.js",
               "DocumentMoniker": "C:\\Users\\josea\\Documents\\Universidad\\8 cuatrimestre\\edel\\ProyectpUnidada3\\ProyectoCarter\\ProyectoCarter\\ProyectoCarter\\wwwroot\\js\\registro.js",
               "RelativeDocumentMoniker": "ProyectoCarter\\wwwroot\\js\\registro.js",
@@ -350,7 +381,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 15,
               "Title": "administrarV2.js",
               "DocumentMoniker": "C:\\Users\\josea\\Documents\\Universidad\\8 cuatrimestre\\edel\\ProyectpUnidada3\\ProyectoCarter\\ProyectoCarter\\ProyectoCarter\\wwwroot\\js\\administrarV2.js",
               "RelativeDocumentMoniker": "ProyectoCarter\\wwwroot\\js\\administrarV2.js",
@@ -362,7 +393,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 22,
               "Title": "clienteFisica.html",
               "DocumentMoniker": "C:\\Users\\josea\\Documents\\Universidad\\8 cuatrimestre\\edel\\ProyectpUnidada3\\ProyectoCarter\\ProyectoCarter\\ProyectoCarter\\wwwroot\\Views\\crud\\clienteFisica.html",
               "RelativeDocumentMoniker": "ProyectoCarter\\wwwroot\\Views\\crud\\clienteFisica.html",
@@ -374,7 +405,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 21,
               "Title": "administrar.css",
               "DocumentMoniker": "C:\\Users\\josea\\Documents\\Universidad\\8 cuatrimestre\\edel\\ProyectpUnidada3\\ProyectoCarter\\ProyectoCarter\\ProyectoCarter\\wwwroot\\css\\administrar.css",
               "RelativeDocumentMoniker": "ProyectoCarter\\wwwroot\\css\\administrar.css",
@@ -386,7 +417,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 24,
               "Title": "permisos.html",
               "DocumentMoniker": "C:\\Users\\josea\\Documents\\Universidad\\8 cuatrimestre\\edel\\ProyectpUnidada3\\ProyectoCarter\\ProyectoCarter\\ProyectoCarter\\wwwroot\\Views\\permisos.html",
               "RelativeDocumentMoniker": "ProyectoCarter\\wwwroot\\Views\\permisos.html",
@@ -398,7 +429,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 20,
               "Title": "Modulo.cs",
               "DocumentMoniker": "C:\\Users\\josea\\Documents\\Universidad\\8 cuatrimestre\\edel\\ProyectpUnidada3\\ProyectoCarter\\ProyectoCarter\\ProyectoCarter\\Models\\Modulo.cs",
               "RelativeDocumentMoniker": "ProyectoCarter\\Models\\Modulo.cs",
@@ -410,19 +441,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "registro.html",
-              "DocumentMoniker": "C:\\Users\\josea\\Documents\\Universidad\\8 cuatrimestre\\edel\\ProyectpUnidada3\\ProyectoCarter\\ProyectoCarter\\ProyectoCarter\\wwwroot\\Views\\registro.html",
-              "RelativeDocumentMoniker": "ProyectoCarter\\wwwroot\\Views\\registro.html",
-              "ToolTip": "C:\\Users\\josea\\Documents\\Universidad\\8 cuatrimestre\\edel\\ProyectpUnidada3\\ProyectoCarter\\ProyectoCarter\\ProyectoCarter\\wwwroot\\Views\\registro.html",
-              "RelativeToolTip": "ProyectoCarter\\wwwroot\\Views\\registro.html",
+              "DocumentIndex": 25,
+              "Title": "Registro.html",
+              "DocumentMoniker": "C:\\Users\\josea\\Documents\\Universidad\\8 cuatrimestre\\edel\\ProyectpUnidada3\\ProyectoCarter\\ProyectoCarter\\ProyectoCarter\\wwwroot\\Views\\Registro.html",
+              "RelativeDocumentMoniker": "ProyectoCarter\\wwwroot\\Views\\Registro.html",
+              "ToolTip": "C:\\Users\\josea\\Documents\\Universidad\\8 cuatrimestre\\edel\\ProyectpUnidada3\\ProyectoCarter\\ProyectoCarter\\ProyectoCarter\\wwwroot\\Views\\Registro.html",
+              "RelativeToolTip": "ProyectoCarter\\wwwroot\\Views\\Registro.html",
               "ViewState": "AgIAAEUBAAAAAAAAAAAqwE8BAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
               "WhenOpened": "2025-04-11T00:18:50.283Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 23,
               "Title": "usuarios.html",
               "DocumentMoniker": "C:\\Users\\josea\\Documents\\Universidad\\8 cuatrimestre\\edel\\ProyectpUnidada3\\ProyectoCarter\\ProyectoCarter\\ProyectoCarter\\wwwroot\\Views\\usuarios.html",
               "RelativeDocumentMoniker": "ProyectoCarter\\wwwroot\\Views\\usuarios.html",
@@ -434,7 +465,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 26,
               "Title": "perfiles.html",
               "DocumentMoniker": "C:\\Users\\josea\\Documents\\Universidad\\8 cuatrimestre\\edel\\ProyectpUnidada3\\ProyectoCarter\\ProyectoCarter\\ProyectoCarter\\wwwroot\\Views\\perfiles.html",
               "RelativeDocumentMoniker": "ProyectoCarter\\wwwroot\\Views\\perfiles.html",
@@ -446,7 +477,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 27,
               "Title": "dashboard.css",
               "DocumentMoniker": "C:\\Users\\josea\\Documents\\Universidad\\8 cuatrimestre\\edel\\ProyectpUnidada3\\ProyectoCarter\\ProyectoCarter\\ProyectoCarter\\wwwroot\\css\\dashboard.css",
               "RelativeDocumentMoniker": "ProyectoCarter\\wwwroot\\css\\dashboard.css",
@@ -458,7 +489,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 29,
               "Title": "administrarusuarios.css",
               "DocumentMoniker": "C:\\Users\\josea\\Documents\\Universidad\\8 cuatrimestre\\edel\\ProyectpUnidada3\\ProyectoCarter\\ProyectoCarter\\ProyectoCarter\\wwwroot\\css\\administrarusuarios.css",
               "RelativeDocumentMoniker": "ProyectoCarter\\wwwroot\\css\\administrarusuarios.css",
@@ -470,7 +501,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 28,
               "Title": "dashboard.html",
               "DocumentMoniker": "C:\\Users\\josea\\Documents\\Universidad\\8 cuatrimestre\\edel\\ProyectpUnidada3\\ProyectoCarter\\ProyectoCarter\\ProyectoCarter\\wwwroot\\Views\\dashboard.html",
               "RelativeDocumentMoniker": "ProyectoCarter\\wwwroot\\Views\\dashboard.html",

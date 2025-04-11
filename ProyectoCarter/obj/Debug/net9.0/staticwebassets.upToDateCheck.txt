@@ -30,13 +30,13 @@ C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\Proyec
 C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\wwwroot\Views\error.html
 C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\wwwroot\js\crud\oficinaImpresora.js
 C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\wwwroot\css\error.css
-C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\wwwroot\Views\registro.html
 C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\wwwroot\Views\crud\oficinaPc.html
 C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\wwwroot\Views\login.html
 C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\wwwroot\js\crud\proveedorMoral.js
 C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\wwwroot\js\crud\clienteFisica.js
 C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\wwwroot\Views\crud\proveedorMoral.html
 C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\wwwroot\Views\crud\proveedorFisica.html
+C:\Users\josea\Documents\Universidad\8 cuatrimestre\edel\ProyectpUnidada3\ProyectoCarter\ProyectoCarter\ProyectoCarter\wwwroot\Views\Registro.html
 wwwroot\css\administrar.css
 wwwroot\css\administrarusuarios.css
 wwwroot\css\crud.css
@@ -74,5 +74,5 @@ wwwroot\Views\error.html
 wwwroot\Views\login.html
 wwwroot\Views\perfiles.html
 wwwroot\Views\permisos.html
-wwwroot\Views\registro.html
+wwwroot\Views\Registro.html
 wwwroot\Views\usuarios.html
